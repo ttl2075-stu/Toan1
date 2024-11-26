@@ -1,0 +1,28 @@
+/* Than cuộn chính */
+::-webkit-scrollbar {
+    width: 7px;
+
+}
+
+/* Thanh cuộn phía đứng */
+::-webkit-scrollbar-thumb {
+    background-color: #c7c7c7; /* Màu nền của thanh cuộn */
+    border-radius: 3px; /* Bo tròn góc của thanh cuộn */
+    height: 20px;
+}
+
+/* Màu nền của khu vực mà thanh cuộn đi qua */
+::-webkit-scrollbar-track {
+    background-color: none;
+    height: 20px;
+}
+
+/* Hiệu ứng khi di chuột qua thanh cuộn */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Hiệu ứng khi thanh cuộn được ấn giữ */
+::-webkit-scrollbar-thumb:active {
+    background-color: #444;
+}

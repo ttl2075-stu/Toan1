@@ -1,0 +1,197 @@
+<style>
+    /* Global Styles */
+    body {
+        font-family: 'Comic Sans MS', 'Arial', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f8ff;
+        color: #333;
+    }
+
+    header {
+        background: linear-gradient(to right, #ff6f61, #ffca3a);
+        color: white;
+        padding: 2rem 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    main {
+        margin: 2rem auto;
+        max-width: 900px;
+        padding: 0 2rem;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    h3 {
+        color: #ff6f61;
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+
+    ul, ol {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    ul li, ol li {
+        margin-bottom: 0.5rem;
+    }
+
+    ul li {
+        background: #ffca3a;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 10px;
+        position: relative;
+        transition: transform 0.3s, background 0.3s;
+    }
+
+    ul li:hover {
+        background: #ff6f61;
+        transform: scale(1.05);
+    }
+
+    ul li::before {
+        content: '★';
+        font-size: 1.2rem;
+        color: #ff6f61;
+        position: absolute;
+        left: -1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    section {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border-radius: 10px;
+        background: #e0f7fa;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    section:hover {
+        background: #b2ebf2;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        main {
+            padding: 0 1rem;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+    }
+
+</style>
+<!-- <header>
+    <h1>Đồng hành học toán lớp 1 dành cho học sinh cần hỗ trợ</h1>
+</header> -->
+<main>
+    <section>
+        <h2>Ý NGHĨA CỦA TRANG WEB</h2>
+        <p>Website là hệ thống học tập môn toán 1 hỗ trợ giáo viên, phụ huynh và học sinh học tập môn toán thông qua các bài tập, trò chơi toán học trên trang web.</p>
+        <p>Các dạng bài được xây dựng trên hệ thống bài tập bổ trợ môn Toán lớp 1 theo các yêu cầu của UDL trong dạy học, qua đó giúp phát triển năng lực toán học ở học sinh đặc biệt là học sinh khuyết tật gặp nhiều khó khăn trong quá trình học tập môn toán.</p>
+    </section>
+    <section>
+        <h2>ĐỐI TƯỢNG SỬ DỤNG</h2>
+        <p>Hệ thống toán 1 hướng đến đa dạng các học sinh đặc biệt là học sinh khuyết tật tiền tiểu học, lớp 1 , đầu cấp tiểu học.</p>
+        <p>Giáo viên hỗ trợ học sinh học tập môn toán bằng cách thiết kế các bài tập bổ trợ được cung cấp định dạng sẵn từ trang web.</p>
+        <p>Phụ huynh hỗ trợ học sinh học tập tại nhà, thực hiện thao tác các bài tập trên trang web để phát triển nâng cao kĩ năng tính toán của bản thân.</p>
+        <p>Chuyên gia, giáo viên, sinh viên nghiên cứu liên quan đến đề tài dạy học môn toán cho học sinh khuyết tật tham khảo.</p>
+    </section>
+    <section>
+        <h2>Chương trình đào tạo</h2>
+        <p>Hệ thống toán 1 xây dựng dựa trên Chương trình GDPT 2018 (Ban hành kèm theo Thông tư số 32/2018/TT-BGDĐT), môn Toán cấp tiểu học. Từ đó nhằm giúp học sinh đạt các mục tiêu chủ yếu sau:</p>
+        <ul>
+            <li>Góp phần hình thành và phát triển năng lực toán học, yêu cầu cần đạt.</li>
+            <li>Có những kiến thức và kĩ năng toán học cơ bản ban đầu, thiết yếu về: Số và phép tính, Hình học và đo lường, Thống kê và xác suất.</li>
+        </ul>
+        <p>Chương trình môn Toán lớp 1 bao gồm hai mạch kiến thức:</p>
+        <ol>
+            <li>Số và phép tính</li>
+            <li>Hình học và Đo lường</li>
+        </ol>
+    </section>
+    <section>
+        <h2>THIẾT KẾ PHỔ DỤNG VÀ NGUYÊN TẮC</h2>
+        <p>UDL (Universal Design for Learning) là khung thiết kế giáo dục tạo ra môi trường học linh hoạt và dễ tiếp cận cho tất cả học sinh, cung cấp nhiều phương tiện để học sinh thể hiện và tham gia học tập. Giải quyết các vấn đề liên quan đến hình thức cung cấp bài học, cách thể hiện của học sinh và cách GV kích thích sự tham gia của HS.</p>
+        <ul>
+            <li>Nguyên tắc 1: Đa dạng trong cách trình bày thông tin và cung cấp nội dung dạy học của GV.</li>
+            <li>Nguyên tắc 2: Đa dạng trong cách thể hiện của HS.</li>
+            <li>Nguyên tắc 3: Đa dạng trong cách kích thích sự tham gia của HS.</li>
+        </ul>
+        <p>=> Việc vận dụng 3 nguyên tắc cơ bản của UDL trong môi trường học tập theo Thiết kế phổ dụng, mọi trẻ em đều được đón nhận, không bị từ chối, không phân biệt.</p>
+    </section>
+    <section>
+        <h2>LỢI ÍCH</h2>
+        <h3>Lợi ích đối với học sinh</h3>
+        <ul>
+            <li>Hứng Thú Học Vượt Trội - Xuyên Suốt Quá Trình Học</li>
+            <li>Video và hình ảnh minh họa sinh động, hấp dẫn, kích thích sự tò mò và khám phá của trẻ</li>
+            <li>Đa dạng cách thức, hình thức hỗ trợ và biểu đạt thông tin</li>
+            <li>Xây dựng trò chơi toán học có tính tương tác giúp trẻ vừa học, vừa chơi giúp duy trì hứng thú học xuyên suốt cho trẻ</li>
+            <li>Khích lệ và tạo động lực cho trẻ thông qua hệ thống phần thưởng (xu, sticker, vật phẩm nuôi thú cưng,...)</li>
+        </ul>
+        <h3>Lợi ích đối với phụ huynh</h3>
+        <ul>
+            <li>Hỗ trợ cha mẹ trong việc hướng dẫn học sinh học bài tại nhà</li>
+            <li>Các bài hướng dẫn dễ hiểu, tài liệu tham khảo được liên kết sẵn ở từng bài học</li>
+            <li>Bài tập đa dạng, kết quả được lưu trữ để giáo viên đánh giá</li>
+        </ul>
+        <h3>Lợi ích đối với giáo viên và nhà trường</h3>
+        <ul>
+            <li>Thực hiện thiết kế bài tập nhanh, theo chuẩn chương trình GDPT</li>
+            <li>Thu kết quả đánh giá kết quả học tập tiến bộ của học sinh một cách khách quan</li>
+            <li>Lưu trữ bài tập và tham khảo bài tập trên hệ thống</li>
+        </ul>
+        <h3>Lợi Ích Khác</h3>
+        <ul>
+            <li>Mỗi học sinh đều có tài khoản riêng và phân theo lớp để GV và phụ huynh theo dõi tiến độ học tập</li>
+            <li>Báo cáo tiến độ học tập của học sinh được lưu trữ, đánh giá khách quan</li>
+            <li>Thao tác tương tác sử dụng trực tiếp các hỗ trợ hình ảnh trực quan khi thực hiện bài tập</li>
+        </ul>
+        <p>Hệ thống giúp HS tiếp cận và học tập môn Toán một cách tốt nhất, hỗ trợ GV trong thiết kế bài tập, hỗ trợ phụ huynh hướng dẫn con tại nhà. Góp phần nâng cao chất lượng giáo dục hòa nhập và tạo cơ hội học tập bình đẳng cho tất cả HS.</p>
+    </section>
+</main>

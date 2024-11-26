@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .showQ {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    width: 400px;
+    height: 100%;
+}
+
+.showQ>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 10px;
+    padding: 15px;
+    width: 300px;
+}
+
+.showQ>div:hover {
+    background-color: rgb(235, 249, 249);
+    border-radius: 20px;
+
+}
+
+.showQ .box {
+    border: 2px solid #4bb9157f;
+    box-sizing: border-box;
+    margin: 2% 0;
+    width: 250px;
+    height: 150px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.showQ input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+
+.showQ>div.scaled {
+    transform: scale(3);
+    background: white;
+    border-radius: 20px;
+    position: fixed;
+    top: 5%;
+    left: 25%;
+    transform-origin: top left;
+    z-index: 3;
+}
+
+.noticeQuiz {
+    position: absolute;
+    left: 0;
+    top: -12%;
+
+}
+.imgObj {
+    max-height: 90%;
+    max-width: 90%;
+    width: 30%;
+    /* object-fit:scale-down; */
+    /* filter: grayscale(100%); */
+    /* filter: sepia(90%); */
+    /* filter: hue-rotate(200deg); */
+    /* filter: hue-rotate(300deg); */
+    /* filter: hue-rotate(400deg); */
+    /* filter: hue-rotate(900deg); */
+}
+
+.imgObj:nth-child(3){
+    position: absolute;
+    top: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="showQ">
+        <div class="scaled">
+            <div class="box" id="question"><div class="noticeQuiz">Câu ${i + 1}:</div>
+                <img src="../uploads/obj1_1.png" class="imgObj" alt="" srcset="">
+                <img src="../uploads/obj1_1.png" class="imgObj" alt="" srcset="">
+                <img src="../uploads/obj1_1.png" class="imgObj" alt="" srcset="">
+            </div>
+            <input type="number"  id="check" class="checkA">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.show {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    background-color: #fff;
+    padding: 50px 55px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+    /* text-align: center; */
+    width: 70%;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.show h1 {
+    margin-bottom: 10px;
+}
+
+.notice{
+    color: orangered;
+    position: absolute;
+    top: 12%;
+    left: 5%;
+}

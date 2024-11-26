@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Style cho button Show Form */
+.showFormBtn {
+    background-color: #6a0dad; /* Màu nút */
+    color: #fff; /* Màu chữ */
+    padding: 10px 20px; /* Kích thước nút */
+    border: none; /* Không viền */
+    border-radius: 4px; /* Góc bo tròn */
+    cursor: pointer; /* Con trỏ khi di chuyển qua nút */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+}
+
+.showFormBtn:hover {
+    background-color: #4b0783; /* Màu hover của nút */
+}
+
+/* Style cho form container */
+.formContainer {
+    /* display: none; */
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* Style cho các label và input */
+.problemForm label {
+    margin-bottom: 5px;
+    font-weight: bold; /* Đậm chữ */
+}
+
+.problemForm input[type="text"],
+.problemForm input[type="checkbox"] {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc; /* Viền input */
+    border-radius: 4px; /* Góc bo tròn input */
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #6a0dad; /* Màu nút */
+    color: #fff; /* Màu chữ */
+    border: none; /* Không viền */
+    border-radius: 4px; /* Góc bo tròn */
+    cursor: pointer; /* Con trỏ khi di chuyển qua nút */
+    transition: background-color 0.3s ease; /* Hiệu ứng hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #4b0783; /* Màu hover của nút */
+}
+.note{
+    font-style: italic;
+    font-weight: 200;
+    color: blue;
+}
+
+#box_so_thich{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.so_thich{
+    border: 1px solid black;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 12px;
+
+}
+
+#khac{
+    border: 0px;
+    border-bottom: 1px solid black;
+    width: 70px;
+    margin-left: 3px;
+}
+
+#recordButton{ 
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; 
+    background-color: #4CAF50;
+}

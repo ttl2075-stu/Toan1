@@ -1,0 +1,142 @@
+.show {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    background-color: #fff;
+    padding: 50px 55px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+    /* text-align: center; */
+    width: 60%;
+    min-height: 500px;
+    max-height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.show h1 {
+    margin-bottom: 10px;
+}
+
+.notice {
+    color: orangered;
+    position: absolute;
+    top: 12%;
+    left: 5%;
+}
+
+.checkA.inputStyle1 {
+    width: 100%;
+    text-align: right;
+    margin-right: 10%;
+    font-size: 33px;
+}
+
+.boxQuiz hr {
+    width: 100%;
+    border: 2px solid black;
+}
+
+.box-phepTinh {
+    margin-top: 9%;
+    width: 100px;
+}
+
+.box-num {
+    font-size: 33px;
+    margin-right: 10px;
+
+}
+
+.strong-help.box-num {
+    font-size: 35px;
+    /* color: rgb(3, 102, 71); */
+    color: white;
+}
+
+.box-phepTinh.strong-help-box {
+    box-sizing: unset;
+    width: 120px;
+    padding: 10px;
+    /* border: 1px solid #eeeeee; */
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    outline: 2px solid #eeeeee;
+    margin-top: 9%;
+    background-color: #eeeeee;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.divStrong {
+    min-width: 25%;
+    max-width: 30%;
+    width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    margin: 0px 2px;
+}
+
+.input-container-hep {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: right;
+}
+
+#divStrong0 {
+    background-color: #1E97F3;
+}
+
+#divStrong3 {
+    background-color: #5a0a85;
+}
+
+#divStrong2 {
+    background-color: #0a5a19;
+}
+
+#divStrong1 {
+    background-color: #c81010;
+}
+
+.boxStrong {
+    display: flex;
+    justify-content: right;
+}
+
+
+
+.boxStrong.box-num.strong-help {
+    margin: 10px 0;
+}
+
+.boxStrong.box-num.strong-help .divStrong-phepTinh {
+    color: #0a5a19;
+    width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 2px;
+    margin: 0px 2px;
+}
+
+div.tag:hover {
+    background-color: orangered;
+    font-weight: bold;
+}
+
+/* Ẩn mũi tên tăng giảm số */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    /* Optional */
+}

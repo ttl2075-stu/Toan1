@@ -1,0 +1,696 @@
+function hotrodocde(index) {
+    let deBai = document.querySelector(`#box-quiz${index} deBai`).textContent
+    let message = "câu hỏi là " + deBai
+    speakVietnamese(message)
+}
+function hotrohightline(bieuthuc, index, loaihienthi) {
+    document.querySelectorAll('.box-phepTinh').forEach((e, i) => {
+        if (index == i) {
+            e.classList.add('strong-help-box')
+            e.querySelectorAll('.box-num').forEach((u) => {
+                u.classList.add('strong-help')
+            })
+        }
+    })
+    if (loaihienthi == 1) {
+        document.querySelectorAll('.box-phepTinh').forEach((e, i) => {
+            if (index == i) {
+                e.classList.add('strong-help-box');
+                e.querySelectorAll('.box-num').forEach((u) => {
+                    u.remove();
+                });
+
+                let arrSo = arrCalculateFromString(bieuthuc);
+                let so1 = arrSo[0].toString().split('').map(Number)
+                let so2 = arrSo[2].toString().split('').map(Number)
+                adjustArrays(so1, so2)
+                let len = Math.max(so1.length, so2.length);
+                let box = document.createElement('div');
+                box.classList.add('boxStrong');
+                box.classList.add('box-num');
+                box.classList.add('strong-help');
+                let div3 = document.createElement('div');
+                let div4 = document.createElement('div');
+                div3.classList.add('divStrong-phepTinh');
+                div4.classList.add('divStrong-phepTinh1');
+                div4.innerHTML = arrSo[1]
+                div3.appendChild(div4)
+                box.appendChild(div3)
+
+                for (let a = 0; a < len; a++) {
+                    let div = document.createElement('div');
+                    let div1 = document.createElement('div');
+                    let div2 = document.createElement('div');
+                    div.classList.add('divStrong');
+                    div.id = `divStrong${a}`
+
+                    div1.innerHTML = so1[a];
+                    div2.innerHTML = so2[a];
+                    div.appendChild(div1);
+                    div.appendChild(div2);
+                    box.appendChild(div);
+                }
+                const firstChild = e.firstChild;
+                e.insertBefore(box, firstChild);
+            }
+        });
+    } else {
+        document.querySelectorAll('.box-phepTinh').forEach((e, i) => {
+            if (index == i) {
+                e.classList.add('strong-help-box');
+                e.querySelectorAll('.box-num').forEach((u) => {
+                    u.remove();
+                });
+
+                let arrSo = arrCalculateFromString(bieuthuc);
+                let so1 = arrSo[0].toString().split('').map(Number)
+                let so2 = arrSo[2].toString().split('').map(Number)
+                adjustArrays(so1, so2)
+                let len = Math.max(so1.length, so2.length);
+                let box = document.createElement('div');
+                box.classList.add('boxStrong');
+                box.classList.add('box-num');
+                box.classList.add('strong-help');
+
+
+                for (let a = 0; a < len; a++) {
+                    let div = document.createElement('div');
+                    let div1 = document.createElement('div');
+                    div.classList.add('divStrong');
+                    div.id = `divStrong${a}`
+                    div1.innerHTML = so1[a];
+                    div.appendChild(div1);
+                    box.appendChild(div);
+                }
+                let div3 = document.createElement('div');
+                let div4 = document.createElement('div');
+                div3.classList.add('divStrong-phepTinh');
+                div4.classList.add('divStrong-phepTinh1');
+                div4.innerHTML = arrSo[1]
+                div3.appendChild(div4)
+                box.appendChild(div3)
+                for (let a = 0; a < len; a++) {
+                    let div = document.createElement('div');
+                    let div2 = document.createElement('div');
+                    div.classList.add('divStrong');
+                    div.id = `divStrong${a}`
+                    div2.innerHTML = so2[a];
+                    div.appendChild(div2);
+                    box.appendChild(div);
+                }
+                let div5 = document.createElement('div');
+                let div6 = document.createElement('div');
+                div5.classList.add('divStrong-phepTinh');
+                div6.classList.add('divStrong-phepTinh1');
+                div6.innerHTML = "="
+                div5.appendChild(div6)
+                box.appendChild(div5)
+                const firstChild = e.firstChild;
+                e.insertBefore(box, firstChild);
+            }
+        });
+    }
+}
+// huong dan cho dang tinh tong hieu so co 2 chu so
+function huongDanTinh(num1, num2, pheptinh) {
+    // Chuyển hai số thành mảng các chữ số
+    let arr1 = num1.toString().split('').map(Number);
+    let arr2 = num2.toString().split('').map(Number);
+    let numA1
+    let numA2
+
+    let nho = 0
+    let muon = 0
+    let ghi
+    let temp = 0
+    let max
+    let min
+    arr1.reverse();
+    arr2.reverse();
+
+    numA1 = arr1
+    numA2 = arr2
+    max = parseInt(num1)
+    min = parseInt(num2)
+
+    len1 = numA1.lenght
+    len2 = numA2.lenght
+    console.log(numA1)
+    console.log(numA2)
+    let bieuthuc = "phép tính " + max + (pheptinh == '-' ? " trừ " : " cộng ") + min
+    let result = "phép tính " + max + (pheptinh == '-' ? " trừ " : " cộng ") + min + " được tính như sau. "
+    result += 'lấy hàng đơn vị của số thứ nhất là ' + numA1[0] + (pheptinh == '-' ? " trừ " : " cộng ") + 'hàng đơn vị của số thứ hai là ' + numA2[0];
+    if (!(parseInt(numA1[0]) - parseInt(numA2[0]) < 0 && pheptinh == "-")) {
+        result += '. Ta được kết quả là: ' + (pheptinh == '-' ? parseInt(numA1[0]) - parseInt(numA2[0]) : parseInt(numA1[0]) + parseInt(numA2[0]));
+    }
+
+    if (numA1[1] && !numA2[1]) {
+        if (pheptinh == "+") {
+            if (parseInt(numA1[0]) + parseInt(numA2[0]) >= 10) {
+                nho = 1
+                result += `, ghi ${(max + min) % 10} vào hàng đơn vị và nhớ một vào hàng chục. Sau đó, lấy hàng chục của số thứ nhất là ${numA1[1]} cộng thêm nhớ một ta được ${numA1[1] + 1} ghi lại vào hàng chục của kết quả`
+            } else {
+                result += `, ghi lại vào hàng đơn vị. Sau đó, lấy hàng chục của số thứ nhất là ${numA1[1]} ghi lại vào hàng chục của kết quả.`
+            }
+        } else {
+            if (parseInt(numA1[0]) - parseInt(numA2[0]) < 0 && pheptinh == "-") {
+                nho = 1
+                result += `, ta thấy hàng dơn vị số thứ nhất nhỏ hơn hàng đơn vị số thứ 2, nên ta mượn 10 vào hàng đơn vị số thứ nhất được ${numA1[0] + 10} trừ đi hàng đơn vị của số thứ 2 là ${numA2[0]}. Ta được kết quả là ${numA1[0] + 10 - numA2[0]}. 
+                ghi vào hàng đơn vị của kết quả và mượn ở 1 vào hàng chục số thứ nhất. lấy hàng chục số thứ nhất là ${numA1[1]} trừ đi mượn 1 ta được ${numA1[1] - 1} và ghi lại vào hàng chục của kết quả`
+            } else {
+                result += `, ghi lại vào hàng đơn vị. Sau đó, lấy hàng chục của số thứ nhất là ${numA1[1]} ghi lại vào hàng chục của kết quả`
+            }
+        }
+    } else if (!numA1[1] && numA2[1]) {
+        if (pheptinh == "+") {
+            if (parseInt(numA1[0]) + parseInt(numA2[0]) >= 10) {
+                nho = 1
+                result += `, ghi ${(max + min) % 10} vào hàng đơn vị và nhớ một vào hàng chục. Sau đó, lấy hàng chục của số thứ hai là ${numA2[1]} cộng thêm nhớ một ta được ${numA2[1] + 1} ghi lại vào hàng chục của kết quả`
+            } else {
+                result += `, ghi lại vào hàng đơn vị. Sau đó, lấy hàng chục của số thứ hai là ${numA1[1]} ghi lại vào hàng chục của kết quả.`
+            }
+        }
+    } else if (numA1[1] && numA2[1]) {
+        if (pheptinh == "+") {
+            if (parseInt(numA1[0]) + parseInt(numA2[0]) >= 10) {
+                nho = 1
+                result += `, ghi ${(max + min) % 10} vào hàng đơn vị và nhớ một vào hàng chục. Sau đó, lấy hàng chục của số thứ nhất là ${numA1[1]} cộng thêm nhớ một ta được ${numA1[1] + 1}. rồi cộng với hàng chục của số thứ hai
+                , là ${numA2[1]}. ta được ${numA1[1] + 1 + numA2[1]}, rồi ghi lại vào hàng chục của kết quả`
+            } else {
+                result += `, ghi lại vào hàng đơn vị. Sau đó, lấy hàng chục của số thứ nhất là ${numA1[1]}, cộng với hàng chục của số thứ hai, là ${numA2[1]}. 
+                ta được ${numA1[1] + numA2[1]}, rồi ghi lại vào hàng chục của kết quả`
+            }
+        } else {
+            if (parseInt(numA1[0]) - parseInt(numA2[0]) < 0 && pheptinh == "-") {
+                nho = 1
+                result += `, ta thấy hàng dơn vị số thứ nhất nhỏ hơn hàng đơn vị số thứ 2, nên ta mượn 10 vào hàng đơn vị số thứ nhất được ${numA1[0] + 10} trừ đi hàng đơn vị của số thứ 2 là ${numA2[0]}. Ta được kết quả là ${numA1[0] + 10 - numA2[0]}. 
+                ghi vào hàng đơn vị của kết quả và mượn 1 ở vào hàng chục số thứ nhất. lấy hàng chục số thứ nhất là ${numA1[1]} trừ đi mượn 1 ta được ${numA1[1] - 1}. rồi trừ đi hàng chục của số thứ hai 
+                là ${numA2[1]}. ta thu được kết quả là ${numA1[1] - numA2[1] - 1} và ghi lại vào hàng chục của kết quả`
+            } else {
+                result += `, ghi lại vào hàng đơn vị. Sau đó, lấy hàng chục số thứ nhất là ${numA1[1]}. rồi trừ đi hàng chục của số thứ hai 
+                là ${numA2[1]}. ta thu được kết quả là ${numA1[1] - numA2[1]} và ghi lại vào hàng chục của kết quả`
+            }
+        }
+    }
+    result += `. Vậy kết quả của biểu thức là ${(pheptinh == '-' ? parseInt(num1) - parseInt(num2) : parseInt(num1) + parseInt(num2))}`
+    console.log(result)
+    return result
+}
+
+function addObj(id, num) {
+    let zoneshow = document.querySelector(`#${id}`);
+    let imgObj = document.createElement('img');
+    let obj;
+    if (num == 10) {
+        obj = "../image/boque.png";
+        imgObj.style.width = `160px`;
+    } else {
+        obj = "../image/motque.png";
+        imgObj.style.width = `100px`;
+    }
+    imgObj.src = `${obj}`;
+    imgObj.classList.add('imgObj');
+    zoneshow.appendChild(imgObj); // Thêm divObj vào zoneshow thay vì imgObj
+    const elements = document.querySelectorAll('[src*="../image/motque.png"]');
+    if (elements.length >= 10) {
+        for (let i = 0; i < 10; i++) {
+            xoaAnh(1);
+        }
+        // speakVietnamese("Có 10 quả táo trên màn hình vì thế cho vào 1 giỏ táo").then(() => {
+        addObj("num1", 10);
+        // }).catch(error => {
+        //     console.error('Đã xảy ra lỗi khi nói:', error);
+        // });
+    }
+}
+
+// function xoaAnh(num) {
+//     let obj
+//     if (num == 10) {
+//         obj = "../image/boque.png"
+//     } else {
+//         obj = "../image/motque.png"
+//     }
+//     const image = document.querySelector('img[src="' + obj + '"]');
+//     if (image) {
+//         image.remove(); // Xóa ảnh khỏi DOM
+//         console.log("Đã xóa ảnh có đường dẫn: " + obj);
+//     } else {
+//         if (num == 1) {
+//             obj = "../image/boque.png"
+//             const image = document.querySelector('img[src="' + obj + '"]');
+//             if (image) {
+//                 image.remove(); // Xóa ảnh khỏi DOM
+//                 console.log("Đã xóa ảnh có đường dẫn: " + obj);
+//             }
+//             for (let i = 0; i < 9; i++) {
+//                 addObj("num1", 1);
+//             }
+//         }
+//     }
+// }
+
+function helpQuetinh(bieuthuc, index) {
+    showHelp.innerHTML = ''
+    showHelp.innerHTML = `
+        <div id="huongDanTinh">
+        <h4>Coi mỗi bó que tính là 10 đơn vị, que tính là 1 đơn vị</h4>
+            <div>
+                <div id="num1">
+                    <div id="num1_10"></div>
+                    <div id="num1_1"></div>
+                </div>
+                <div id="num2">
+                    <div id="num2_10"></div>
+                    <div id="num2_1"></div>
+                </div>
+            </div>
+        </div>
+        `
+    let arrSo = arrCalculateFromString(bieuthuc)
+    let num1 = tachSoThanhPhan10(arrSo[0])
+    let num2 = tachSoThanhPhan10(arrSo[2])
+    console.log(num1)
+    num1.forEach((u) => {
+        if (u == 10) {
+            u.addObj("num1_10", 10)
+        } else if (u == 1) {
+            u.addObj("num1_1", 1)
+        }
+    })
+
+}
+
+
+// Hàm tia số
+function helpTiaSo(bieuthuc) {
+    function tachBieuThuc(bieuThuc) {
+        let phanTu = [];
+        let soTam = '';
+        for (let char of bieuThuc) {
+            if (!isNaN(char)) {
+                soTam += char;
+            } else {
+                if (soTam !== '') {
+                    phanTu.push(soTam);
+                    soTam = '';
+                }
+                phanTu.push(char);
+            }
+        }
+        if (soTam !== '') {
+            phanTu.push(soTam);
+        }
+        return phanTu;
+    }
+
+
+    showHelp.innerHTML = '';
+    var support = document.getElementById('support');
+    support.innerHTML = '';
+    var arrSo = tachBieuThuc(bieuthuc);
+    var firstNumber = parseInt(arrSo[0]);
+    var dau = arrSo[1];
+    var secondNumber = parseInt(arrSo[2]); //
+
+    // console.log(firstNumber);
+    // console.log(dau);
+    // console.log(secondNumber);
+    if (dau == '+') {
+        var min = firstNumber;
+        var max = firstNumber + secondNumber;
+
+        // Tạo phần tử tia số
+        var tiaSo = document.createElement('div');
+        tiaSo.className = 'tia-so';
+        tiaSo.style.width = 800 + 'px';
+        support.appendChild(tiaSo);
+
+        // mũi tên đầu tia số
+        var arrow = document.createElement('div');
+        arrow.className = 'arrow';
+        tiaSo.appendChild(arrow);
+
+        // Hiển thị các vạch và số trên tia số
+        var step = 1; // Bước mặc định là 1
+        for (var i = min; i <= max; i += step) {
+            var tick = document.createElement("div");
+            tick.className = "tick";
+            tick.style.left = ((i - min) / (max - min) * 70 + 10) + "%";
+            tiaSo.appendChild(tick);
+
+            // Tạo và hiển thị số
+            var number = document.createElement("div");
+            number.className = "number";
+            number.style.left = ((i - min) / (max - min) * 70 + 10) + "%";
+            if (i === min) {
+                number.textContent = i;
+            } else {
+                number.textContent = '?';
+            }
+            tiaSo.appendChild(number);
+        }
+
+        var count = max - min;
+
+        // Tạo và hiển thị hình quả táo
+        var tiaSoWidth = tiaSo.offsetWidth;
+        var tickWidth = tiaSoWidth / (count + 1);
+
+        function showApple(index) {
+            if (index > count) return; // Điều kiện dừng đệ quy
+            var apple = document.createElement("img");
+            apple.src = "../image/1.png";
+            apple.className = "apple";
+            apple.style.left = (index * tickWidth - 80) + "px";
+            tiaSo.appendChild(apple);
+            setTimeout(function () {
+                showApple(index + 1); // Gọi đệ quy với index tăng lên
+            }, 3000); // Thời gian delay giữa mỗi lần hiển thị hình ảnh (miliseconds)
+        }
+
+        showApple(1); // Bắt đầu đệ quy từ index 1
+
+        // Tạo và hiển thị hình mũi tên
+        var arrowWidth = arrow.offsetWidth;
+        var arrowWidth = arrowWidth / (count + 1);
+        function showArrow(index) {
+            if (index > count) return; // Điều kiện dừng đệ quy
+            var arrow = document.createElement("img");
+            arrow.src = "../image/arrow_curve.png";
+            arrow.className = "muiten";
+            arrow.style.left = (index * tickWidth + 50) + "px";
+            tiaSo.appendChild(arrow);
+            setTimeout(function () {
+                showArrow(index + 1); // Gọi đệ quy với index tăng lên
+            }, 3000); // Thời gian delay giữa mỗi lần hiển thị hình ảnh (miliseconds)
+        }
+
+        showArrow(1); // Bắt đầu đệ quy từ index 1
+    } else {
+
+
+        var max = firstNumber;
+        var min = firstNumber - secondNumber;
+
+        var tiaSo = document.createElement('div');
+        tiaSo.className = 'tia-so';
+        tiaSo.style.width = 800 + 'px';
+        support.appendChild(tiaSo);
+
+        // mũi tên đầu tia số
+        var arrow = document.createElement('div');
+        arrow.className = 'arrow';
+        tiaSo.appendChild(arrow);
+
+        // Hiển thị các vạch và số trên tia số
+        var step = 1; // Bước mặc định là 1
+        for (var i = min; i <= max; i += step) { // Bắt đầu từ max và giảm dần cho đến min
+            var tick = document.createElement("div");
+            tick.className = "tick";
+            tick.style.left = ((max - i) / (max - min) * 70 + 10) + "%"; // Thay đổi cách tính toán vị trí
+            tiaSo.appendChild(tick);
+
+            // Tạo và hiển thị số
+            var number = document.createElement("div");
+            number.className = "number";
+            number.style.left = ((i - min) / (max - min) * 70 + 10) + "%"; // Tính toán vị trí dựa trên min và max
+            if (i === max) {
+                number.textContent = i;
+            } else {
+                number.textContent = '?';
+            }
+            tiaSo.appendChild(number);
+        }
+
+        var count = max - min;
+        var tiaSoWidth = tiaSo.offsetWidth;
+        var tickWidth = tiaSoWidth / (count + 1);
+
+        function showApple(index) {
+            if (index > count) return; // Điều kiện dừng đệ quy
+            var apple = document.createElement("img");
+            apple.src = "../image/tru1.png";
+            apple.className = "apple";
+            apple.style.left = (index * tickWidth - 80) + "px";
+            tiaSo.appendChild(apple);
+            setTimeout(function () {
+                showApple(index + 1); // Gọi đệ quy với index tăng lên
+            }); // Thời gian delay giữa mỗi lần hiển thị hình ảnh (miliseconds)
+        }
+
+        showApple(1); // Bắt đầu đệ quy từ index 1
+        var arrowWidth = arrow.offsetWidth;
+        var arrowWidth = arrowWidth / (count + 1);
+        function showArrow(index) {
+            if (index > count) return; // Điều kiện dừng đệ quy
+            var arrow2 = document.createElement("img");
+            arrow2.src = "../image/giam.png";
+            arrow2.className = "muiten2";
+            arrow2.style.left = (index * tickWidth + 50) + "px";
+            tiaSo.appendChild(arrow2);
+            setTimeout(function () {
+                showArrow(index + 1); // Gọi đệ quy với index tăng lên
+            }); // Thời gian delay giữa mỗi lần hiển thị hình ảnh (miliseconds)
+        }
+
+        showArrow(1); // Bắt đầu đệ quy từ index 1
+
+    }
+
+
+}
+
+// Hàm tạo bảng
+function drawTable(firstNumber, secondNumber, operation) {
+    showHelp.innerHTML = '';
+    var container = document.getElementById('tableContainer');
+    container.innerHTML = "";
+    var table = document.createElement('table');
+    var one = firstNumber;
+    var two = secondNumber;
+    var delta = firstNumber % 10;
+    var tinh = one - delta;
+    var tru = firstNumber;
+    var so = 1;
+    var tong = firstNumber + secondNumber;
+    var sub = firstNumber - secondNumber;
+    var sub_delta = sub % 10;
+    var tinh_tru = sub - sub_delta;
+    var tru_2 = secondNumber;
+
+    for (var i = 0; i < 3; i++) {
+        var row = document.createElement('tr');
+        for (var j = 0; j < 10; j++) {
+            if (operation == "+") {
+                var cell = document.createElement('td');
+                cell.className = tinh;
+                var div = document.createElement('div');
+                div.className = "bocso";
+                div.id = tinh;
+                div.textContent = tinh;
+                cell.appendChild(div);
+                row.appendChild(cell);
+
+                if (tinh > tru && tinh <= tong) {
+                    var smallElement = document.createElement('div');
+                    smallElement.className = 'small-element';
+                    smallElement.textContent = "+" + so;
+                    cell.appendChild(smallElement);
+                    so++;
+                    tru++;
+                }
+                tinh++;
+            } else {
+                var cell = document.createElement('td');
+                cell.className = tinh;
+                var div = document.createElement('div');
+                div.className = "bocso";
+                div.id = tinh_tru;
+                div.textContent = tinh_tru;
+                cell.appendChild(div);
+                row.appendChild(cell);
+
+                if (tinh_tru >= sub && tinh_tru < one) {
+                    var smallElement = document.createElement('div');
+                    smallElement.className = 'small-element';
+                    smallElement.textContent = "-" + tru_2;
+                    cell.appendChild(smallElement);
+                    tru_2--;
+                }
+                tinh_tru++;
+            }
+        }
+        table.appendChild(row);
+    }
+    container.appendChild(table);
+    animateColor(one, two, operation);
+}
+
+// Hàm tạo hiệu ứng
+function animateColor(one, two, operation) {
+    var cells = document.querySelectorAll('.bocso');
+    var delay = 1000;
+    var delayDecreaseFactor = 0.9;
+    var counter = 0;
+    var sum = one + two;
+    var index = 1;
+    if (operation === "+") {
+        cells.forEach(function (cell) {
+            var id = parseInt(cell.textContent);
+            if (id === one) {
+                cell.style.backgroundColor = 'lightpink';
+                cell.style.boxShadow = '0 0 10px 10px lightblue';
+            }
+            if (id > one && id <= sum) {
+                setTimeout(function () {
+                    var speech = new SpeechSynthesisUtterance();
+                    speech.lang = 'vi-VN';
+                    speech.volume = 1;
+                    speech.rate = 1;
+                    speech.pitch = 1;
+                    speech.text = "Cộng" + index;
+                    cell.style.boxShadow = '-15px 0px 10px 5px lightblue';
+                    cell.style.transform = 'translateX(4px)';
+                    cell.style.transition = 'transform 0.3s ease';
+                    cell.style.animation = 'moveRight 0.3s ease';
+                    window.speechSynthesis.speak(speech);
+
+                    if (id === sum) {
+                        var speech_2 = new SpeechSynthesisUtterance();
+                        speech_2.lang = 'vi-VN';
+                        speech_2.volume = 1;
+                        speech_2.rate = 1;
+                        speech_2.pitch = 1;
+                        speech_2.text = "Đáp án là" + id;
+                        cell.style.backgroundColor = 'red';
+                        cell.style.border = '5px solid red';
+                        window.speechSynthesis.speak(speech_2);
+                    } else {
+                        var image = document.createElement('img');
+                        image.className = 'img-above-number';
+                        image.src = 'chan_gau.png';
+                        image.style.transform = 'rotate(90deg)';
+                        cell.appendChild(image);
+                    }
+                    index++;
+                }, delay * counter * 1.5);
+                counter++;
+            }
+        });
+    } else if (operation === "-") {
+        var reversedCells = Array.from(cells).reverse();
+        var sub = one - two;
+
+        reversedCells.forEach(function (cell) {
+            var id = parseInt(cell.textContent);
+            if (id === one) {
+                cell.style.backgroundColor = 'lightpink';
+                cell.style.boxShadow = '0 0 10px 10px lightblue';
+                cell.style.border = '5px solid lightpink';
+            }
+
+            if (id >= sub && id < one) {
+                setTimeout(function () {
+                    var speech = new SpeechSynthesisUtterance();
+                    speech.lang = 'vi-VN';
+                    speech.volume = 1;
+                    speech.rate = 1;
+                    speech.pitch = 1;
+                    speech.text = "Trừ" + index;
+                    window.speechSynthesis.speak(speech);
+
+                    cell.style.boxShadow = '15px 0px 10px 5px lightblue';
+                    cell.style.transform = 'translateX(-4px)';
+                    cell.style.transition = 'transform 0.3s ease';
+                    cell.style.animation = 'moveLeft 0.3s ease';
+
+                    if (id === sub) {
+                        var speech_2 = new SpeechSynthesisUtterance();
+                        speech_2.lang = 'vi-VN';
+                        speech_2.volume = 1;
+                        speech_2.rate = 1;
+                        speech_2.pitch = 1;
+                        speech_2.text = "Đáp án là" + id;
+                        cell.style.backgroundColor = 'red';
+                        cell.style.border = '5px solid red';
+                        window.speechSynthesis.speak(speech_2);
+                    } else {
+                        var image = document.createElement('img');
+                        image.className = 'img-above-number';
+                        image.src = 'chan_gau.png';
+                        image.style.transform = 'rotate(-90deg)';
+                        cell.appendChild(image);
+                    }
+                    index++;
+                }, delay * counter * 1.5);
+                counter++;
+            }
+        });
+    }
+}
+
+// lego
+function generateLEGO(bieuthuc) {
+    showHelp.innerHTML = ''
+    const legoContainer = document.getElementById("legoContainer");
+    legoContainer.innerHTML = '';
+    const math = bieuthuc.match(/[+\-*/]/g);
+    const numbers = bieuthuc.match(/\d+/g);
+
+    if (numbers) {
+        let i = 0;
+        numbers.forEach(number => {
+            let legoDots = '';
+            let legoCount = parseInt(number);
+
+            while (legoCount > 0) {
+                if (i === 0) {
+                    legoDots += '<img src="../image/lego_1.png" width="100px">';
+                }
+                else {
+                    legoDots += '<img src="../image/lego_2.png" width="100px">';
+                }
+                legoCount -= 1;
+            }
+
+            const legoImage = document.createElement("div");
+            legoImage.innerHTML = legoDots;
+            legoImage.classList.add("lego");
+            legoContainer.appendChild(legoImage);
+
+            if (i < math.length) {
+                const mathImage = document.createElement("div");
+                let mathDots = '';
+                switch (math[i]) {
+                    case '+':
+                        mathDots += '<img src="../image/daucong.png" width="100px">';
+                        break;
+                    case '-':
+                        mathDots += '<img src="../image/dautru.png" width="100px">';
+                        break;
+                }
+                mathImage.innerHTML = mathDots;
+                mathImage.style.display = "flex";
+                mathImage.style.alignItems = "center";
+                legoContainer.appendChild(mathImage);
+            }
+
+            i++;
+        });
+
+        // Thêm dấu bằng vào giữa hai cột lego
+        const equalsImage = document.createElement("div");
+        equalsImage.innerHTML = '<img src="../image/daubang.png" width="100px">';
+        equalsImage.style.display = "flex";
+        equalsImage.style.alignItems = "center";
+        legoContainer.appendChild(equalsImage);
+
+        // Thêm ô input kết quả vào giữa hai cột lego
+        const answerInput = document.createElement("div");
+        answerInput.innerHTML = '<input type="number" id="mathAnswer" placeholder="?">';
+        answerInput.style.display = "flex";
+        answerInput.style.alignItems = "center";
+        legoContainer.appendChild(answerInput);
+    }
+}

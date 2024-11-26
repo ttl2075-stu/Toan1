@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    /* background-color: #f4f4f4; */
+    padding: 20px;
+    overflow: hidden;
+}
+
+a {
+    display: inline-block;
+    background-color: #3a6a94;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+    background-color: #3a6a94;
+    transform: translateY(-5px);
+}
+
+form {
+    max-width: 500px;
+    top:10%;
+    margin: 0 auto;
+    overflow-y: auto; 
+    max-height: 500px; 
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--shadow); 
+    background-color: var(--container); 
+}
+
+form h1{
+    font-size: 30px;
+    text-align: center;
+    color: var(--color);
+    /* margin-bottom: 10px; */
+}
+
+form label,
+form input[type="text"],
+form input[type="submit"],
+form select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    outline: 2px solid var(--primary);
+}
+
+form input[type="text"]:hover,
+form input[type="number"],
+form input[type="password"]:hover,
+form select:hover {
+    border: 2px solid var(--color);
+    cursor: pointer;
+}
+
+form input[type="text"]:focus,
+form input[type="number"],
+form input[type="password"]:focus,
+form select:focus {
+    border: 2px solid var(--color);
+}
+
+form input[type="submit"] {
+    background-color: #3a6a94;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3a6a94;
+    transform: translateY(-5px);
+}
+i{
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.danhsach {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+.danhsach button {
+    font-weight: bold;
+}
+
+#questions-section h1, #exercises-section h1{
+    font-size: 40px;
+    text-align: center;
+    color: var(--color);
+    margin-top: 30px;
+
+}
+
+table{
+    border: 1px solid black;
+    background-color: var(--blue);
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0px 0px 10px 10px var(--sky); 
+    background-color: var(--white);
+    overflow-y: auto;
+}
+
+tr{
+    border: 1px soild black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px soild black;
+}
+
+th {
+    background-color: var(--color);
+    color: var(--container);
+    font-size: 25px;
+    /* text-align: center; */
+}
+
+tr:nth-child(even){
+    background-color: #b3e3f7;
+}
+
+.btn_xem_chi_tiet{
+    padding: 8px 16px;
+    margin-right: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.btn_xem_chi_tiet:hover{
+    background-color: #3a6a94;
+    transform: translateY(-5px);
+}
+
+.btn_xem_chi_tiet i{
+    font-size: 18px;
+}
+
+#baitap{
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}

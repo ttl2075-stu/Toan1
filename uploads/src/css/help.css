@@ -1,0 +1,153 @@
+.help-container {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+    display: none;
+    text-align: center;
+    width: 94%;
+    min-height: 700px;
+}
+
+
+.help-container.show {
+    display: block;
+}
+
+
+.back-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.div-btn {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+
+}
+
+.show-help {
+    margin-top: 10%;
+}
+
+button.back-button:hover {
+    background-color: orangered;
+    cursor: pointer;
+}
+
+.strong-help {
+    font-weight: bold;
+    /* In đậm */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Đổ bóng */
+}
+
+#num1_1,
+#num2_1,
+#num2_10,
+#num1_10 {
+    display: flex;
+    justify-content: left;
+}
+
+#num2_1 img,
+#num2_10 img {
+    /* filter: grayscale(50%) blur(5px); */
+    filter: hue-rotate(180deg) saturate(200%);
+}
+
+#huongDanTinh span {
+    font-weight: bold;
+    font-size: 40px;
+
+}
+
+#huongDanTinh span:nth-child(1) {
+    color: rgb(214, 201, 14);
+    /* Màu cho phần tử span thứ nhất */
+}
+
+#huongDanTinh span:nth-child(2) {
+    color: rgb(21, 66, 30);
+    /* Màu cho phần tử span thứ hai */
+}
+
+#huongDanTinh span:nth-child(3) {
+    color: rgb(58, 38, 206);
+    /* Màu cho phần tử span thứ ba */
+}
+
+
+#huongDanTinh .box-phepTinh.strong-help-box {
+    width: 200px;
+}
+
+.cauhoi {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    background-color: bisque;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* thêm
+ */
+
+
+.input-box {
+    width: 32px;
+    height: 60px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 4px;
+}
+
+.input-box:focus {
+    outline: none;
+}
+
+#input-box0 {
+    background-color: #1e97f3;
+    /* Màu nền khi chọn */
+}
+
+#input-box1 {
+    /* Màu nền cho số thứ nhất */
+    background-color: #c81010;
+    margin-right: 2px;
+}
+
+.input-box:nth-child(2) {
+    background-color: #ccffcc;
+    /* Màu nền cho số thứ hai */
+}
+
+.input-box:nth-child(3) {
+    background-color: #ccccff;
+    /* Màu nền cho số thứ ba */
+}
+
+.input-box:nth-child(4) {
+    background-color: #ffffcc;
+    /* Màu nền cho số thứ tư */
+}
+

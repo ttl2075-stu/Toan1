@@ -1,0 +1,105 @@
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    font-size: 25px;
+}
+
+button:hover {
+    background-color: orangered;
+    transform: translateY(-5px);
+}
+
+.return-button-top-left {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.confirm-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.confirm-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.confirm-button:hover {
+    background-color: orangered;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.btn-quiz {
+    margin: 2px 4px;
+    font-weight: bold;
+}
+
+.isSelect-btn-quiz {
+    background-color: aquamarine;
+}
+
+.btn-quiz-true {
+    background-color: #00ff00;
+}
+
+.btn-quiz-false {
+    background-color: orangered;
+}
+
+.isSelect-btn-quiz.btn-quiz-true {
+    background-color: aquamarine;
+}
+
+.isSelect-btn-quiz.btn-quiz-false {
+    background-color: aquamarine;
+}
+
+.btn {
+    margin: 10px 0px;
+    width: 80%;
+    overflow: hidden;
+    /* Ẩn phần vượt quá kích thước */
+    text-overflow: ellipsis;
+    /* Hiển thị dấu chấm khi văn bản bị ẩn */
+    white-space: nowrap;
+    /* Ngăn cản việc xuống dòng */
+    position: relative;
+    /* Để vị trí tuyệt đối cho biểu tượng */
+}
+
+.btn:after {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn.hinhthucTL {
+    margin: 10px 0px;
+    width: fit-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}

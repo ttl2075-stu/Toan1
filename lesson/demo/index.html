@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kéo thả táo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">
+
+            <div id="zoneshow" class="item" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container1">
+        <div><span>Số lượng:&ensp;</span><br><span id="objCount">0</span></div>
+    </div>
+
+    <div class="container2">
+        <div><span>Nghe khi số quả thay đổi:&ensp;</span><input type="range" id="rangeInput" min="0" max="1" value="0">
+        </div>
+        <div><span>Độ khó:&ensp;</span><input type="range" id="rangeLeve" min="0" max="2" value="0" style="width: 60px;"
+                onchange="show()"></div>
+        <div id="selectObj">
+            <form action="" id="selectObjForm"></form>
+            <label for="select">Lựa chọn đối tượng</label> <br>
+            <input type="radio" name="select" value="obj1" onchange="display(event)"><span>&ensp;Con vật</span> <br>
+            <input type="radio" name="select" id="selectObj2" value="obj2" onchange="display(event)"
+                checked><span>&ensp;Đồ vật</span>
+            </form>
+        </div>
+    </div>
+    
+    <div class="container3">
+        <div class="box box2">
+            <span style="position:absolute; top: -25px" class="require">Chọn đồ vật</span>
+            <div id="basket" class="item" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            </div>
+        </div>
+    </div>
+    <div class="noticeSelect" id="convat">Chọn con vật!</div>
+    <div class="noticeSelect" id="dovat">Chọn con đồ!</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

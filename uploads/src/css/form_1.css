@@ -1,0 +1,72 @@
+form {
+    max-width: 500px;
+    top:10%;
+    margin: 0 auto;
+    overflow-y: auto; 
+    max-height: 500px; 
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--shadow); 
+    background-color: var(--container); 
+}
+
+form h1{
+    font-size: 30px;
+    text-align: center;
+    color: var(--color);
+    /* margin-bottom: 10px; */
+}
+
+form label,
+form input[type="text"],
+form input[type="submit"],
+form select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    outline: 2px solid var(--primary);
+}
+
+form input[type="text"]:hover,
+form input[type="password"]:hover,
+form select:hover {
+    border: 2px solid var(--color);
+    cursor: pointer;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form select:focus {
+    border: 2px solid var(--color);
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+form input[type="submit"]:hover {
+    background-color: orangered;
+    transform: translateY(-5px);
+}

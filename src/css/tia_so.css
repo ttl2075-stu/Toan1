@@ -1,0 +1,60 @@
+.tia-so {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  left: 5%;
+  top: 40%;
+}
+.tick {
+  width: 10px;
+  height: 60px;
+  background-color: #3f8a25;
+  position: absolute;
+  top: -25px;
+}
+
+.number {
+  position: absolute;
+  bottom: -80px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid black;
+  position: absolute;
+  /* top: -5px; 
+    left: 50%; 
+    transform:  translateX(399px) rotate(90deg);  */
+  transform: rotate(90deg);
+  right: -2%;
+  top: -40%;
+}
+
+.apple {
+  width: 12%; /* Điều chỉnh kích thước táo */
+  position: absolute;
+  top: -150px; /* Điều chỉnh vị trí táo */
+}
+.muiten {
+  width: 15%; /* Điều chỉnh kích thước táo */
+  position: absolute;
+  /* top: -90px; */
+  bottom: -10%;
+  transform: translateX(-120%) rotate(130deg);
+  /* transform: rotate(130deg); */
+}
+
+.muiten2 {
+  width: 15%; /* Điều chỉnh kích thước táo */
+  position: absolute;
+  top: -90px;
+  transform: translateX(-120%) rotate(-40deg);
+}

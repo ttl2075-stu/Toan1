@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://resetcss.long.pro.vn/base.css" />
+        <style>
+            html {
+                /* font-size: 62.5%; */
+                font-size: 60%;
+            }
+            body {
+                font-family: Montserrat, sans-serif;
+                font-size: 2.4rem;
+                text-align: justify;
+                line-height: 1.5;
+                background-color: #f9f9f9;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: Oswald, sans-serif;
+                font-size: 4.2rem;
+                font-weight: bold;
+                padding: 5px 0;
+                color: #263e85;
+            }
+
+            p {
+                padding-bottom: 5px;
+            }
+            .trainProgram {
+                display: flex;
+                flex-direction: row;
+                margin: 50px;
+
+                .text {
+                    width: 60%;
+                }
+
+                .media {
+                    width: 40%;
+                    padding: 3%;
+                    padding-bottom: 0;
+                }
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            ul li {
+                position: relative;
+                padding-left: 50px;
+            }
+
+            ul li::after {
+                content: '';
+                height: 25px;
+                width: 25px;
+                background: url(./media/star2.png) no-repeat 0 0 / contain;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 5px;
+            }
+
+            ol {
+                list-style-type: decimal;
+                padding-inline-start: 50px;
+            }
+
+            .rule {
+                width: 100%;
+                height: fit-content;
+                box-sizing: border-box;
+                background-color: #b2ebf2;
+                padding: 1%;
+                text-align: center;
+
+                .row {
+                    margin: 20px 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+
+                .groups {
+                    width: 30%;
+                    box-sizing: border-box;
+                    height: auto;
+                    padding: 10px 20px;
+                    text-align: center;
+                }
+
+                .iconIMG img {
+                    height: 70px;
+                    width: auto;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+                }
+
+                .description {
+                    font-style: italic;
+                }
+
+                .border {
+                    border-left: thin solid #4d181c;
+                    border-right: thin solid #4d181c;
+                }
+            }
+
+            .benefit-customer {
+                margin: 50px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                .benefit {
+                    width: 40%;
+                    align-self: center;
+                }
+
+                .benefit-description {
+                    background-color: #b2ebf2;
+                    padding: 15px;
+                    box-sizing: border-box;
+                    border-radius: 15px;
+                    font-size: 1.8rem;
+                    position: relative;
+                    padding-top: 75px;
+                }
+
+                .benefit-description::after {
+                    content: '';
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background: hsl(239.75deg 100% 50% / 20%) url(./media/quote.svg) no-repeat 50%;
+                    position: absolute;
+                    top: 20px;
+                    left: 25px;
+                }
+
+                .indent {
+                    text-indent: 1.8rem;
+                }
+
+                .customer {
+                    width: 50%;
+                    height: auto;
+                    background-color: #ffffff;
+                    border-radius: 15px;
+                    padding: 25px;
+                    box-shadow: 5px 5px 120px hsla(0, 0%, 76%, 0.15);
+                }
+
+                .title {
+                    font-weight: bold;
+                    color: #263e85;
+                    font-size: 2.8rem;
+                }
+
+                .user {
+                    background-color: #f7f7f7;
+                    padding: 20px;
+                    margin: 15px 0;
+                    font-size: 2.2rem;
+                    border-radius: 10px;
+                }
+            }
+
+            .benefitForUser {
+                height: auto;
+                background-color: #ffffff;
+                box-sizing: border-box;
+                padding: 50px;
+
+                h1 {
+                    text-align: center;
+                }
+
+                .benefitFU-box {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+
+                .benefitFU-box-groups {
+                    width: 40%;
+                    height: auto;
+                    background-color: #f7f7f7;
+                }
+
+                .mr-bottom {
+                    margin-bottom: 50px;
+                }
+                .BBG-img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .BBG-text {
+                    box-sizing: border-box;
+                    padding: 20px;
+                }
+                p {
+                    text-align: center;
+                    font-weight: bold;
+                    color: #263e85;
+                    padding: 5px 0;
+                    font-size: 2.8rem;
+                }
+            }
+        </style>
+        <title>Giới thiệu</title>
+    </head>
+    <body>
+        <section class="trainProgram">
+            <div class="text">
+                <h1 style="padding-bottom: 0">CHƯƠNG TRÌNH ĐÀO TẠO</h1>
+                <h2 style="padding-top: 0">Hệ thống Toán 1</h2>
+                <p>
+                    Hệ thống toán 1 xây dựng dựa trên Chương trình GDPT 2018 (Ban hành kèm theo Thông tư số
+                    32/2018/TT-BGDĐT), môn Toán cấp tiểu học. Từ đó nhằm giúp học sinh đạt các mục tiêu chủ yếu sau:
+                </p>
+                <ul>
+                    <li>Góp phần hình thành và phát triển năng lực toán học, yêu cầu cần đạt.</li>
+                    <li>
+                        Có những kiến thức và kĩ năng toán học cơ bản ban đầu, thiết yếu về: Số và phép tính, Hình học
+                        và đo lường, Thống kê và xác suất.
+                    </li>
+                </ul>
+                <p>Chương trình môn Toán lớp 1 bao gồm hai mạch kiến thức:</p>
+                <ol type="1">
+                    <li>Số và phép tính</li>
+                    <li>Hình học và Đo lường</li>
+                </ol>
+            </div>
+            <div class="media">
+                <img src="./media/mu-cu-nhan.png" alt="" />
+            </div>
+        </section>
+
+        <section class="rule">
+            <h1>Thiết kế phổ dụng và nguyên tắc</h1>
+            <p>
+                UDL (Universal Design for Learning) là khung thiết kế giáo dục tạo ra môi trường học linh hoạt và dễ
+                tiếp cận cho tất cả học sinh, cung cấp nhiều phương tiện để học sinh thể hiện và tham gia học tập. Giải
+                quyết các vấn đề liên quan đến hình thức cung cấp bài học, cách thể hiện của học sinh và cách GV kích
+                thích sự tham gia của HS
+            </p>
+            <div class="row">
+                <div class="groups">
+                    <div class="iconIMG">
+                        <img src="./media/presentation.png" alt="" />
+                    </div>
+                    <p class="description">
+                        Đa dạng trong cách trình bày thông tin và cung cấp nội dung dạy học của GV
+                    </p>
+                </div>
+                <div class="groups border">
+                    <div class="iconIMG">
+                        <img src="./media/idea.png" alt="" />
+                    </div>
+                    <p class="description">Đa dạng trong cách thể hiện của HS</p>
+                </div>
+                <div class="groups">
+                    <div class="iconIMG">
+                        <img src="./media/teamwork.png" alt="" />
+                    </div>
+                    <p class="description">Đa dạng trong cách kích thích sự tham gia của HS</p>
+                </div>
+            </div>
+            <p>
+                Việc vận dụng 3 nguyên tắc cơ bản của UDL trong môi trường học tập theo Thiết kế phổ dụng, mọi trẻ em
+                đều được đón nhận, không bị từ chối, không phân biệt
+            </p>
+        </section>
+
+        <section class="benefit-customer">
+            <div class="benefit">
+                <div class="benefit-img">
+                    <img src="./media/student-math.png" alt="" />
+                </div>
+                <div class="benefit-description">
+                    <p class="indent">
+                        Website là hệ thống học tập môn toán 1 hỗ trợ giáo viên, phụ huynh và học sinh học tập môn toán
+                        thông qua các bài tập, trò chơi toán học trên trang web.
+                    </p>
+                    <p class="indent">
+                        Các dạng bài được xây dựng trên hệ thống bài tập bổ trợ môn Toán lớp 1 theo các yêu cầu của UDL
+                        trong dạy học, qua đó giúp phát triển năng lực toán học ở học sinh đặc biệt là học sinh khuyết
+                        tật gặp nhiều khó khăn trong quá trình học tập môn toán.
+                    </p>
+                </div>
+            </div>
+            <div class="customer">
+                <p class="title indent">Đối tượng sử dụng:</p>
+                <div class="user">
+                    Hệ thống toán 1 hướng đến đa dạng các học sinh đặc biệt là học sinh khuyết tật tiền tiểu học, lớp 1
+                    , đầu cấp tiểu học
+                </div>
+                <div class="user">
+                    Giáo viên hỗ trợ học sinh học tập môn toán bằng cách thiết kế các bài tập bổ trợ được cung cấp định
+                    dạng sẵn từ trang web
+                </div>
+                <div class="user">
+                    Phụ huynh hỗ trợ học sinh học tập tại nhà, thực hiện thao tác các bài tập trên trang web để phát
+                    triển nâng cao kĩ năng tính toán của bản thân
+                </div>
+                <div class="user">
+                    Chuyên gia, giáo viên, sinh viên nghiên cứu liên quan đến đề tài dạy học môn toán cho học sinh
+                    khuyết tật tham khảo
+                </div>
+            </div>
+        </section>
+
+        <section class="benefitForUser">
+            <h1 style="margin-bottom: 20px">LỢI ÍCH KHI SỬ DỤNG</h1>
+            <div class="benefitFU-box">
+                <div class="benefitFU-box-groups mr-bottom">
+                    <div class="BBG-img">
+                        <img src="./media/students.jpg" alt="" />
+                    </div>
+                    <div class="BBG-text">
+                        <p>Đối với học sinh</p>
+                        <ul>
+                            <li>Hứng Thú Học Vượt Trội - Xuyên Suốt Quá Trình Học</li>
+                            <li>
+                                Video và hình ảnh minh họa sinh động, hấp dẫn, kích thích sự tò mò và khám phá của trẻ
+                            </li>
+                            <li>Đa dạng cách thức, hình thức hỗ trợ và biểu đạt thông tin</li>
+                            <li>
+                                Xây dựng trò chơi toán học có tính tương tác giúp trẻ vừa học, vừa chơi giúp duy trì
+                                hứng thú học xuyên suốt cho trẻ
+                            </li>
+                            <li>
+                                Khích lệ và tạo động lực cho trẻ thông qua hệ thống phần thưởng (xu, sticker, vật phẩm
+                                nuôi thú cưng,...)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="benefitFU-box-groups mr-bottom">
+                    <div class="BBG-img">
+                        <img src="./media/parents.webp" alt="" />
+                    </div>
+                    <div class="BBG-text">
+                        <p>Đối với phụ huynh</p>
+                        <ul>
+                            <li>Hỗ trợ cha mẹ trong việc hướng dẫn học sinh học bài tại nhà</li>
+                            <li>Các bài hướng dẫn dễ hiểu, tài liệu tham khảo được liên kết sẵn ở từng bài học</li>
+                            <li>Bài tập đa dạng, kết quả được lưu trữ để giáo viên đánh giá</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="benefitFU-box-groups mr-bottom">
+                    <div class="BBG-img">
+                        <img src="./media/teacher.jpg" alt="" />
+                    </div>
+                    <div class="BBG-text">
+                        <p>Đối với giáo viên và nhà trường</p>
+                        <ul>
+                            <li>Thực hiện thiết kế bài tập nhanh, theo chuẩn chương trình GDPT</li>
+                            <li>Thu kết quả đánh giá kết quả học tập tiến bộ của học sinh một cách khách quan</li>
+                            <li>Lưu trữ bài tập và tham khảo bài tập trên hệ thống</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="benefitFU-box-groups mr-bottom">
+                    <div class="BBG-img">
+                        <img src="./media/system.jpg" alt="" />
+                    </div>
+                    <div class="BBG-text">
+                        <p>Về mặt hệ thống</p>
+                        <ul>
+                            <li>
+                                Mỗi học sinh đều có tài khoản riêng và phân theo lớp để GV và phụ huynh theo dõi tiến độ
+                                học tập
+                            </li>
+                            <li>Báo cáo tiến độ học tập của học sinh được lưu trữ, đánh giá khách quan</li>
+                            <li>
+                                Thao tác tương tác sử dụng trực tiếp các hỗ trợ hình ảnh trực quan khi thực hiện bài tập
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
