@@ -3,7 +3,7 @@
     // print_r($_SESSION);
     include 'connectdb.php';
     if(isset($_SESSION['id_user'])){
-		header("Location:mo_dau.php");
+		header("Location: khoa_hoc.php");
 	}
 	// else{
 	// 	header("");
