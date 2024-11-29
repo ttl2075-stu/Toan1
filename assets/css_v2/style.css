@@ -1,0 +1,26 @@
+/* FONT CHỮ Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* BẢNG ICON */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+/* LINK ICON https://fontawesome.com/  */
+
+/* MÀU */
+:root{
+    --blue: #0b2585;
+    --bluehover: #0b2585;
+    --white: #ffffff;
+    --whitehover: #f8f9fa;
+    --black: #000000;
+    --blackhover: #505050;
+    --yellow: #ffd43b;
+    --yellowhover: #fab005;
+}
+
+
+
+/* BẢNG SIZE */
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 62.5% !important;
+}
