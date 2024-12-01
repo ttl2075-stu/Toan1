@@ -17,26 +17,31 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="src/css/nhap_cau_hoi.css?v=1">
-	<link rel="stylesheet" href="src/css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/nhap_cau_hoi.css?v=1">
+    <link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
+    <link rel="stylesheet" href="assets/css_v2/nhap_cau_hoi.css">
     <title>Nhập câu câu hỏi D7.K1</title>
     <style>
-        .center-text{
-            font-size: 30px;
-            text-align: center;
-            color: var(--color);
-            font-weight: bold;
-        }
+    .center-text {
+        font-size: 30px;
+        text-align: center;
+        color: var(--color);
+        font-weight: bold;
+    }
     </style>
 </head>
+
 <body>
-<?php
+    <?php
         // role=2&id_user=2&id_cau_hoi=35
         // $role = $_GET['role'];
         // $id_user = $_GET['id_user'];
@@ -58,10 +63,10 @@
         // in loại câu hỏi
         // $conn = mysqli_connect('localhost', 'root','', 'nckh_2024');
         ?>
-            <div id="bai_hoc">
-            <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
-            </div>
-        <?php
+    <div id="bai_hoc">
+        <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
+    </div>
+    <?php
         $sql ="SELECT * FROM `loai_hien_thi` WHERE `id_loai_hien_thi`=$id_loai_cau";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) 
@@ -98,11 +103,11 @@
         <!-- biểu thức -->
         <label for="">Biểu thức:</label>
         <!--<input required type="text" name="bieu_thuc" id="">-->
-         <select name="expression" id="bieu_thuc">
-          <option value="addition">Phép cộng</option>
-          <option value="subtraction">Phép trừ</option>
+        <select name="expression" id="bieu_thuc">
+            <option value="addition">Phép cộng</option>
+            <option value="subtraction">Phép trừ</option>
         </select>
-        
+
         <!-- dấu -->
         <!-- <label for="">Dấu:</label>
         <input type="text" name="dau" id=""> -->
@@ -111,7 +116,7 @@
         <!-- đáp án -->
         <!--<label for="">Đáp án</label>-->
         <!--<input required type="text" name="da" id="">-->
-        
+
         <!-- <div>
             <select name="loai_ht" id="">
                 
@@ -136,8 +141,8 @@
             ?>
            
         </div> -->
-         
-        <input type="submit" name="btn" value="Thêm câu hỏi">
+
+        <input class="btn-submit" type="submit" name="btn" value="Thêm câu hỏi">
     </form>
     <?php
         
@@ -187,6 +192,7 @@
            
         }
     ?>
-   
+
 </body>
+
 </html>

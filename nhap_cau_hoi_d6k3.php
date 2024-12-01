@@ -15,34 +15,40 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="src/css/test.css">
-	<link rel="stylesheet" href="src/css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/test.css">
+    <link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
+    <link rel="stylesheet" href="assets/css_v2/nhap_cau_hoi.css">
     <title>Nhập câu hỏi D6.K3</title>
     <style>
-        .centered-text {
-            font-size: 30px;
-            text-align: center;
-            color: var(--color);
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        #bieu_thuc{
-            width: 100%;
-            padding: 10px;
-            border: 1px solid var(--primary);
-            border-radius: 8px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            outline: 2px solid var(--primary);
-        }
+    .centered-text {
+        font-size: 30px;
+        text-align: center;
+        color: var(--color);
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    #bieu_thuc {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--primary);
+        border-radius: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        outline: 2px solid var(--primary);
+    }
     </style>
 </head>
+
 <body>
     <?php 
         function get_ten_bai($ma_bai_hoc){
@@ -62,10 +68,10 @@
         // in loại câu hỏi
         // $conn = mysqli_connect('localhost', 'root','', 'nckh_2024');
         ?>
-            <div id="bai_hoc">
-            <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
-            </div>
-        <?php
+    <div id="bai_hoc">
+        <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
+    </div>
+    <?php
         $sql ="SELECT * FROM `loai_hien_thi` WHERE `id_loai_hien_thi`=$id_loai_cau";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) 
@@ -89,35 +95,35 @@
     <form action="" method="POST" enctype="multipart/form-data">
         <!-- số thứ nhất -->
         <label for="">Số thứ nhất:</label>
-        <input required  type="text" name="so_thu_nhat" id=""><br>
-         <!-- biểu thức -->
+        <input required type="text" name="so_thu_nhat" id=""><br>
+        <!-- biểu thức -->
         <!-- <label for="">Biểu thức:</label>
         <input required  type="text" name="bieu_thuc" id=""><br> -->
         <select name="expression" id="bieu_thuc">
-          <option value="addition">Phép cộng</option>
-          <option value="subtraction">Phép trừ</option>
+            <option value="addition">Phép cộng</option>
+            <option value="subtraction">Phép trừ</option>
         </select>
         <!-- số thứ hai -->
         <label for="">Số thứ hai:</label>
-        <input required  type="text" name="so_thu_hai" id=""><br>
-       
+        <input required type="text" name="so_thu_hai" id=""><br>
+
         <?php $duong_dan = 'anh/convat/';
             $url_anh = get_duong_dan_ngau_nhien($duong_dan);
             echo "<input type='hidden' name='anh0' value='$url_anh'>"; ?>
         <img width='50px' src='<?php echo $url_anh; ?>'>
         <label for="">Ảnh đối tượng</label><br>
-        <input   type='file' name='dt1' ><br>
+        <input type='file' name='dt1'><br>
 
         <?php $duong_dan = 'anh/convat/';
             $url_anh = get_duong_dan_ngau_nhien($duong_dan);
             echo "<input type='hidden' name='anh1' value='$url_anh'>"; ?>
         <img width='50px' src='<?php echo $url_anh; ?>'>
         <label for="">Ảnh đối tượng thứ 2(nếu là phép cộng)</label><br>
-        <input   type='file' name='dt2' ><br><br><br>
+        <input type='file' name='dt2'><br><br><br>
         <?php echo "<input type='hidden' name='role' value='$role'>" ?>
         <?php echo "<input type='hidden' name='id_user' value='$id_user'>" ?>
         <?php echo "<input type='hidden' name='id_khoa_hoc' value='$id_khoa_hoc'>" ?>
-        <input type="submit" name="btn" value="Thêm câu hỏi">
+        <input class="btn-submit" type="submit" name="btn" value="Thêm câu hỏi">
     </form>
     <?php
         
@@ -239,6 +245,7 @@
             return $randomImage;
         }
     ?>
-   
+
 </body>
+
 </html>
