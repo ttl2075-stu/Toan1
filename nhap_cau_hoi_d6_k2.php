@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css_v2/nhap_cau_hoi.css">
 </head>
+
 <body>
     <a href="nhap_cau_hoi.php">Trở về</a>
     <?php 
@@ -21,10 +24,10 @@
     // echo $id_cau_hoi;
     // echo $sl_cap;
     ?>
-    
+
     <form action="" method="POST" enctype="multipart/form-data">
-    
-    <?php
+
+        <?php
        echo "<input type='hidden' name='sl_capa' value='$sl_cap'>";
        echo "<input type='hidden' name='id_cau_hoi' value='$id_cau_hoi'>";
         
@@ -44,7 +47,7 @@
         echo "<input type='submit' name='nhap' value='Nhập'>";
         
     ?>
-   
+
     </form>
     <?php
          
@@ -81,6 +84,7 @@
                             
 
         }
-    ?> 
+    ?>
 </body>
+
 </html>

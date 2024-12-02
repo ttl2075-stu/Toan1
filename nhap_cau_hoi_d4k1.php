@@ -16,97 +16,106 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="src/css/test.css">
-	<link rel="stylesheet" href="src/css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/test.css">
+    <link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
+    <link rel="stylesheet" href="assets/css_v2/nhap_cau_hoi.css">
     <title>Nhập câu hỏi D6.K3</title>
     <style>
-        .centered-text {
-            font-size: 30px;
-            text-align: center;
-            color: var(--color);
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        #bai_hoc{
-            width: 100%;
-            font-weight: bold; 
-            color: black; 
-            background-color: bisque; 
-            padding: 10px; 
-            border-radius: 5px; 
-            text-align: center; 
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-            margin-bottom: 15px;     
-        }
-        form label,
-        form input[type="number"],
-        form input[type="submit"],
-        form input[type="file"] {
-            display: block;
-            margin-bottom: 10px;
-        }
+    .centered-text {
+        font-size: 30px;
+        text-align: center;
+        color: var(--color);
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
 
-        form input[type="number"],
-        form input[type="password"],
-        form input[type="file"],
-        form select{
-            width: 100%;
-            padding: 10px;
-            border: 2px solid var(--color);
-            border-radius: 8px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-        }
+    #bai_hoc {
+        width: 100%;
+        font-weight: bold;
+        color: black;
+        background-color: bisque;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        margin-bottom: 15px;
+    }
 
-        form input[type="number"]:hover,
-        form input[type="password"]:hover,
-        form input[type="file"]:hover,
-        form select:hover {
-            border: 3px solid var(--color); 
-            cursor: pointer;
-        }
+    form label,
+    form input[type="number"],
+    form input[type="submit"],
+    form input[type="file"] {
+        display: block;
+        margin-bottom: 10px;
+    }
 
-        form input[type="number"]:focus,
-        form input[type="password"]:focus,
-        form input[type="file"]:focus,
-        form select:focus {
-            border: 3px solid var(--boder);
-            outline: none;
-        }
-        p{
-            color: red;
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        .check {
+    form input[type="number"],
+    form input[type="password"],
+    form input[type="file"],
+    form select {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid var(--color);
+        border-radius: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    form input[type="number"]:hover,
+    form input[type="password"]:hover,
+    form input[type="file"]:hover,
+    form select:hover {
+        border: 3px solid var(--color);
+        cursor: pointer;
+    }
+
+    form input[type="number"]:focus,
+    form input[type="password"]:focus,
+    form input[type="file"]:focus,
+    form select:focus {
+        border: 3px solid var(--boder);
+        outline: none;
+    }
+
+    p {
+        color: red;
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+
+    .check {
         border: 2px solid #0071f9;
-        height: 50px; 
+        height: 50px;
         width: 50px;
         /* border: 2px solid #ccc; */
         border-radius: 8px;
         margin-left: 20px;
         position: relative;
         transition: all 0.2s ease-in-out;
-        }
+    }
 
-        .check:focus{
-            border: 3px solid var(--boder);
-            outline: none;
-            cursor: pointer;
-        }
-        .check:checked {
-        background-color: #007bff; 
-        border-color: green; 
-        }
+    .check:focus {
+        border: 3px solid var(--boder);
+        outline: none;
+        cursor: pointer;
+    }
 
+    .check:checked {
+        background-color: #007bff;
+        border-color: green;
+    }
     </style>
 </head>
+
 <body>
     <?php 
         function get_ten_bai($ma_bai_hoc){
@@ -120,10 +129,10 @@
             return 0;
           }
         ?>
-            <div id="bai_hoc">
-            <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
-            </div>
-        <?php
+    <div id="bai_hoc">
+        <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
+    </div>
+    <?php
         $sql ="SELECT * FROM `loai_hien_thi` WHERE `id_loai_hien_thi`=$id_loai_cau";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) 
@@ -145,51 +154,51 @@
     
     ?>
     <form action="" method="POST" enctype="multipart/form-data">
-    <!-- số thứ nhất -->
-    <label for="so_thu_nhat" style="margin-right: 10px;">Số thứ nhất</label>
-    <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <input required type="number" name="so_thu_nhat" id="so_thu_nhat" style="margin-right: 5px;">
-        <input type="checkbox" name="check_so_thu_nhat" class="check">
-    </div>
+        <!-- số thứ nhất -->
+        <label for="so_thu_nhat" style="margin-right: 10px;">Số thứ nhất</label>
+        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+            <input required type="number" name="so_thu_nhat" id="so_thu_nhat" style="margin-right: 5px;">
+            <input type="checkbox" name="check_so_thu_nhat" class="check">
+        </div>
 
-    <!-- Biểu thức so sánh -->
-    <label for="bieu_thuc" style="margin-right: 10px;">Biểu thức so sánh</label>
-    <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <select name="expression" id="bieu_thuc" style="margin-right: 5px;">
-            <option value="Bigger">Lớn hơn</option>
-            <option value="Biggerorequal">Lớn hơn hoặc bằng</option>
-            <option value="Less">Nhỏ hơn</option>
-            <option value="Lessorequal">Nhỏ hơn hoặc bằng</option>
-            <option value="Equal">Bằng nhau</option>
-        </select>
-        <input type="checkbox" name="check_expression" class="check">
-    </div>
+        <!-- Biểu thức so sánh -->
+        <label for="bieu_thuc" style="margin-right: 10px;">Biểu thức so sánh</label>
+        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+            <select name="expression" id="bieu_thuc" style="margin-right: 5px;">
+                <option value="Bigger">Lớn hơn</option>
+                <option value="Biggerorequal">Lớn hơn hoặc bằng</option>
+                <option value="Less">Nhỏ hơn</option>
+                <option value="Lessorequal">Nhỏ hơn hoặc bằng</option>
+                <option value="Equal">Bằng nhau</option>
+            </select>
+            <input type="checkbox" name="check_expression" class="check">
+        </div>
 
-    <!-- số thứ hai -->
-    <label for="so_thu_hai" style="margin-right: 10px;">Số thứ hai</label>
-    <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <input required type="number" name="so_thu_hai" id="so_thu_hai" style="margin-right: 5px;">
-        <input type="checkbox" name="check_so_thu_hai" class="check">
-    </div>
-    <?php $duong_dan = 'anh/convat/';
+        <!-- số thứ hai -->
+        <label for="so_thu_hai" style="margin-right: 10px;">Số thứ hai</label>
+        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+            <input required type="number" name="so_thu_hai" id="so_thu_hai" style="margin-right: 5px;">
+            <input type="checkbox" name="check_so_thu_hai" class="check">
+        </div>
+        <?php $duong_dan = 'anh/convat/';
             $url_anh = get_duong_dan_ngau_nhien($duong_dan);
             echo "<input type='hidden' name='anh0' value='$url_anh'>"; ?>
         <img width='50px' src='<?php echo $url_anh; ?>'>
-    <label for="dt1">Ảnh đối tượng thứ 1</label><br>
-    <input  type='file' name='dt1' id='dt1'><br>
-    <?php $duong_dan = 'anh/convat/';
+        <label for="dt1">Ảnh đối tượng thứ 1</label><br>
+        <input type='file' name='dt1' id='dt1'><br>
+        <?php $duong_dan = 'anh/convat/';
             $url_anh = get_duong_dan_ngau_nhien($duong_dan);
             echo "<input type='hidden' name='anh1' value='$url_anh'>"; ?>
         <img width='50px' src='<?php echo $url_anh; ?>'>
-    <label for="dt2">Ảnh đối tượng thứ 2</label><br>
-    <input  type='file' name='dt2' id='dt2'><br><br><br>
+        <label for="dt2">Ảnh đối tượng thứ 2</label><br>
+        <input type='file' name='dt2' id='dt2'><br><br><br>
 
-    <?php echo "<input type='hidden' name='role' value='$role'>" ?>
-    <?php echo "<input type='hidden' name='id_user' value='$id_user'>" ?>
-    <?php echo "<input type='hidden' name='id_khoa_hoc' value='$id_khoa_hoc'>" ?>
-    <p>*Note: Nhấn vào ô nếu muốn hiện phần tử cùng hàng</p>
-    <input type="submit" name="btn" value="Thêm câu hỏi">
-</form>
+        <?php echo "<input type='hidden' name='role' value='$role'>" ?>
+        <?php echo "<input type='hidden' name='id_user' value='$id_user'>" ?>
+        <?php echo "<input type='hidden' name='id_khoa_hoc' value='$id_khoa_hoc'>" ?>
+        <p>*Note: Nhấn vào ô nếu muốn hiện phần tử cùng hàng</p>
+        <input class="btn-submit" type="submit" name="btn" value="Thêm câu hỏi">
+    </form>
 
     <?php
         if(isset($_POST['btn'])){
@@ -314,6 +323,7 @@
             return $randomImage;
         }
     ?>
-   
+
 </body>
+
 </html>

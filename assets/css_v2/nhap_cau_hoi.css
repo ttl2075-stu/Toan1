@@ -19,6 +19,9 @@ label{
 }
 #bai_hoc{
     text-align: center;
+    box-shadow: none !important;
+    background-color: var(--white) !important;
+    
 }
 .centered-text{
     font-size: 2rem !important;
