@@ -26,5 +26,14 @@ label{
 .centered-text{
     font-size: 2rem !important;
     margin-top: 2rem !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 2rem !important;
+}
+.block-bt, .block-da{
+    font-size: 2rem !important;
+}
+.nt{
+    font-size: 1.5rem !important;
+}
+#btn1{
+    margin-left: 1rem !important;
 }

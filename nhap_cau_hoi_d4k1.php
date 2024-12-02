@@ -196,8 +196,8 @@
         <?php echo "<input type='hidden' name='role' value='$role'>" ?>
         <?php echo "<input type='hidden' name='id_user' value='$id_user'>" ?>
         <?php echo "<input type='hidden' name='id_khoa_hoc' value='$id_khoa_hoc'>" ?>
-        <p>*Note: Nhấn vào ô nếu muốn hiện phần tử cùng hàng</p>
-        <input class="btn-submit" type="submit" name="btn" value="Thêm câu hỏi">
+        <p class="nt">*Note: Nhấn vào ô nếu muốn hiện phần tử cùng hàng</p>
+        <input class="btn-submit" id="btn1" type="submit" name="btn" value="Thêm câu hỏi">
     </form>
 
     <?php
