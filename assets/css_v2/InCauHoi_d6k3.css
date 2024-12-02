@@ -6,6 +6,39 @@ body {
     position:relative;
 }
 
+
+button#xemdapan-button{
+    background-color: var( --blue);
+
+}
+button#xemdapan-button:hover{
+    background-color: var(  --yellow);
+}
+div#basket_plate.basket_plate{
+    width: 50rem;
+    height: 25rem;
+    margin-left: 30rem; 
+   
+    /* display: flex; 
+    justify-content: center; 
+    align-items: center;  */
+}
+div.cauhoi{
+    background-color: var(--blue);
+    color: var(--white);
+   
+}
+.div.box-pheptinh{
+    display: flex;
+}
+@import url('./style.css');
+body {
+    /* background-color: #f0f8ff; Tông màu nhã nhặn */
+    margin: 0;
+    padding: 0;
+    position:relative;
+}
+
 div.button-container{
     position:fixed;
 }
@@ -184,6 +217,27 @@ span#notice0{
 debai{
     font-size: 3rem;
 }
+div#contain_2{
+    width: 80rem;
+    position: fixed;
+    margin-top: 10rem;
+    bottom: 20rem;
+    top: 10px; 
+
+    height: 15rem; 
+   
+}
+button#help.btn{
+    margin-top: 5rem;
+}
+/* div#basket_plate.basket_plate{
+  
+    position:fixed;
+} */
+div.div.box-pheptinh{
+    margin-top: 20rem;
+}
+
 
 /*  */
 
@@ -241,7 +295,6 @@ button.speaker{
 button.speaker:hover{
     background-color: var( --yellow);
 }
-
 .nuthotro button {
     background-color: var(--blue);
 }
@@ -249,3 +302,6 @@ button.speaker:hover{
 .nuthotro button:hover{
     background-color: var(--yellow);
 }
+
+
+

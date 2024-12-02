@@ -49,6 +49,8 @@ function cap_nhat_tg($id_bai_tap_user, $i)
     <link rel="stylesheet" href="./src/css/lego.css">
     <link rel="stylesheet" href="./src/css/d6k2.css">
     <link rel="stylesheet" href="./src/css/root.css">
+    <link rel="stylesheet" href="./assets/css_v2/style.css">
+    <link rel="stylesheet" href="./assets/css_v2/InCauHoi_php.css">
     <script src="./src/js/function.js"></script>
     <script>
         // Loại bỏ sự kiện beforeunload

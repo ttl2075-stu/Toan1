@@ -121,6 +121,8 @@ function cap_nhat_tg($id_bai_tap_user, $i)
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./src/css/d6_k3.css">
+    <link rel="stylesheet" href="./assets/css_v2/style.css">
+    <link rel="stylesheet" href="./assets/css_v2/InCauHoi_d6k3.css">
     <script src="./src/js/function.js"></script>
     <script>
         // Loại bỏ sự kiện beforeunload

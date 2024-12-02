@@ -108,6 +108,7 @@ div.show{
     height: 50px; 
     margin-bottom: 10px;
     width: 50rem;
+    margin-left: 20rem;
 }
 /* div.box-pheptinh hr{
     width: 10rem;
@@ -120,6 +121,7 @@ div.score-container.box_flex_column{
     position:fixed;
     position: absolute; 
     top: 10rem; left: 60rem;
+    margin-left: 20rem;
  }
 
 div#the0_0.tag{
@@ -175,4 +177,83 @@ button.xemdapan-button{
 }
 button.xemdapan-button:hover{
     background-color: var(  --yellow);
+}
+
+
+
+
+/*  */
+
+
+button#btn-kieuhotro12.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro12.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+
+button#btn-kieuhotro13.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro13.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+
+button#btn-kieuhotro14.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro14.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+
+button#btn-kieuhotro15.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro15.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+
+button#btn-kieuhotro19.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro19.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+button.back-button{
+    background-color: var( --blue);
+}
+button.back-button:hover{
+    background-color: var( --yellow);
+}
+
+
+div#bieuThuc{
+    background-color: var( --blue);
+}
+div#bieuThuc:hover{
+    background-color: var( --blue);
+}
+
+button.speaker{
+    background-color: var( --blue);
+
+}
+button.speaker:hover{
+    background-color: var( --yellow);
+}
+.nuthotro button {
+    background-color: var(--blue);
+}
+
+.nuthotro button:hover{
+    background-color: var(--yellow);
+}
+
+div.help-container.show{
+    margin-right: 30rem;
 }
