@@ -22,7 +22,12 @@
 	<!-- End bootstrap cdn -->
   <style>
     .btn-primary{
-      background-color: #1a6bb2;
+      background-color: var(--blue);
+      border-color: #1a6bb2;
+    }
+
+    .btn-primary:hover{
+      background-color: var(--bluehover);
       border-color: #1a6bb2;
     }
   </style>
@@ -49,7 +54,7 @@
 </nav> -->
 	<main style="min-height: 100vh; width: 100%;">
 		<div class="" style="text-align: center;">
-			<h2>Khóa học</h2>
+			<h2 style="font-size: 2.8rem; font-weight: bold;">Khóa học</h2>
 		</div>
 		<div class="row row-cols-1 row-cols-md-3 g-4" style="margin: 0 auto; width: 80%;">
 		<?php 
@@ -64,7 +69,7 @@
                         <img src="./anh/<?php echo $khoaHoc['url_anh']; ?>" class="card-img-top" alt="Course Image" style="width:100%">
                           
 				 	      <div class="card-body">
-				 	        <h5 class="card-title"><?php echo $khoaHoc['ten_khoa_hoc']; ?></h5>
+				 	        <h5 class="card-title" style="font-size: 2rem;"><?php echo $khoaHoc['ten_khoa_hoc']; ?></h5>
 				 	        <a target="_parent" href="mo_dau.php?id_khoa_hoc=<?php echo $khoaHoc['id_khoa_hoc']; ?>" class="btn btn-primary">Truy cập</a>
 				 	      </div>
 				 	    </div>
@@ -74,7 +79,7 @@
                 }else{
                     $listKhoaHoc = getAllKhoaHoc($id_user);
                     if(count($listKhoaHoc)==0){?>
-                        <h5 class="card-title" style="text-align: center;">Bạn chưa được thêm vào khóa học</h5><?php
+                        <h5 class="card-title" style="text-align: center; font-size: 2rem;">Bạn chưa được thêm vào khóa học</h5><?php
                     }
 					else{
                         foreach ($listKhoaHoc as $khoaHoc){ 
@@ -89,7 +94,7 @@
                                 <div class="card">
                                       <img  src="./anh/<?php echo $khoaHoc['url_anh']; ?>" class="card-img-top" alt="Course Image">
                                     <div class="card-body">
-                                        <h5 class="card-title"><?php echo $khoaHoc['ten_khoa_hoc']; ?></h5>
+                                        <h5 class="card-title" style="font-size: 2rem;"><?php echo $khoaHoc['ten_khoa_hoc']; ?></h5>
                                         <a target="_parent" href="mo_dau.php?id_khoa_hoc=<?php echo $khoaHoc['id_khoa_hoc']; ?>" class="btn btn-primary">Truy cập</a>
                                     </div>
                                     </div>

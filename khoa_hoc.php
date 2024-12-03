@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/menu.css" />
   <link rel="stylesheet" href="assets/css/scrollbar.css" />
+  <link rel="stylesheet" href="./assets/css_v2/style.css">
   <link rel="shortcut icon" type="image/png" href="anh/logo.png"/>
   <script>
     localStorage.setItem("toc_do",'<?php echo $_SESSION['toc_do']?>')
@@ -40,15 +41,6 @@
       background-color: none;
      }
 
-     footer{
-      /* margin-top: 20px; */
-      /* top: 10%; 
-      position: relative; */
-      text-align: center;
-      color: white;
-      font-size: 50px;
-      font-weight: bold;
-     }
      #scrollBtn {
       display: none;
       position: fixed;
@@ -62,77 +54,45 @@
       padding: 15px;
       font-size: 16px;
     }
+  .card {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .card img {
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+  }
+
+  .card-body {
+    width: 100%;
+    height: 30%;  
+    position: relative;
+    font-size: 2rem !important;
+  }
+
+  .card-title {
+    width: 100%;
+    height: 65%;
+    text-align: justify;
+    line-height: 1.5;
+    overflow: hidden;
+  }
+
+  .card-body .btn {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-size: 1.8rem;
+  }
 
 
-    footer {
-      /* background-color: #333; */
-      color: #fff;
-      padding: 10px 0;
-      /* text-align: center; */
-      background-color: var(--primary-color);
-      height: 20vh;
-      min-width: 80%;
-      width: 100%;
-    }
 
 
-.footer-content p {
-  font-size: 40px;
-  margin-bottom: 5px;
-}
-
-.content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.address,
-.contact-info,
-.social-icons {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.address span,
-.contact-info span {
-  display: block;
-}
 
 
-.footer-content i{
-  color: #fff;
-  font-size: 24px;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-  /* box-shadow: 0px 2px 8px 0px aqua; */
-  background-color: none;
-}
-.footer-content .social-icons .icon i:hover{
-  color: aquamarine;
-  cursor: pointer;
-}
-
-/* .cta-btn{
-  background-color: #fff;
-  color: black;
-  font-weight: bold;
-} */
-
-
-.cta-btn i {
-  transition: all 0.3s ease;
-  font-size: 25px;
-}
-
-.cta-btn:hover i {
-  transform: rotate(360deg);
-}
-
-.cta-btn:hover i:before {
-  content: "\f1d9"; 
-}
   </style>
   <title>Hệ thống hỗ trợ dạy học môn toán lớp 1 cho học sinh khuyết tật học tập</title>
   <script>
@@ -196,12 +156,19 @@ function updateFolderValue(link, event) {
     <i class="fa fa-bars fa-2x"></i>
   </button> -->
   <header>
-    <h1>HỌC TOÁN LỚP 1</h1>
-    <p>
-      Các bài học được biên soạn theo khung chương trình giáo dục phổ thông!
-    </p>
-    <h3><?php echo $_SESSION['ten']; ?></h3>
-    <a id="dang_xuat" href="dang_xuat.php"><button class="cta-btn" id="">Đăng xuất<i class="fa-solid fa-person-walking-arrow-right"></i></button> </a>
+    <div class="header-title">
+      <h1>HỌC TOÁN LỚP 1</h1>
+      <p>
+        Các bài học được biên soạn theo khung chương trình giáo dục phổ thông!
+      </p>
+    </div>
+    <div class="header-account">
+      <h3>
+        <i class="fa-solid fa-circle-user"></i>
+        <?php echo $_SESSION['ten']; ?>
+      </h3>
+      <a id="dang_xuat" href="dang_xuat.php"><button class="cta-btn" id="">Đăng xuất<i class="fa-solid fa-person-walking-arrow-right"></i></button> </a>
+    </div>
   </header>
 
   <div class="container">
