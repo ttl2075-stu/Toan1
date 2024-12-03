@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/menu.css" />
   <link rel="stylesheet" href="assets/css/scrollbar.css" />
+  <link rel="stylesheet" href="./assets/css_v2/style.css">
   <link rel="shortcut icon" type="image/png" href="anh/logo.png"/>
 
   <style>
@@ -60,76 +61,10 @@
       font-size: 16px;
     }
 
-
-    footer {
-      /* background-color: #333; */
-      color: #fff;
-      padding: 10px 0;
-      /* text-align: center; */
-      background-color: var(--primary-color);
-      height: 20vh;
-      min-width: 80%;
-      width: 100%;
+    .header-title {
+      position: relative;
     }
 
-
-.footer-content p {
-  font-size: 40px;
-  margin-bottom: 5px;
-}
-
-.content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.address,
-.contact-info,
-.social-icons {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.address span,
-.contact-info span {
-  display: block;
-}
-
-
-.footer-content i{
-  color: #fff;
-  font-size: 24px;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-  /* box-shadow: 0px 2px 8px 0px aqua; */
-  background-color: none;
-}
-.footer-content .social-icons .icon i:hover{
-  color: aquamarine;
-  cursor: pointer;
-}
-
-/* .cta-btn{
-  background-color: #fff;
-  color: black;
-  font-weight: bold;
-} */
-
-
-.cta-btn i {
-  transition: all 0.3s ease;
-  font-size: 25px;
-}
-
-.cta-btn:hover i {
-  transform: rotate(360deg);
-}
-
-.cta-btn:hover i:before {
-  content: "\f1d9"; 
-}
     #thong_bao{
       position: absolute;
       right: 0px;
@@ -153,14 +88,14 @@
       box-sizing: border-box;
       color: black;
       /* margin-bottom: ; */
-      
+      font-size: 2.4rem;
       /* overflow-y: scroll; */
     }
     #tb{
-      font-size: 30px;
+      font-size: 2.8rem;
       position: absolute;
       right: 50px;
-      top: 10px;
+      top: 0px;
       cursor: pointer;
     }
    
@@ -517,20 +452,18 @@ function updateFolderValue(link, event) {
     <i class="fa fa-bars fa-2x"></i>
   </button>
   <header>
-    <h1>HỌC TOÁN LỚP 1</h1>
-    <p>
-      Các bài học được biên soạn theo khung chương trình giáo dục phổ thông!
-    </p>
-    <i onclick="tb()" id="tb" class="fas fa-bell"></i>
-    <span onclick="tb()" id="tb1">*</span>
-    <h3><?php echo $_SESSION['ten']; ?></h3>
+    <div class="header-title">
+      <h1>HỌC TOÁN LỚP 1</h1>
+      <p>
+        Các bài học được biên soạn theo khung chương trình giáo dục phổ thông!
+      </p>
+      <i onclick="tb()" id="tb" class="fas fa-bell"></i>
     <div id="thong_bao">
       <?php 
       $sql = "SELECT * FROM `thong_bao` WHERE `thoi_gian` >= DATE_SUB(NOW(), INTERVAL 4 DAY) AND `id_khoa_hoc` = '$id_khoa_hoc'  AND `id_nguoi_nhan` = '$id_user'  ORDER BY `thoi_gian` DESC;"; 
       $kq = mysqli_query($conn, $sql);
       if(mysqli_num_rows($kq)>0){
         while($row = mysqli_fetch_array($kq)){
-          // print_r($row);
           $id_bai_hoc = $row['id_bai_hoc'];
           $ten_bai =ten_bai_hoc($id_bai_hoc);
           ?><div class="noi_dung">Bạn được GV giao bài tập ở bài học <?php echo $ten_bai['ten_bai_hoc'];?> thời gian: <?php echo $row['thoi_gian'] ?></div><?php 
@@ -542,11 +475,15 @@ function updateFolderValue(link, event) {
         ?> <div class="noi_dung"> Không có thông báo nào</div><?php
       }
       ?>
-      
-      
-      <!-- <div class="noi_dung"> hDDDDD1</div> -->
     </div>
-    <a id="dang_xuat" href="dang_xuat.php"><button class="cta-btn" id="">Đăng xuất<i class="fa-solid fa-person-walking-arrow-right"></i></button> </a>
+    </div>
+    <div class="header-account">
+      <h3>
+        <i class="fa-solid fa-circle-user"></i>
+        <?php echo $_SESSION['ten']; ?>
+      </h3>
+      <a id="dang_xuat" href="dang_xuat.php"><button class="cta-btn" id="">Đăng xuất<i class="fa-solid fa-person-walking-arrow-right"></i></button> </a>
+    </div>
   </header>
 
   <div class="container">

@@ -5,12 +5,9 @@
 :root{
     --primary:#eeeeee;
     --secondary:deepskyblue;
-    --blue:deepskyblue;
     --secondary-light: #1E97F3;
     --white:#fff;
     --black: black;
-    --sky: #BCE6FF;
-    --shadow: 0px 2px 8px 0px var(--secondary-light);
     --bottom: #adadad; 
     --container:white;
     --text:#666666;
