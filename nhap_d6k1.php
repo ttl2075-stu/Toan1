@@ -14,30 +14,36 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="src/css/nhap_cau_hoi.css?v=2">
-	<link rel="stylesheet" href="src/css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/nhap_cau_hoi.css?v=2">
+    <link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
+    <link rel="stylesheet" href="assets/css_v2/nhap_cau_hoi.css">
     <title>Nhập câu hỏi dạng D6.K1</title>
     <style>
-        .center-text{
-            font-size: 30px;
-            text-align: center;
-            color: var(--color);
-            font-weight: bold;
-        }
-        #bai_hoc{
-            width: 100%;
-            text-align: center;
-        }
+    .center-text {
+        font-size: 30px;
+        text-align: center;
+        color: var(--color);
+        font-weight: bold;
+    }
+
+    #bai_hoc {
+        width: 100%;
+        text-align: center;
+    }
     </style>
 </head>
+
 <body>
-<?php
+    <?php
     function get_ten_bai($ma_bai_hoc){
       global $conn;
       $sql ="SELECT * FROM `bai_hoc` WHERE `ma_bai_hoc`='$ma_bai_hoc'";
@@ -63,10 +69,10 @@
         {
             $row = mysqli_fetch_assoc($result);
             ?>
-                <div id="bai_hoc">
-                <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
-                </div>
-            <?php
+    <div id="bai_hoc">
+        <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
+    </div>
+    <?php
             echo "<div class='center-text'>LOẠI CÂU: " . $row['ten_loai_hien_thi'] . "</div>";
            
         }  
@@ -97,10 +103,10 @@
         <!-- biểu thức -->
         <label for="">Phép tính:</label>
         <select name="expression" id="bieu_thuc">
-          <option value="addition">Phép cộng</option>
-          <option value="subtraction">Phép trừ</option>
-        </select>      
-        <input type="submit" name="btn" value="Thêm câu hỏi">
+            <option value="addition">Phép cộng</option>
+            <option value="subtraction">Phép trừ</option>
+        </select>
+        <input class="btn-submit" type="submit" name="btn" value="Thêm câu hỏi">
     </form>
     <?php 
         if(isset($_POST['btn'])){
@@ -139,4 +145,5 @@
         }
     ?>
 </body>
+
 </html>

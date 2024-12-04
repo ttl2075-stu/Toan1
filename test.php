@@ -1,19 +1,20 @@
 <style>
-    .block-bt{
-  margin: 20px  0;
-  padding: 10px;
-  /* background: black; */
-  border-color: blue;
-  border-width: 1px;
-  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+.block-bt {
+    margin: 20px 0;
+    padding: 10px;
+    /* background: black; */
+    border-color: blue;
+    border-width: 1px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
-.block-da{
-  margin: 20px  0;
-  padding: 10px;
-  /* background: pink; */
-  border-color: orange;
-  border-width: 1px;
-  box-shadow: orange 0px 0px 0px 3px;
+
+.block-da {
+    margin: 20px 0;
+    padding: 10px;
+    /* background: pink; */
+    border-color: orange;
+    border-width: 1px;
+    box-shadow: orange 0px 0px 0px 3px;
 }
 </style>
 <?php
@@ -36,17 +37,22 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="src/css/test.css">
-	<link rel="stylesheet" href="src/css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/test.css">
+    <link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
+    <link rel="stylesheet" href="assets/css_v2/nhap_cau_hoi.css">
     <title>Nhập đầu bài dạng D6.K2</title>
 </head>
-<body>   
+
+<body>
     <?php 
     // echo "";
     // $conn = mysqli_connect('localhost', 'root','', 'nckh_2024');      
@@ -57,14 +63,14 @@
     // ech_bt;
     // echo "<a href='nhap_cau_hoi.php?role=$role&id_user=$id_user'><i class='fa-solid fa-backward'></i>Trở về</a>";
     ?>
-    
-            <div id="bai_hoc">
-                <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
-                </div>
+
+    <div id="bai_hoc">
+        <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
+    </div>
     <form action="" method="POST" enctype="multipart/form-data">
         <h1>NHẬP ĐỀ BÀI</h1>
-    
-    <?php
+
+        <?php
        echo "<input type='hidden' name='sl_bt' value='$sl_bt'>";
        echo "<input type='hidden' name='sl_da' value='$sl_da'>";
        echo "<input type='hidden' name='id_cau_hoi' value='$id_cau_hoi'>";
@@ -72,7 +78,7 @@
        echo "<input type='hidden' name='id_user' value='$id_user'>";
        echo "<input type='hidden' name='id_khoa_hoc' value='$id_khoa_hoc'>"; ?>
         <div class="block-bt">
-        <?php
+            <?php
         // in ô nhập biểu mẫu
         $stt=1;
         for ($i=0; $i <$sl_bt ; $i++) { 
@@ -85,7 +91,7 @@
         ?>
         </div>
         <div class="block-da">
-        <?php
+            <?php
         $stt=1;
         for ($i=$sl_bt; $i <$sl_da+$sl_bt; $i++) { 
             $duong_dan = 'anh/canhdieu/';
@@ -94,9 +100,9 @@
             echo "Đáp án $stt"."<input required  type='text' name='ch$i' id=''>"." Nối với đáp án"."<input type='text' name='flag$i' id=''>"."<img width='50px' src='$url_anh'>"."<input type='file' name='file_anh$i'><br>";
             $stt++;
         }
-        echo "</div><input type='submit' name='nhap' value='Nhập câu hỏi'>";
+        echo "</div><input class='btn-submit' type='submit' name='nhap' value='Nhập câu hỏi'>";
     ?>
-        
+
     </form>
     <?php
          
@@ -199,6 +205,7 @@
             return $fileNameWithExtension; // Kết quả sẽ là: anh.png
         }
        
-    ?> 
+    ?>
 </body>
+
 </html>

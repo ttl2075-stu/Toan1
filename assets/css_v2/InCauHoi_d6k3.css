@@ -1,0 +1,307 @@
+@import url('./style.css');
+body {
+    /* background-color: #f0f8ff; Tông màu nhã nhặn */
+    margin: 0;
+    padding: 0;
+    position:relative;
+}
+
+
+button#xemdapan-button{
+    background-color: var( --blue);
+
+}
+button#xemdapan-button:hover{
+    background-color: var(  --yellow);
+}
+div#basket_plate.basket_plate{
+    width: 50rem;
+    height: 25rem;
+    margin-left: 30rem; 
+   
+    /* display: flex; 
+    justify-content: center; 
+    align-items: center;  */
+}
+div.cauhoi{
+    background-color: var(--blue);
+    color: var(--white);
+   
+}
+.div.box-pheptinh{
+    display: flex;
+}
+@import url('./style.css');
+body {
+    /* background-color: #f0f8ff; Tông màu nhã nhặn */
+    margin: 0;
+    padding: 0;
+    position:relative;
+}
+
+div.button-container{
+    position:fixed;
+}
+.btn.hinhthucTL {
+    background-color: var( --blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    
+}
+.btn.hinhthucTL:hover{
+    background-color: var( --yellow);
+}
+button#check.btn{
+    background-color: var( --blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px 20px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1.5rem;
+
+
+
+
+}
+
+button#check.btn:hover{
+    background-color: var( --yellow);
+
+}
+button#help.btn{
+    background-color: var( --blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1.5rem;
+
+}
+
+button#help.btn:hover{
+    background-color: var( --yellow);
+}
+
+button#incrementButton{
+    background-color: var( --blue);
+}
+button#incrementButton:hover{
+    background-color: var(  --yellow);
+
+}
+
+button#decrementButton{
+    background-color: var( --blue);
+}
+
+button#decrementButton:hover{
+    background-color: var( --yellow);
+}
+
+div#box-num1.box-num{
+    font-size: 3rem;
+}
+div#box-num2.box-num{
+    font-size: 3rem;
+}
+div#box-pheptinh.box-num{
+    font-size: 3rem;
+}
+
+div.show{
+    height: 40rem;
+    position:fixed;
+    position: absolute; 
+    top: 5rem; 
+    left: 5rem;
+    height: 50px; 
+    margin-bottom: 10px;
+    width: 50rem;
+}
+/* div.box-pheptinh hr{
+    width: 10rem;
+} */
+/* input#checkA0.checkA.inputStyle1{
+   
+} */
+div.score-container.box_flex_column{
+    width: 30rem;
+    position:fixed;
+    position: absolute; 
+    top: 10rem; left: 60rem;
+ }
+
+div#the0_0.tag{
+    width: 4rem;
+    height: 1rem;
+    background-color: var( --blue);
+    
+}
+div#the0_1.tag{
+    width: 4rem;
+    height: 1rem;
+    background-color: var( --blue);
+}
+div#the0_2.tag{
+    width: 4rem;
+    height: 1rem;
+    background-color: var( --blue);
+}
+div#the0_3.tag{
+    width: 4rem;
+    height: 1rem;
+    background-color: var( --blue);
+}
+
+div#the0_0.tag:hover{
+    background-color: var(  --yellow);
+}
+
+div#the0_1.tag:hover{
+    background-color: var(  --yellow);
+}
+div#the0_2.tag:hover{
+    background-color: var(  --yellow);
+}
+div#the0_3.tag:hover{
+    background-color: var(  --yellow);
+}
+button#recordButton{
+    background-color: var( --blue);
+
+}
+button#recordButton:hover{
+    background-color: var(  --yellow);
+}
+
+button.xemdapan-button{
+    background-color: var( --blue);
+
+}
+button.xemdapan-button:hover{
+    background-color: var(  --yellow);
+}
+input#checkA0.checkA.inputStyle1{
+    font-size: 3rem;
+    text-align: center;
+}
+span#notice0{
+    font-size: 5rem;
+    color: var(--white);
+    margin-top: 2rem;
+}
+debai{
+    font-size: 3rem;
+}
+div#contain_2{
+    width: 80rem;
+    position: fixed;
+    margin-top: 10rem;
+    bottom: 20rem;
+    top: 10px; 
+
+    height: 15rem; 
+   
+}
+button#help.btn{
+    margin-top: 5rem;
+}
+/* div#basket_plate.basket_plate{
+  
+    position:fixed;
+} */
+div.div.box-pheptinh{
+    margin-top: 20rem;
+}
+
+
+/*  */
+
+
+button#btn-kieuhotro22.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro22.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+
+button#btn-kieuhotro23.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro23.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+
+button#btn-kieuhotro24.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro24.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+
+button#btn-kieuhotro25.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro25.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+button.back-button{
+    background-color: var( --blue);
+}
+button.back-button:hover{
+    background-color: var( --yellow);
+}
+
+
+div#bieuThuc{
+    background-color: var( --blue);
+}
+div#bieuThuc:hover{
+    background-color: var( --blue);
+}
+
+button.speaker{
+    background-color: var( --blue);
+
+}
+button.speaker:hover{
+    background-color: var( --yellow);
+}
+.nuthotro button {
+    background-color: var(--blue);
+}
+
+.nuthotro button:hover{
+    background-color: var(--yellow);
+}
+
+
+

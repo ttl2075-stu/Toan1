@@ -16,24 +16,29 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhập số lượng biểu thức và đáp án</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="src/css/nhap_cau_hoi.css">
-	<link rel="stylesheet" href="src/css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/nhap_cau_hoi.css">
+    <link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
+    <link rel="stylesheet" href="assets/css_v2/nhap_cau_hoi.css">
     <style>
-        .centered-text{
-            font-size: 30px;
-            text-align: center;
-            color: var(--color);
-            font-weight: bold;
-        }
+    .centered-text {
+        font-size: 30px;
+        text-align: center;
+        color: var(--color);
+        font-weight: bold;
+    }
     </style>
 </head>
+
 <body>
     <?php 
         // $conn = mysqli_connect('localhost', 'root','', 'nckh_2024');
@@ -49,9 +54,9 @@
        if (mysqli_num_rows($result) > 0) 
        {
             $row = mysqli_fetch_assoc($result);?>
-            <div id="bai_hoc">
-                <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
-                </div><?php
+    <div id="bai_hoc">
+        <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
+    </div><?php
             echo "<div class='centered-text'>LOẠI CÂU: ".$row['ten_loai_hien_thi']."</div>";
           
        }  
@@ -79,10 +84,10 @@
         <input required type="text" name="sl_bt" id="">
         <label for="">Nhập số lượng đáp án</label>
         <input required type="text" name="sl_da" id="">
-        <input type="submit" name="btn" value="Xác nhận">
+        <input class="btn-submit" type="submit" name="btn" value="Xác nhận">
     </form>
-    
-   <?php 
+
+    <?php 
     if(isset($_GET['btn'])){
         $sl_bt=$_GET['sl_bt'];
         $sl_da=$_GET['sl_da'];
@@ -106,4 +111,5 @@
   
     ?>
 </body>
+
 </html>
