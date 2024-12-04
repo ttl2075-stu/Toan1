@@ -1,0 +1,18 @@
+@import url('./style.css');
+th{
+    color: var(--white) !important;
+    background-color:  var(--blue) !important;
+}
+.btn_giao_bai{
+    border: none;
+    background-color: var(--blue);
+    color: var(--white);
+    height: 3.5rem;
+    margin-left: 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+.btn_giao_bai:hover{
+    background-color: var(--bluehover);
+    cursor: pointer;
+}

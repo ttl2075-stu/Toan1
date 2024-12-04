@@ -1,0 +1,13 @@
+@import url('./style.css');
+.th{
+    background-color: var(--blue);
+    color: var(--white);
+}
+.btn_tro_ve{
+    background-color: var(--blue);
+    outline: none;
+}
+.btn_tro_ve:hover{
+    background-color: var(--bluehover);
+    cursor: pointer;
+}

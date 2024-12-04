@@ -1,0 +1,16 @@
+@import url('./style.css');
+#btn_tro_ve{
+    background-color: var(--blue) !important;
+    outline: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2.5rem;
+    width: 10%;
+    height: 8vh;
+    transition: transform 0.5s ease-in-out;
+    padding-bottom: 4rem;
+}
+#btn_tro_ve:hover{
+    background-color: var(--bluehover);
+}

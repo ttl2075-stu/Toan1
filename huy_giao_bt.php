@@ -29,6 +29,7 @@
 	<link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css_v2/huy_giao_bai.css">
     <title>Giao bài tập chi tiết</title>
     <style>
         select {
@@ -61,7 +62,7 @@
    
 
 
-    <a href="danh_sach_giao_bt_chi_tiet_2.php?id_user=<?php echo $id_user1?>&id_khoa_hoc=<?php echo $id_khoa_hoc;?>&id_bai_hoc=<?php echo $id_bai_hoc; ?>">Trở về</a>
+    <a href="danh_sach_giao_bt_chi_tiet_2.php?id_user=<?php echo $id_user1?>&id_khoa_hoc=<?php echo $id_khoa_hoc;?>&id_bai_hoc=<?php echo $id_bai_hoc; ?>" class="btn_tro_ve">Trở về</a>
     <h1>Hủy giao bài tập thành công</h1>
 
 </body>
