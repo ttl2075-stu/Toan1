@@ -1,9 +1,10 @@
 @import url('../css_v2/style.css');
 
 .center-text{
-    font-size: 2rem !important;
+    font-size: 2.4rem !important;
     margin-top: 2rem ;
     margin-bottom: 2rem;
+    color: var(--blue) !important;
 }
 h2{
     font-size: 3rem !important;
@@ -24,9 +25,10 @@ label{
     
 }
 .centered-text{
-    font-size: 2rem !important;
+    font-size: 2.4rem !important;
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
+    color: var(--blue) !important;
 }
 .block-bt, .block-da{
     font-size: 2rem !important;
@@ -36,4 +38,33 @@ label{
 }
 #btn1{
     margin-left: 1rem !important;
+}
+.title{
+    font-size: 2.4rem ;
+    color: var(--blue);
+}
+input[type="number"]:focus{
+    border: 0.185rem solid var(--bluehover) !important;
+}
+input[type="number"]:hover{
+    border: 0.185rem solid var(--bluehover) !important;
+}
+
+form select{
+    border: 0.185rem solid var(--bluehover) !important;
+}
+form input[type="text"]{
+    border: 0.185rem solid var(--bluehover) !important;
+}
+input[type="text"]{
+    border: 0.185rem solid var(--bluehover) !important;
+}
+form input[type='file']{
+    border: 0.185rem solid var(--bluehover) !important;
+}
+form input[type="number"]{
+    border: 0.185rem solid var(--bluehover) !important;
+}
+form input[type="number"]{
+    border: 0.185rem solid var(--bluehover) !important;
 }
