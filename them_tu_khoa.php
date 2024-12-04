@@ -13,16 +13,21 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="src/css/nhap_cau_hoi.css">
-	<link rel="stylesheet" href="src/css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/nhap_cau_hoi.css">
+    <link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
+    <link rel="stylesheet" href="assets/css_v2/nhap_cau_hoi.css">
     <title>Thêm từ khóa</title>
 </head>
+
 <body>
     <!-- <a href="dang_nhap.php"><i class="fa-solid fa-backward"></i>Trở về</a> -->
     <?php 
@@ -44,20 +49,20 @@
 
     if($role==1)
         ?>
-        <form action="" method="POST" enctype="multipart/form-data">
-            <h1>Nhập từ khóa</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <h1 class="title">Nhập từ khóa</h1>
         <label for="">Từ khóa </label>
-        <input required type="text" name="tu_khoa" id=""> 
+        <input required type="text" name="tu_khoa" id="">
         <?php 
             echo "<input type='hidden' name='role' value='$role'>";
             echo "<input type='hidden' name='id_user' value='$id_user'>"
         ?>
-        
+
         <input type="hidden" name="id_user">
         <div>
             <label for="">Chọn bài học</label>
             <select name="bai_hoc" id="">
-            <?php
+                <?php
              $sql ="SELECT * FROM `bai_hoc`";
              $result = mysqli_query($conn, $sql);
              if (mysqli_num_rows($result) > 0) 
@@ -68,10 +73,10 @@
                 echo "</select>";
              }  
              
-            ?> 
+            ?>
         </div>
-         
-        <input type="submit" name="btn" value="Thêm từ khóa"><br>
+
+        <input class="btn-submit" type="submit" name="btn" value="Thêm từ khóa"><br>
 
     </form>
     <?php
@@ -95,30 +100,31 @@
                 $sql ="INSERT INTO `tu_khoa`(`id_tu_khoa`, `ten_tu_khoa`, `id_bai_hoc`, `khoa_hoc`) VALUES (null,'$tu_khoa','$id_bai_hoc','$id_khoa_hoc')";
             }
             mysqli_query($conn,$sql);
-            ?><script>alert("Thay đổi từ khóa thành công");</script><?php
+            ?><script>
+    alert("Thay đổi từ khóa thành công");
+    </script><?php
         }
     ?>
-    
-    <script>
-        
-        
-        function showQuestions() {
-            var x = document.getElementById("questions-section");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
 
-        function showExercises() {
-            var x = document.getElementById("exercises-section");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
+    <script>
+    function showQuestions() {
+        var x = document.getElementById("questions-section");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
         }
+    }
+
+    function showExercises() {
+        var x = document.getElementById("exercises-section");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
     </script>
 </body>
+
 </html>

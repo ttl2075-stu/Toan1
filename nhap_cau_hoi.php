@@ -13,16 +13,21 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="src/css/nhap_cau_hoi.css?v=1">
-	<link rel="stylesheet" href="src/css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/nhap_cau_hoi.css?v=1">
+    <link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
+    <link rel="stylesheet" href="assets/css_v2/nhap_cau_hoi.css">
     <title>Nhập câu hỏi chung</title>
 </head>
+
 <body>
     <!-- <a href="dang_nhap.php"><i class="fa-solid fa-backward"></i>Trở về</a> -->
     <?php 
@@ -46,20 +51,20 @@
     // phân quyền giáo viên
     if($role==1)
         ?>
-        <form action="" method="POST" enctype="multipart/form-data">
-            <h1>NHẬP CÂU HỎI</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <h1 class="title">NHẬP CÂU HỎI</h1>
         <label for="">Câu hỏi: </label>
-        <input value="Đặt tính rồi tính?" required type="text" name="cau_hoi" id="cau_hoi"> 
+        <input value="Đặt tính rồi tính?" required type="text" name="cau_hoi" id="cau_hoi">
         <?php 
             echo "<input type='hidden' name='role' value='$role'>";
             echo "<input type='hidden' name='id_user' value='$id_user'>"
         ?>
-        
+
         <input type="hidden" name="id_user">
         <div>
-        <label for="">Chọn loại câu hỏi</label>
+            <label for="">Chọn loại câu hỏi</label>
             <select name="loai_ht" id="abc">
-            <?php
+                <?php
             
             
              $sql ="SELECT * FROM `loai_hien_thi`";
@@ -73,9 +78,9 @@
              }  
              
             ?>
-           <label for="">Chọn bài học</label>
-            <select name="bai_hoc" id="">
-            <?php
+                <label for="">Chọn bài học</label>
+                <select name="bai_hoc" id="">
+                    <?php
             
             
              $sql ="SELECT * FROM `bai_hoc`";
@@ -88,14 +93,14 @@
                 echo "</select>";
              }  
              
-            ?> 
+            ?>
         </div>
-         
-        <input type="submit" name="btn" value="Nhập câu hỏi"><br>
-        
+
+        <input class="btn-submit" type="submit" name="btn" value="Nhập câu hỏi"><br>
+
         <?php //echo "<a href='nhap_de_thi.php'><i class='fa-solid fa-file-import'></i>Giao bài tập</a>"?>
 
-        
+
 
     </form>
     <?php
@@ -166,51 +171,46 @@
     </div> -->
 
     <script>
-        function showQuestions() {
-            var x = document.getElementById("questions-section");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
+    function showQuestions() {
+        var x = document.getElementById("questions-section");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
         }
+    }
 
-        function showExercises() {
-            var x = document.getElementById("exercises-section");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
+    function showExercises() {
+        var x = document.getElementById("exercises-section");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
         }
-        document.getElementById('abc').addEventListener('change', function() {
-            var cauHoiInput = document.getElementById('cau_hoi');
-            var selectedOption = this.options[this.selectedIndex].value;
-            if(selectedOption ==1){
-                cauHoiInput.value = "Đặt tính rồi tính ?";
-            }
-            else if(selectedOption==2){
-                cauHoiInput.value = "Nối?";
-            }
-            else if(selectedOption==3){
-                cauHoiInput.value = "Đếm và chọn số con vật/ đồ vật tương ứng?";
-            }
-            else if(selectedOption==4){
-                cauHoiInput.value = "Tính?";
-            }
-            else if(selectedOption==5){
-                cauHoiInput.value = "Đếm và chọn số con vật/ đồ vật tương ứng?";
-            }
-            else if(selectedOption==7){
-                cauHoiInput.value = "Đếm và chọn số con vật/ đồ vật tương ứng?";
-            }
-            else if(selectedOption==8){
-                cauHoiInput.value = "Đếm và chọn số con vật/ đồ vật tương ứng?";
-            }
-            // console.log(selectedOption);
-            
-        });
+    }
+    document.getElementById('abc').addEventListener('change', function() {
+        var cauHoiInput = document.getElementById('cau_hoi');
+        var selectedOption = this.options[this.selectedIndex].value;
+        if (selectedOption == 1) {
+            cauHoiInput.value = "Đặt tính rồi tính ?";
+        } else if (selectedOption == 2) {
+            cauHoiInput.value = "Nối?";
+        } else if (selectedOption == 3) {
+            cauHoiInput.value = "Đếm và chọn số con vật/ đồ vật tương ứng?";
+        } else if (selectedOption == 4) {
+            cauHoiInput.value = "Tính?";
+        } else if (selectedOption == 5) {
+            cauHoiInput.value = "Đếm và chọn số con vật/ đồ vật tương ứng?";
+        } else if (selectedOption == 7) {
+            cauHoiInput.value = "Đếm và chọn số con vật/ đồ vật tương ứng?";
+        } else if (selectedOption == 8) {
+            cauHoiInput.value = "Đếm và chọn số con vật/ đồ vật tương ứng?";
+        }
+        // console.log(selectedOption);
+
+    });
     </script>
 
 </body>
+
 </html>
