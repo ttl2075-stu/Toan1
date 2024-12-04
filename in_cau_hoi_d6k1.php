@@ -172,7 +172,9 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D6K1 - Tổng Hiệu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./src/css/form.css">
     <link rel="stylesheet" href="./src/css/setting.css">
     <link rel="stylesheet" href="./src/css/button.css">
@@ -186,108 +188,108 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
     <link rel="stylesheet" href="./assets/css_v2/InCauHoi_d6k1.css">
     <script src="./src/js/function.js"></script>
     <script>
-        // Loại bỏ sự kiện beforeunload
-        window.removeEventListener('beforeunload', function(e) {
-            // Không làm gì cả sẽ ngăn chặn thông báo
-        });
+    // Loại bỏ sự kiện beforeunload
+    window.removeEventListener('beforeunload', function(e) {
+        // Không làm gì cả sẽ ngăn chặn thông báo
+    });
 
-        // Đảm bảo rằng không có sự kiện beforeunload nào được thêm mới
-        window.onbeforeunload = null;
+    // Đảm bảo rằng không có sự kiện beforeunload nào được thêm mới
+    window.onbeforeunload = null;
 
-        function upLocalStorage(key, value) {
-            localStorage.setItem(key, JSON.stringify(value))
-        }
+    function upLocalStorage(key, value) {
+        localStorage.setItem(key, JSON.stringify(value))
+    }
     </script>
     <!-- Chuyen session php sang localstorage -->
     <script>
-        let loaihienthi = <?php echo $id_loai_hien_thi; ?>;
-        let sessionData = <?php echo $sessionDataJSON; ?>;
-        let quizs = JSON.parse(sessionData);
-        upLocalStorage("d6k1_baiDien", quizs);
+    let loaihienthi = <?php echo $id_loai_hien_thi; ?>;
+    let sessionData = <?php echo $sessionDataJSON; ?>;
+    let quizs = JSON.parse(sessionData);
+    upLocalStorage("d6k1_baiDien", quizs);
     </script>
     <style>
-        .cauhoi {
-            font-size: 30px;
-            font-weight: bold;
-            color: black;
-            background-color: bisque;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-        }
+    .cauhoi {
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+        background-color: bisque;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    }
 
-        #help {
-            padding: 0px;
-        }
+    #help {
+        padding: 0px;
+    }
 
-        #help img {
-            width: 50px;
-            height: 50px;
-        }
+    #help img {
+        width: 50px;
+        height: 50px;
+    }
 
-        #incrementButton {
-            margin: 3% 10% 0px 0px;
-        }
+    #incrementButton {
+        margin: 3% 10% 0px 0px;
+    }
 
-        .btn {
-            background-color: #2da0fa;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-right: 10px;
-            transition: transform 0.5s ease-in-out;
-            font-size: 25px;
-        }
+    .btn {
+        background-color: #2da0fa;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-right: 10px;
+        transition: transform 0.5s ease-in-out;
+        font-size: 25px;
+    }
 
-        .btn i {
-            color: white;
-        }
+    .btn i {
+        color: white;
+    }
 
-        .btn:hover {
-            background-color: yellow;
-            transform: translateY(-5px);
-            color: black;
-        }
+    .btn:hover {
+        background-color: yellow;
+        transform: translateY(-5px);
+        color: black;
+    }
 
-        #help {
-            padding: 0 10px;
-            margin-top: 10px;
-            /* width: 50px; */
-        }
+    #help {
+        padding: 0 10px;
+        margin-top: 10px;
+        /* width: 50px; */
+    }
 
-        #help img {
-            width: 50px;
-            /* Độ rộng của hình ảnh */
-            margin-left: 5px;
-            /* Khoảng cách giữa hình ảnh và văn bản */
-        }
+    #help img {
+        width: 50px;
+        /* Độ rộng của hình ảnh */
+        margin-left: 5px;
+        /* Khoảng cách giữa hình ảnh và văn bản */
+    }
 
-        /* .help-container{
+    /* .help-container{
             height: 100px;
             position: relative;
         } */
-        table {
-            width: 100%;
-            table-layout: fixed;
-            /* Giảm kích thước chữ */
+    table {
+        width: 100%;
+        table-layout: fixed;
+        /* Giảm kích thước chữ */
+    }
+
+    @media (max-width: 768px) {
+        .bocso {
+            font-size: 14px;
         }
 
-        @media (max-width: 768px) {
-            .bocso {
-                font-size: 14px;
-            }
-
-            td,
-            th {
-                padding: 5px;
-                /* font-size: 12px; */
-                /* Giảm padding */
-            }
+        td,
+        th {
+            padding: 5px;
+            /* font-size: 12px; */
+            /* Giảm padding */
         }
+    }
     </style>
 </head>
 
@@ -299,9 +301,12 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
 
     <div class="button-container">
         <!-- <button type="button" class="return-button return-button-top-left" onclick="returnToForm()"><i class="fa-solid fa-backward"></i>Trở về</button> -->
-        <button type="button" class="btn hinhthucTL" id="traloikeotha" onclick="showThe()"><img src="./icon/thedapan.png" style="width:30px; height:30px; margin-right: 10px">Hiện thẻ đáp án</button>
-        <button type="button" class="btn hinhthucTL" id="traloithuam" onclick="showThuAM()"><img src="./icon/listen_1.png" style="width:30px; height:30px; margin-right: 10px">Thu âm để trả lời</button>
-        <button type="button" class="btn hinhthucTL" id="traloidien" onclick="showDien()"><img src="./icon/thedapan.png" style="width:30px; height:30px; margin-right: 10px"></i>Trả lời bằng cách điền</button>
+        <button type="button" class="btn hinhthucTL" id="traloikeotha" onclick="showThe()"><img
+                src="./icon/thedapan.png" style="width:30px; height:30px; margin-right: 10px">Hiện thẻ đáp án</button>
+        <button type="button" class="btn hinhthucTL" id="traloithuam" onclick="showThuAM()"><img
+                src="./icon/listen_1.png" style="width:30px; height:30px; margin-right: 10px">Thu âm để trả lời</button>
+        <button type="button" class="btn hinhthucTL" id="traloidien" onclick="showDien()"><img src="./icon/thedapan.png"
+                style="width:30px; height:30px; margin-right: 10px"></i>Trả lời bằng cách điền</button>
     </div>
     <div class="score-container box_flex_column">
         <label style="display:none;">ĐIỂM</label>
@@ -311,7 +316,8 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
         <form action="" method="post">
 
 
-            <button style="margin-bottom: 50%;" type="button" class="btn" id="check" name="btn_check" onclick="checkAnswer()"><img src="./icon/check.png" style="width:30px; height:30px;">Kiểm tra</button>
+            <button style="margin-bottom: 50%;" type="button" class="btn" id="check" name="btn_check"
+                onclick="checkAnswer()"><img src="./icon/check.png" style="width:30px; height:30px;">Kiểm tra</button>
 
 
             <button type="button" class="btn" id="help" name='btn_hd' value="
@@ -362,7 +368,8 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
 
         </div>
         <div class='div-btn'>
-            <button type="button" class="back-button"><img src="./icon/trove.png" style="width:30px; height:30px; margin-right: 5px; ">Trở về</button>
+            <button type="button" class="back-button"><img src="./icon/trove.png"
+                    style="width:30px; height:30px; margin-right: 5px; ">Trở về</button>
         </div>
         <center>
             <div id="nuthotro"></div>
@@ -421,91 +428,92 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
         <h1>Bạn đã hoàn thành</h1>
         <div class='btn-div-notice'>
             <!-- <button type="button" class="back-button"><i class="fa-solid fa-pen-to-square"></i>Làm lại</button> -->
-            <button type="button" class="xemdapan-button" onclick="Xemdapan()"><i class="fa-solid fa-eye"></i>Xem lại đáp án đúng</button>
+            <button type="button" class="xemdapan-button" onclick="Xemdapan()"><i class="fa-solid fa-eye"></i>Xem lại
+                đáp án đúng</button>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.help-container .back-button').click(function() {
-                $(this).closest('.help-container').removeClass('show');
-                $('#tableContainer').empty();
-                $('#legoContainer').empty();
-                $('#support').empty();
-                $('.show-help').empty();
-            });
-            $('.notice-container button').click(function() {
-                $(this).closest('.notice-container').removeClass('showNotice');
-            });
+    $(document).ready(function() {
+        $('.help-container .back-button').click(function() {
+            $(this).closest('.help-container').removeClass('show');
+            $('#tableContainer').empty();
+            $('#legoContainer').empty();
+            $('#support').empty();
+            $('.show-help').empty();
         });
-        console.log(<?php echo $id_loai_hien_thi; ?>)
+        $('.notice-container button').click(function() {
+            $(this).closest('.notice-container').removeClass('showNotice');
+        });
+    });
+    console.log(<?php echo $id_loai_hien_thi; ?>)
     </script>
     <script>
-        // $('#check').click(function() {
-        //     var hai = localStorage.getItem('d6k1_baiDien');
-        //     $.ajax({
-        //         url: 'file_php_xu_ly_du_lieu_d6k1.php',
-        //         type: 'post',
-        //         data: {
-        //             hai: hai
+    // $('#check').click(function() {
+    //     var hai = localStorage.getItem('d6k1_baiDien');
+    //     $.ajax({
+    //         url: 'file_php_xu_ly_du_lieu_d6k1.php',
+    //         type: 'post',
+    //         data: {
+    //             hai: hai
 
-        //         },
-        //         success: function(response) {
-        //             // alert(response);
-        //         },
-        //         error: function(xhr, status, error) {
-        //             console.error(error);
-        //         }
-        //     });
-        // });
-        $('#check').click(function() {
-            var hai = localStorage.getItem('d6k1_baiDien');
-            var luu_vet1 = localStorage.getItem('luu_vet');
-            $.ajax({
-                url: 'file_php_xu_ly_du_lieu_d6k1.php',
-                type: 'post',
-                data: {
-                    hai: hai,
-                    luu_vet1: luu_vet1
-                },
-                success: function(response) {
-                    // Check the result of the AJAX call and play the corresponding audio
-                    if (isTrue) {
-                        $('.Notice_True').show();
-                        $('.Notice_False').hide();
-                        playAudio('.trueAudio', hideImage);
-                    } else {
-                        $('.Notice_True').hide();
-                        $('.Notice_False').show();
-                        playAudio('.falseAudio', hideImage);
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error(error);
+    //         },
+    //         success: function(response) {
+    //             // alert(response);
+    //         },
+    //         error: function(xhr, status, error) {
+    //             console.error(error);
+    //         }
+    //     });
+    // });
+    $('#check').click(function() {
+        var hai = localStorage.getItem('d6k1_baiDien');
+        var luu_vet1 = localStorage.getItem('luu_vet');
+        $.ajax({
+            url: 'file_php_xu_ly_du_lieu_d6k1.php',
+            type: 'post',
+            data: {
+                hai: hai,
+                luu_vet1: luu_vet1
+            },
+            success: function(response) {
+                // Check the result of the AJAX call and play the corresponding audio
+                if (isTrue) {
+                    $('.Notice_True').show();
+                    $('.Notice_False').hide();
+                    playAudio('.trueAudio', hideImage);
+                } else {
+                    $('.Notice_True').hide();
+                    $('.Notice_False').show();
+                    playAudio('.falseAudio', hideImage);
                 }
-            });
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
         });
+    });
 
-        function playAudio(audioSelector, callback) {
-            // Select the audio element and play it
-            var audio = $(audioSelector)[0];
-            audio.play();
+    function playAudio(audioSelector, callback) {
+        // Select the audio element and play it
+        var audio = $(audioSelector)[0];
+        audio.play();
 
-            // Add an event listener for the 'ended' event
-            audio.addEventListener('ended', function() {
-                // When the audio ends, call the callback function
-                if (typeof callback === 'function') {
-                    callback();
-                }
-            });
-        }
+        // Add an event listener for the 'ended' event
+        audio.addEventListener('ended', function() {
+            // When the audio ends, call the callback function
+            if (typeof callback === 'function') {
+                callback();
+            }
+        });
+    }
 
-        function hideImage() {
-            // Hide the corresponding image
-            $('.Notice_True').hide();
-            $('.Notice_False').hide();
-        }
-        localStorage.setItem("luu_vet", JSON.stringify([]));
+    function hideImage() {
+        // Hide the corresponding image
+        $('.Notice_True').hide();
+        $('.Notice_False').hide();
+    }
+    localStorage.setItem("luu_vet", JSON.stringify([]));
     </script>
 
     <script src="./src/js/d6k1.js"></script>
