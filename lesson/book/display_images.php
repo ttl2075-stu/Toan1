@@ -20,12 +20,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css_v2/style.css">
     <title>Hiển thị Ảnh</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            font-size: 2rem;
         }
 
         .border {
@@ -53,11 +55,17 @@
             top: 10px;
             left: 10px;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: var(--blue);
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 2rem;
+        }
+
+        .goback-button:hover {
+            background-color: var(--yellow);
+            color: var(--blue);
         }
 
         h1 {

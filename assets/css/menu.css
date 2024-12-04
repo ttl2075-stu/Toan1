@@ -10,10 +10,11 @@ nav {
     overflow-y: scroll;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
+    font-size: 1.8rem;
 }
 
 nav ul li a {
-    color: darkblue; /* Màu chữ đen */
+    color: var(--blue); /* Màu chữ đen */
 }
 
 nav ul li:hover {
@@ -123,6 +124,6 @@ a:focus {
     background-color: #fae3d9; 
     font-weight: bold ;
     color: #ecf0f3; 
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 

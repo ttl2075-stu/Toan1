@@ -19,6 +19,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css_v2/style.css">
     <title>Trang Web</title>
     <style>
         body {
@@ -32,7 +33,7 @@
 
         * {
             color: white;
-            font-size: 20px;
+            font-size: 2rem;
             font-weight: bold;
             box-sizing: border-box;
         }
@@ -47,10 +48,12 @@
             margin-top: 100px;
             display: flex;
             gap: 150px;
+            justify-content: center;
         }
 
         .box {
             width: 300px;
+            height: 200px;
             background-color: white;
             position: relative;
             border: 4px outset black;
@@ -63,6 +66,7 @@
         img {
             width: 100%;
             height: 100%;
+            object-fit: contain;
             z-index: -1;
             border-radius: 50px;
             transition: transform 0.3s ease;
@@ -135,11 +139,15 @@
             top: 10px;
             left: 10px;
             padding: 10px;
-            background-color: #4CAF50;
-            color: white;
+            background-color: var(--blue);
+            color: var(--white);
             border: none;
             border-radius: 5px;
             cursor: pointer;
+        }
+        .goback-button:hover {
+            background-color: var(--yellow);
+            color: var(--blue);
         }
 
         .box:hover a {
@@ -164,17 +172,17 @@
 
 <div class="flex-container">
     <a href="display_images.php?id_bo_sach=2&id_bai_hoc=<?php echo $id_bai_hoc; ?>" class="box">
-        <img src="../../assets/image/cat-1.png">
+        <img src="../../assets/image/kntt.png">
         <span class="b">Chi tiết</span>
         <div class="d">Kết nối tri thức</div>
     </a>
     <a href="display_images.php?id_bo_sach=1&id_bai_hoc=<?php echo $id_bai_hoc; ?>" class="box">
-        <img src="../../assets/image/cat-2.jpg">
+        <img src="../../assets/image/canhdieu.png">
         <span class="b">Chi tiết</span>
         <div class="d">Cánh diều</div>
     </a>
     <a href="display_images.php?id_bo_sach=3&id_bai_hoc=<?php echo $id_bai_hoc; ?>" class="box">
-        <img src="../../assets/image/cat-3.jpg">
+        <img src="../../assets/image/ctst.jpg">
         <span class="b">Chi tiết</span>
         <div class="d">Chân trời sáng tạo</div>
     </a>

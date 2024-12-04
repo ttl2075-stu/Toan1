@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="src/css/dangnhap.css">
-	<link rel="stylesheet" href="src/css/root.css">
+	<!-- <link rel="stylesheet" href="src/css/root.css"> -->
     <link rel="stylesheet" href="src/css/button.css">
     <link rel="shortcut icon" type="image/png" href="anh/logo.png"/>
     <title>Hệ thống hỗ trợ dạy học môn toán lớp 1 cho học sinh khuyết tật học tập</title>
@@ -27,10 +27,10 @@
    
     <form action="" method="get">
         <h1>ĐĂNG NHẬP</h1>
-        <label for=""><i class="fa-solid fa-user"></i>Tài khoản</label>
-        <input type="text" name="tk" id="">
-        <label for=""><i class="fa-solid fa-lock"></i>Mật khẩu</label>
-        <input type="password" name="mk" id="">
+        <label for="tk"><i class="fa-solid fa-user"></i>Tài khoản</label>
+        <input type="text" name="tk" id="tk">
+        <label for="mk"><i class="fa-solid fa-lock"></i>Mật khẩu</label>
+        <input type="password" name="mk" id="mk">
         <input class="abc" type="submit" name="btn" value="Đăng nhập">
     </form>
     <?php

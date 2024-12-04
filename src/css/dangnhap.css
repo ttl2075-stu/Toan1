@@ -1,14 +1,16 @@
+@import url('../../assets/css_v2/style.css');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    /* font-family: "Inter", sans-serif; */
 }
 
 body {
     background-color: var(--sky);
     height: 100vh;
     overflow: hidden;
+    font-size: 1.8rem;
 }
 
 form {
@@ -23,15 +25,23 @@ form {
     width: 95%;
     border-radius: 10px;
     padding: 30px;
-    box-shadow: var(--shadow); 
-    background-color: var(--container); 
+    box-shadow: 0 20px 40px 0 rgba(118, 118, 128, 0.2); 
+    background-color: var(--white); 
 }
 
 form h1{
-    font-size: 30px;
+    font-size: 2.8rem;
     text-align: center;
-    color: var(--color);
+    color: var(--blue);
     /* margin-bottom: 10px; */
+}
+
+i {
+    margin-right: 10px;
+}
+
+label {
+    padding-left: 7px;
 }
 
 form label,
@@ -42,46 +52,50 @@ form input[type="submit"] {
     margin: 10px 0;
 }
 
+input[type="password"] {
+    font-weight: bold;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+}
+
 form input[type="text"],
 form input[type="password"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--primary);
+    border: 2px solid var(--blue);
     border-radius: 8px;
     margin-top: 5px;
     margin-bottom: 10px;
-    outline: 2px solid var(--primary);
+    font-size: 1.8rem;
 }
 
 form input[type="text"]:hover,
 form input[type="password"]:hover {
-    border: 2px solid var(--color);
+    border: 2px solid var(--blue);
     cursor: pointer;
 }
 
 form input[type="text"]:focus,
 form input[type="password"]:focus{
-    border: 2px solid var(--color);
+    border: 2px solid var(--blue);
+    outline: 4px solid rgba(11, 37, 132, 0.3);
 }
 
 
 form input[type="submit"] {
-    background-color: #1a6bb2;
-    color: white;
+    background-color: var(--blue);
+    color: var(--white);
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 2.6rem;
 }
 
 form input[type="submit"]:hover {
-    background-color: #3a6a94;
+    background-color: var(--bluehover);
     transform: translateY(-5px);
 }
 
-.fa {
-    margin-right: 10px;
-}

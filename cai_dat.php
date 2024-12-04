@@ -25,8 +25,12 @@
 	<link rel="stylesheet" href="src/css/nhap_cau_hoi.css?v=1">
 	<link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
+    <link rel="stylesheet" href="./assets/css_v2/style.css">
     <title>Cài đặt</title>
     <style>
+        :root {
+            --color: #0b2585 !important;
+        }
         form{
             max-height: fit-content;
         }
@@ -34,7 +38,7 @@
             display: inline;
         }
         body label{
-            font-size: 20px;
+            font-size: 2rem;
             font-weight: bold;
             margin-top: 20px;
         }
@@ -58,6 +62,7 @@
             min-height: 50px;
             display: flex;
             text-align: left;
+            font-size: 1.8rem;
             
         }
         body{
@@ -71,10 +76,25 @@
             height: auto;
             display: flex;
             flex-wrap: wrap;
-            /* justify-content: space-evenly; */
+            justify-content: space-evenly;
+        }
+        .tren p{
+            width: 30%;
+            margin: 0px;
+            padding: 0px;
         }
         h1{
             font-weight: bold;
+            color: var(--blue);
+        }
+
+        input[name="btn_cai_dat"] {
+            background-color: var(--blue) !important;
+            color: white;
+        }
+        input[name="btn_cai_dat"]:hover {
+            background-color: var(--bluehover) !important;
+            color: white;
         }
     </style>
 </head>
