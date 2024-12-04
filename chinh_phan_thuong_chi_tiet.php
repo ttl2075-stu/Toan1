@@ -40,6 +40,7 @@
 	<link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css_v2/chinh_phan_thuong_ct.css">
     <title>Tính phần thưởng</title>
     <style>
         select {
@@ -64,7 +65,7 @@
     </style>
 </head>
 <body>
-<a href="chinh_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>">Trở về</a>
+<a href="chinh_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>" class="btn_tro_ve">Trở về</a>
     <?php 
         $sql = "SELECT * FROM `user` WHERE `id_user`='$id_user'";
         $result = mysqli_query($conn, $sql);
@@ -78,7 +79,7 @@
 
     <!-- <a href="danh_sach_giao_bt.php">Trở về</a> -->
     <h1>Thay đổi phần thưởng</h1>
-    <a href="upload_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>">Upload ảnh</a>
+    <a href="upload_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>" class="btn_upload">Upload ảnh</a>
     <!-- <button>Up load ảnh</button> -->
         <!-- <select name="user" id="a"> -->
             <?php
@@ -92,7 +93,7 @@
                 $tong_phan_thuong = 0;
                 $stt=1;
                 echo "<table>";
-                echo "<tr>
+                echo "<tr class='th'>
                     <td><b>STT</b></td>
                     <td style='min-width: 300px;'><b>Họ tên</b></td>
               
@@ -136,7 +137,7 @@
                         echo "</select></td>";
                      }  
                     //  echo "<input type='hidden' name='test$i' value='$id_user'>";
-                     echo "<td><input type='submit' name='thay_doi' value='Thay đổi'></td>";
+                     echo "<td><input type='submit' name='thay_doi' value='Thay đổi' class='btn_thay_doi'></td>";
                    
                     $stt++;
                     $i++;

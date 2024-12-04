@@ -106,7 +106,7 @@
                     }
                     echo "</select>";
                  } 
-                echo "<input type='submit' name='btn_bh' value='CHọn bài học'>";
+                echo "<input type='submit' name='btn_bh' value='Chọn bài học'>";
                 ?> <input type="submit" name="btn_de" value="Giao bài tập"><?php
                  if(isset($_POST['btn_bh'])){
                     // echo "Bài học:". $_POST['bai_hoc'];

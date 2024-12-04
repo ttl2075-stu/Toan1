@@ -1,0 +1,15 @@
+@import url('./style.css');
+.btn_tro_ve{
+    background-color: var(--blue);
+    outline: none;
+}
+a:hover{
+    background-color: var(--bluehover);
+}
+.btn_them_phan_thuong{
+    background-color: var(--blue) !important;
+    outline: none;
+}
+.btn_them_phan_thuong:hover{
+    background-color: var(--bluehover) !important;
+}

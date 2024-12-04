@@ -37,6 +37,7 @@
 	<link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css_v2/tinh_phan_thuong.css">
     <title>Tính phần thưởng</title>
     <style>
         select {
@@ -76,7 +77,7 @@
     
     <!-- <h1>Nhập bài tập</h1> -->
 
-    <a href="doimatkhau.php">Đổi mật khẩu</a>
+    <a href="doimatkhau.php" class="btn_doi_mat_khau">Đổi mật khẩu</a>
     <form action="" method="post">
         <!-- <select name="user" id=""> -->
         <h1>Tiến độ làm bài tập của <?php echo $ten; ?></h1>
@@ -93,7 +94,7 @@
                 $tong_phan_thuong = 0;
                 $stt=1;
                 echo "<table>";
-                echo "<tr>
+                echo "<tr class='th'>
                     <td><b>STT</b></td>
                     <td style='min-width: 300px;'><b>Câu hỏi</b></td>
                     <td style='min-width: 300px;'><b>Bài học</b></td>

@@ -40,6 +40,7 @@
 	<link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css_v2/chinh_phan_thuong.css">
     <title>Tính phần thưởng</title>
     <style>
         select {
@@ -92,7 +93,7 @@
                 $tong_phan_thuong = 0;
                 $stt=1;
                 echo "<table>";
-                echo "<tr>
+                echo "<tr class='th'>
                     <td><b>STT</b></td>
                     <td style='min-width: 300px;'><b>Họ tên</b></td>
               
@@ -134,7 +135,7 @@
                     //     echo "</select></td>";
                     //  }  
                      echo "<input type='hidden' name='test$i' value='$id_user'>";
-                     echo "<td><a href='chinh_phan_thuong_chi_tiet.php?id_khoa_hoc=$id_khoa_hoc&id_user=$id_user'>Chi tiết</a></td>";
+                     echo "<td><a href='chinh_phan_thuong_chi_tiet.php?id_khoa_hoc=$id_khoa_hoc&id_user=$id_user' class='btn_chi_tiet'>Chi tiết</a></td>";
                    
                     $stt++;
                     $i++;

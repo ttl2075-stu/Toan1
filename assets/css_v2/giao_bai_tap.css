@@ -11,6 +11,7 @@ th{
     margin-left: 2rem;
     border-radius: 0.5rem;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 .btn_giao_bai:hover{
     background-color: var(--bluehover);

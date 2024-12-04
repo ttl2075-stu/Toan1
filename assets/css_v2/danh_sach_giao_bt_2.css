@@ -11,3 +11,15 @@
     background-color: var(--bluehover);
     cursor: pointer;
 }
+.huy_giao{
+    font-size: 2rem;
+}
+.lich_su{
+    font-size: 2rem;
+}
+.huy_giao:hover{
+    background-color: var(--bluehover);
+}
+.lich_su:hover{
+    background-color: var(--bluehover);
+}

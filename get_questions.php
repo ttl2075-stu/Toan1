@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="./assets/css_v2/get_question.css">
 <?php
 include 'connectdb.php';
 
@@ -30,49 +31,49 @@ if (mysqli_num_rows($result) > 0) {
         echo (kiem_tra_giao_bai_chua($id_user, $row["id_cau_hoi"], $id_bai_hoc) == 1) ? "<td>Đã giao bài</td>" : "<td>Chưa giao bài</td>";
         // echo "<td><a class='btn_xem_chi_tiet' href='in_cau_hoi.php?id_cau_hoi=" . $row['id_cau_hoi'] . "'><i class='fa-solid fa-eye'></i>Xem chi tiết</a></td>";
         if ($row["id_loai_hien_thi"] == 1) {
-            echo "<td><a class= 'btn_xem_chi_tiet' href='in_cau_hoi_d6k1.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i>Xem chi tiết</a></td>";
+            echo "<td><a class= 'btn_xem_chi_tiet' href='in_cau_hoi_d6k1.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i></a></td>";
             // echo "<li><a href='../../in_cau_hoi_d6k1.php?id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi' target='ndung1'>";
             // echo $row['ten_cau_hoi'];
             // echo "</a></li>";
         } elseif ($row["id_loai_hien_thi"] == 3) {
             //  e thêm onclick
-            echo "<td><a class= 'btn_xem_chi_tiet'  onclick='luubien()'  href='in_cau_hoi_d6k3.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i>Xem chi tiết</a></td>";
+            echo "<td><a class= 'btn_xem_chi_tiet'  onclick='luubien()'  href='in_cau_hoi_d6k3.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i></a></td>";
             //   echo "<li><a href='../../in_cau_hoi_d6k3.php?&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi' onclick='luubien()' target='ndung1'>";
             //   echo $row['ten_cau_hoi'];
             //   echo "</a></li>";
         } elseif ($row["id_loai_hien_thi"] == 2) {
-            echo "<td><a class= 'btn_xem_chi_tiet' onclick='luubien_2()' href='in_cau_hoi.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i>Xem chi tiết</a></td>";
+            echo "<td><a class= 'btn_xem_chi_tiet' onclick='luubien_2()' href='in_cau_hoi.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i></a></td>";
 
             // echo "<li><a href='../../in_cau_hoi.php?&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi' target='ndung1'>";
             // echo $row['ten_cau_hoi'];
             // echo "</a></li>";
         } elseif ($row["id_loai_hien_thi"] == 4) {
             // $in = "in_cau_hoi_d7k1";
-            echo "<td><a class= 'btn_xem_chi_tiet' href='in_cau_hoi_d7k1.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i>Xem chi tiết</a></td>";
+            echo "<td><a class= 'btn_xem_chi_tiet' href='in_cau_hoi_d7k1.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i></a></td>";
 
             //   echo "<li><a href='../../in_cau_hoi_d7k1.php?&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi' target='ndung1'>";
             //   echo $row['ten_cau_hoi'];
             //   echo "</a></li>";
         } elseif ($row["id_loai_hien_thi"] == 5) {
             //  e thêm onclick
-            echo "<td><a class= 'btn_xem_chi_tiet'  onclick='luubien()'  href='in_cau_hoi_d1.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i>Xem chi tiết</a></td>";
+            echo "<td><a class= 'btn_xem_chi_tiet'  onclick='luubien()'  href='in_cau_hoi_d1.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i></a></td>";
             //   echo "<li><a href='../../in_cau_hoi_d6k3.php?&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi' onclick='luubien()' target='ndung1'>";
             //   echo $row['ten_cau_hoi'];
             //   echo "</a></li>";
         } elseif ($row["id_loai_hien_thi"] == 6) {
             //  e thêm onclick
-            echo "<td><a class= 'btn_xem_chi_tiet'  onclick='luubien()'  href='in_cau_hoi_d4k1.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i>Xem chi tiết</a></td>";
+            echo "<td><a class= 'btn_xem_chi_tiet'  onclick='luubien()'  href='in_cau_hoi_d4k1.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i></a></td>";
             //   echo "<li><a href='../../in_cau_hoi_d6k3.php?&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi' onclick='luubien()' target='ndung1'>";
             //   echo $row['ten_cau_hoi'];
             //   echo "</a></li>";
         } elseif ($row["id_loai_hien_thi"] == 7) {
             //  e thêm onclick
-            echo "<td><a class= 'btn_xem_chi_tiet'  onclick='luubien()'  href='in_cau_hoi_d3.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i>Xem chi tiết</a></td>";
+            echo "<td><a class= 'btn_xem_chi_tiet'  onclick='luubien()'  href='in_cau_hoi_d3.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i></a></td>";
             //   echo "<li><a href='../../in_cau_hoi_d6k3.php?&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi' onclick='luubien()' target='ndung1'>";
             //   echo $row['ten_cau_hoi'];
             //   echo "</a></li>";
         } elseif ($row["id_loai_hien_thi"] == 8) {
-            echo "<td><a class= 'btn_xem_chi_tiet' onclick='luubien_2()' href='in_cau_hoi.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i>Xem chi tiết</a></td>";
+            echo "<td><a class= 'btn_xem_chi_tiet' onclick='luubien_2()' href='in_cau_hoi.php?id_bai_tap_user=0&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi'><i class='fa-solid fa-eye'></i></a></td>";
 
             // echo "<li><a href='../../in_cau_hoi.php?&id_cau_hoi=$id_cau_hoi&id_loai_hien_thi=$id_loai_hien_thi' target='ndung1'>";
             // echo $row['ten_cau_hoi'];

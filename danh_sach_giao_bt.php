@@ -88,12 +88,12 @@
              {  
                 $stt=1;
                 echo "<table>";
-                echo "<tr class='th'><td ><b>STT</b></td><td><b>Họ tên</b></td><td><b>#</b></td></tr>";
+                echo "<tr class='th'><td ><b>STT</b></td><td><b>Họ tên</b></td><td><b>Xem tiến độ</b></td></tr>";
                 while($row = mysqli_fetch_assoc($result)) {
                     // echo "<option value='".$row['id_user']."'>".$row['ten'] ."</option>";
                     echo "<tr ><td style='font-weight: bold;font-size: 25px;'>". $stt."</td>";
                     echo "<td style='font-weight: bold;font-size: 25px;'>".$row['ten'] ."</td>";
-                    echo "<td> <a href='danh_sach_giao_bt_chi_tiet_1.php?id_khoa_hoc=$id_khoa_hoc&id_user=".$row['id_user']."' class = 'btn_tien_do'>Xem tiến độ</a></td>";
+                    echo "<td> <a href='danh_sach_giao_bt_chi_tiet_1.php?id_khoa_hoc=$id_khoa_hoc&id_user=".$row['id_user']."' class = 'btn_tien_do'><i class='fa-solid fa-eye'></i></a></td>";
                     // echo "<td>".$row['ten'] ."</td></tr>";
                     $stt++;
                 }

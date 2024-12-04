@@ -1,0 +1,17 @@
+@import url('./style.css');
+.th{
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 2rem;
+}
+table{
+    font-size: 1.5rem;
+}
+.btn_chi_tiet{
+    background-color: var(--blue);
+    outline: none;
+    font-size: 2rem;
+}
+a:hover{
+    background-color: var(--bluehover);
+}

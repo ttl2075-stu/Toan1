@@ -1,0 +1,26 @@
+@import url('./style.css');
+.btn_tro_ve{
+    background-color: var(--blue);
+    outline: none;
+}
+a:hover{
+    background-color: var(--bluehover);
+}
+.btn_upload{
+    background-color: var(--blue);
+}
+table{
+    font-size: 1.5rem;
+}
+.th{
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 2rem;
+}
+input.btn_thay_doi{
+    background-color: var(--blue) !important;
+    font-size: 1.5rem !important;
+}
+input.btn_thay_doi:hover{
+    background-color: var(--bluehover) !important;
+}

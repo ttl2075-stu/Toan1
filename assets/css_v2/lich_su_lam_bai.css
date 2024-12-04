@@ -1,4 +1,7 @@
 @import url('./style.css');
+a{
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease;
+}
 #btn_tro_ve{
     background-color: var(--blue) !important;
     outline: none;
@@ -8,9 +11,16 @@
     font-size: 2.5rem;
     width: 10%;
     height: 8vh;
-    transition: transform 0.5s ease-in-out;
     padding-bottom: 4rem;
 }
 #btn_tro_ve:hover{
-    background-color: var(--bluehover);
+    background-color: var(--bluehover) !important;
+}
+.tb_dung{
+    border-radius: 2.4rem !important;
+    width: 12% !important;
+}.tb_sai{
+    border-radius: 2.4rem !important;
+    width: 12% !important;
+    background-color: var(--yellow);
 }
