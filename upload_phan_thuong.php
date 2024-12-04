@@ -40,9 +40,10 @@
 	<link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css_v2/upload_phan_thuong.css">
 </head>
 <body>
-<a href="chinh_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>">Trở về</a>
+<a href="chinh_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>" class="btn_tro_ve">Trở về</a>
 
         <!-- <select name="user" id=""> -->
        
@@ -52,7 +53,7 @@
         <input   type='file' name='dt1' ><br>
         
         
-        <input type="submit" name="btn" value="Thêm phần thưởng">
+        <input type="submit" name="btn" value="Thêm phần thưởng" class="btn_them_phan_thuong">
     </form>
     <?php
         if(isset($_POST['btn'])){

@@ -1,0 +1,13 @@
+@import url('./style.css');
+.th{
+    background-color: var(--blue);
+    color: white;
+}
+.btn_tien_do{
+    background-color: var(--blue);
+    outline: none;
+}
+.btn_tien_do :hover{
+    background-color: var(--bluehover);
+    cursor: pointer;
+}

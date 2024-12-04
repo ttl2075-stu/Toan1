@@ -15,6 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css_v2/lich_su_lam_bai.css">
 
     <title>Lịch sử làm bài</title>
     <style>
@@ -196,7 +197,7 @@
         $id_user = $thong_tin['id_user'];
         // end 
 
-        ?><a class="back" href="<?php echo "danh_sach_giao_bt_chi_tiet_2.php?id_bai_tap_user=$id_bai_tap_user&id_bai_hoc=$id_bai_hoc&id_khoa_hoc=$id_khoa_hoc&id_user=$id_user1"; ?>">Trở về</a><?php 
+        ?><a class="back" href="<?php echo "danh_sach_giao_bt_chi_tiet_2.php?id_bai_tap_user=$id_bai_tap_user&id_bai_hoc=$id_bai_hoc&id_khoa_hoc=$id_khoa_hoc&id_user=$id_user1"; ?>" id="btn_tro_ve">Trở về</a><?php 
         
         // dạng d6k1 
         if($loai_hien_thi ==1){

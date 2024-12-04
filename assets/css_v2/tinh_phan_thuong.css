@@ -1,0 +1,16 @@
+@import url('./style.css');
+table{
+    font-size: 1.5rem;
+}
+.btn_doi_mat_khau{
+    background-color: var(--blue) !important;
+    outline: none;
+}
+.btn_doi_mat_khau:hover{
+    background-color: var(--bluehover) !important;
+}
+.th{
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 2rem;
+}

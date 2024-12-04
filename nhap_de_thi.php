@@ -23,6 +23,7 @@ $id_khoa_hoc = $_GET['id_khoa_hoc'];
 
     ?>
 </select>
+<link rel="stylesheet" href="./assets/css_v2/giao_bai_tap.css">
 <style>
     /* Định dạng bảng câu hỏi */
     table {
@@ -152,7 +153,7 @@ $id_khoa_hoc = $_GET['id_khoa_hoc'];
 </select>
 <input type="hidden" id="id_nguoi_giao" name="" <?php echo "value='$id_user'" ?>>
 <input type="hidden" id="id_khoa_hoc" name="" <?php echo "value='$id_khoa_hoc'" ?>>
-<button type="button" onclick="giaoBai()">Giao bài</button> <!-- Nút giao bài -->
+<button type="button" onclick="giaoBai()" class="btn_giao_bai">Giao bài</button> <!-- Nút giao bài -->
 <h1>Danh sách câu hỏi</h1>
 <table id="questions_table">
     <tr>

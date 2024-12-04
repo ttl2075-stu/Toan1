@@ -36,6 +36,7 @@
 	<link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css_v2/danh_sach_giao_bt_1.css">
     <title>Giao bài tập chi tiết</title>
     <style>
         select {
@@ -74,7 +75,7 @@
     
     <!-- <h1>Nhập bài tập</h1> -->
 
-    <a href="danh_sach_giao_bt.php?id_khoa_hoc=<?php echo $id_khoa_hoc; ?>">Trở về</a>
+    <a href="danh_sach_giao_bt.php?id_khoa_hoc=<?php echo $id_khoa_hoc; ?>" class="btn_tro_ve">Trở về</a>
     <form action="" method="post">
         <!-- <select name="user" id=""> -->
         <h1>Tiến độ làm bài tập theo tùng chủ đề của <?php echo $ten; ?></h1>
@@ -90,7 +91,7 @@
              {  
                 $stt=1;
                 echo "<table>";
-                echo "<tr>
+                echo "<tr class='th'>
                     <td><b>STT</b></td>
                     <td><b>Chủ đề</b></td>
                     <td><b>Trạng thái</b></td>
@@ -147,7 +148,7 @@
                         echo "<td>Chưa giao bài tập</td>";
                         echo "<td>0</td>";
                     }
-                    echo "<td> <a href='danh_sach_giao_bt_chi_tiet_2.php?id_bai_hoc=$id_bai_hoc&id_khoa_hoc=$id_khoa_hoc&id_user=".$id_user1."'>Xem chi tiết</a></td>";
+                    echo "<td> <a href='danh_sach_giao_bt_chi_tiet_2.php?id_bai_hoc=$id_bai_hoc&id_khoa_hoc=$id_khoa_hoc&id_user=".$id_user1."' class='btn_xem_ct'><i class='fa-solid fa-eye'></i></a></td>";
                   
                     
                     echo "</tr>";

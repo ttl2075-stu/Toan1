@@ -1,0 +1,10 @@
+@import url('./style.css');
+th{
+    background-color: var(--blue)  !important;
+}
+.btn_chi_tiet{
+    background-color: var(--blue) !important;
+}
+.btn_chi_tiet:hover{
+    background-color: var(--bluehover) !important;
+}

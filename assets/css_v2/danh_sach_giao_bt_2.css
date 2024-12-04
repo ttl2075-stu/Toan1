@@ -1,0 +1,25 @@
+@import url('./style.css');
+.th{
+    background-color: var(--blue);
+    color: var(--white);
+}
+.btn_tro_ve{
+    background-color: var(--blue);
+    outline: none;
+}
+.btn_tro_ve:hover{
+    background-color: var(--bluehover);
+    cursor: pointer;
+}
+.huy_giao{
+    font-size: 2rem;
+}
+.lich_su{
+    font-size: 2rem;
+}
+.huy_giao:hover{
+    background-color: var(--bluehover);
+}
+.lich_su:hover{
+    background-color: var(--bluehover);
+}

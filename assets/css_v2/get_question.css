@@ -1,0 +1,7 @@
+@import url('./style.css');
+.btn_xem_chi_tiet{
+    background-color: var(--blue);
+}
+.btn_xem_chi_tiet:hover{
+    background-color: var(--bluehover);
+}

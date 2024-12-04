@@ -37,6 +37,7 @@
 	<link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css_v2/danh_sach_giao_bt_2.css">
     <title>Giao bài tập chi tiết</title>
     <style>
         select {
@@ -84,7 +85,7 @@
     
     <!-- <h1>Nhập bài tập</h1> -->
 
-    <a href="danh_sach_giao_bt_chi_tiet_1.php?id_user=<?php echo $id_user1?>&id_khoa_hoc=<?php echo $id_khoa_hoc; ?>">Trở về</a>
+    <a href="danh_sach_giao_bt_chi_tiet_1.php?id_user=<?php echo $id_user1?>&id_khoa_hoc=<?php echo $id_khoa_hoc; ?>" class="btn_tro_ve">Trở về</a>
     <form id="deleteForm" action="" method="post">
         <!-- <select name="user" id=""> -->
         <h1>Tiến độ làm bài tập của <?php echo $ten; ?></h1>
@@ -99,7 +100,7 @@
              {  
                 $stt=1;
                 echo "<table>";
-                echo "<tr>
+                echo "<tr class='th'>
                     <td><b>STT</b></td>
                     <td><b>Câu hỏi</b></td>
                     <td><b>Trạng thái</b></td>
