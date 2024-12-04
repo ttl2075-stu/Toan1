@@ -1,0 +1,155 @@
+@import url('./style.css');
+body {
+    /* background-color: #f0f8ff; Tông màu nhã nhặn */
+    margin: 0;
+    padding: 0;
+    position:relative;
+}
+
+div.cauhoi{
+    background-color: var(--blue);
+    color: var(--white);
+
+}
+
+div#contain_2{
+    width: 90rem;
+    position: fixed;
+    bottom: 20rem;
+    height: 18rem; 
+    position: fixed;
+            top: 23rem;
+           
+            color: white;
+            text-align: center;
+           
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    padding: 1rem 2rem;
+   
+}
+button#check.btn{
+    background-color: var( --blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px 20px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1.5rem;
+
+
+
+
+}
+
+button#check.btn:hover{
+    background-color: var( --yellow);
+
+}
+button#help.btn{
+    background-color: var( --blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1.5rem;
+
+}
+
+button#help.btn:hover{
+    background-color: var( --yellow);
+}
+
+div.contain{
+    height: 20rem;
+    
+}
+
+div#basket_plate.basket_plate{
+    height: 10rem;
+    margin-left: 5rem;
+}
+div.trai{
+    margin-top: 25rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+div.phai{
+    margin-top: 25rem;
+    margin-right: 5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+
+}
+button#btn-kieuhotro22.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro22.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+
+button#btn-kieuhotro23.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro23.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+
+button#btn-kieuhotro24.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro24.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+
+button#btn-kieuhotro25.btn.kht.hinhThucHelp{
+    background-color: var( --blue);
+}
+button#btn-kieuhotro25.btn.kht.hinhThucHelp:hover{
+    background-color: var( --yellow);
+}
+
+button.back-button{
+    background-color: var( --blue);
+}
+button.back-button:hover{
+    background-color: var( --yellow);
+}
+
+
+div#bieuThuc{
+    background-color: var( --blue);
+}
+div#bieuThuc:hover{
+    background-color: var( --blue);
+}
+
+button.speaker{
+    background-color: var( --blue);
+
+}
+button.speaker:hover{
+    background-color: var( --yellow);
+}
+
+
+.nuthotro button {
+    background-color: var(--blue);
+}
+
+.nuthotro button:hover{
+    background-color: var(--yellow);
+}

@@ -182,6 +182,8 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
     <link rel="stylesheet" href="./src/css/tia_so.css">
     <link rel="stylesheet" href="./src/css/help_bang.css">
     <link rel="stylesheet" href="./src/css/lego.css">
+    <link rel="stylesheet" href="./assets/css_v2/style.css">
+    <link rel="stylesheet" href="./assets/css_v2/InCauHoi_d6k1.css">
     <script src="./src/js/function.js"></script>
     <script>
         // Loại bỏ sự kiện beforeunload

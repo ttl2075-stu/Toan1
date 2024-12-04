@@ -1,0 +1,179 @@
+@import url('./style.css');
+
+div#contain_2{
+    width: 20rem;
+    /* position: fixed; */
+}
+div.help-container.show{
+    max-width: 250rem;
+}
+button#check.btn{
+    background-color: var( --blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px 20px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1.5rem;
+
+}
+
+button#check.btn:hover{
+    background-color: var( --yellow);
+
+}
+button#help.btn{
+    background-color: var( --blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1.5rem;
+
+}
+
+button#help.btn:hover{
+    background-color: var( --yellow);
+}
+div.cauhoi{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+#nuthotro button{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+#nuthotro button:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+#backbutton button{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+#backbutton button:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+.show-help button{
+    background-color: var(--bluehover);
+    color: var(--white);
+}
+
+.show-help button:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+/* div.button-container{
+    background-color: var(--blue);
+    color: var(--white);
+} */
+button#traloikeotha.btn.hinhthucTL{
+    background-color: var(--blue);
+    color: var(--white);
+}
+button#traloithuam.btn.hinhthucTL{
+    background-color: var(--blue);
+    color: var(--white);
+}
+.boxQuiz h1{
+    font-size: 3rem;
+}
+div.show{
+   width: 60rem;
+}
+
+button#incrementButton{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+button#incrementButton:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+button#decrementButton{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+button#decrementButton:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+button.back-button{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+button.back-button:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+button#recordButton{
+    background-color: var(--blue);
+    color: var(--white);
+}
+button#recordButton:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+#tags0 div.tag{
+    background-color: var(--blue);
+    color: var(--white);
+}
+#tags0 div.tag:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+button#traloidien.btn.hinhthucTL{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+button#traloidien.btn.hinhthucTL:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+div.box-phepTinh div#box-num1{
+    font-size: 2rem;
+}
+div.box-phepTinh div#box-num2{
+    font-size: 2rem;
+}
+div.box-phepTinh div#box-pheptinh{
+    font-size: 2rem;
+}
+button.xemdapan-button{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+button.xemdapan-button:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+
+
