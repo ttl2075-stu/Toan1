@@ -178,3 +178,9 @@ div#contain_2 {
     font-size: 25px;
     width: 100px;
 }
+button#xemdapan-button{
+    background-color: var(--blue);
+}
+button#xemdapan-button:hover{
+    background-color: var(--yellow);
+}
