@@ -229,4 +229,15 @@ button.xemdapan-button:hover{
     color: var(--white);
     margin-top: 10rem;
 }
+.speaker {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    font-size: 25px;
+    width: 100px;
+}
 

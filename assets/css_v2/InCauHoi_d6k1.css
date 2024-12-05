@@ -1,36 +1,7 @@
 @import url('./style.css');
 
-div.show{
-    
-        position: absolute;
-        top: 15%;
-        background-color: #fff;
-        padding: 50px 55px;
-        border: 2px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0px 2px 8px 0px #1E97F3;
-        /* text-align: center; */
-        width: 60%;
-        min-height: 500px;
-        max-height: 500px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        left: 0%;
 
-}
-div.score-container.box_flex_column{
-    top: 15%;
-  
-    background-color: #fff;
-    padding: 30px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0px 2px 8px 0px #1E97F3;
-    text-align: center;
-    overflow: hidden;
-    max-width: 350px;
-}
+
 .score-container{
     width: 35%;
 }
@@ -241,9 +212,51 @@ button.xemdapan-button{
 button.xemdapan-button:hover{
     background-color: var( --yellow);
 }
-
 #backbutton button {
     background-color: var(--blue);
     color: var(--white);
-    margin-top: 10rem;
+    margin-top: 8rem;
+}
+/* div.show {
+    position: absolute;
+    top: 15%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+   
+    width: 100%;
+    min-height: 800px;
+    overflow: hidden;
+    display: flex
+;
+    flex-direction: column;
+} */
+div.help-container.show{
+    width: 100%;
+}
+div.score-container.box_flex_column {
+    top: 15%;
+    background-color: #fff;
+    padding: 30px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+    text-align: center;
+    overflow: hidden;
+    max-width: 210px;
+}
+div.show{
+    width: 57%;
+}
+.speaker {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    font-size: 25px;
+    width: 100px;
 }
