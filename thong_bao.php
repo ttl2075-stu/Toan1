@@ -30,36 +30,41 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="src/css/nhap_de_thi.css?v=1">
-	<link rel="stylesheet" href="src/css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/nhap_de_thi.css?v=1">
+    <link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
+    <link rel="stylesheet" href="assets/css_v2/nhap_cau_hoi.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Nhập đề thi</title>
     <style>
-        select {
-            width: 200px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #61b1ee;
-            color: #333;
-            }
-        option {
-            background-color: #f8f8f8;
-            color: #333;
-        }
-           
+    select {
+        width: 200px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #61b1ee;
+        color: #333;
+    }
+
+    option {
+        background-color: #f8f8f8;
+        color: #333;
+    }
     </style>
 </head>
+
 <body>
-    
-   <h1>Giao bài tập vừa rồi cho học sinh</h1>
+
+    <h1>Giao bài tập vừa rồi cho học sinh</h1>
     <form action="" method="post">
         <!-- <select name="user" id=""> -->
         <h4>Chọn học sinh</h4>
@@ -80,11 +85,11 @@
              }  
              
             ?>
-                
+
             <!-- </select> -->
-      
-        <input type="submit" name="btn_de" value="Giao bài tập">
-        <input type="submit" name="btn_tro_ve" value="Trở về">
+
+            <input class="btn-submit" type="submit" name="btn_de" value="Giao bài tập">
+            <input class="btn-submit" type="submit" name="btn_tro_ve" value="Trở về">
     </form>
     <?php
         if(isset($_POST['btn_de'])){
@@ -112,6 +117,7 @@
             header("Location: nhap_cau_hoi.php?id_khoa_hoc=$id_khoa_hoc");
         }
     ?>
-   
+
 </body>
+
 </html>

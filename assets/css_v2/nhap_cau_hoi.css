@@ -76,3 +76,6 @@ body{
 element.style{
     width: 100%;
 }
+.btn-submit ,form select {
+    margin-bottom: 2rem !important;
+}
