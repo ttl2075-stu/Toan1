@@ -1,7 +1,7 @@
 @import url('../css_v2/style.css');
 
 .center-text{
-    font-size: 2.4rem !important;
+    font-size: 2.6rem !important;
     margin-top: 2rem ;
     margin-bottom: 2rem;
     color: var(--blue) !important;
@@ -12,8 +12,10 @@ h2{
 label{
     font-size: 1.5rem !important;
 }
+
 .btn-submit{
     background-color: var(--blue) !important;
+    width: 100% !important;
 }
 .btn-submit:hover{
     background-color: var(--bluehover) !important;
@@ -67,4 +69,10 @@ form input[type="number"]{
 }
 form input[type="number"]{
     border: 0.185rem solid var(--bluehover) !important;
+}
+body{
+    background-color: var(--white) !important;
+}
+element.style{
+    width: 100%;
 }
