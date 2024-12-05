@@ -4,9 +4,12 @@ div#contain_2{
     width: 20rem;
     position: fixed;
 }
+div#basket.basket{
+    
+}
 button#check.btn{
     background-color: var( --blue);
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
@@ -17,7 +20,8 @@ button#check.btn{
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-left: 1.5rem;
+    margin-left: 1.5rem; */
+    color: var(--white);
 
 }
 
@@ -27,8 +31,9 @@ button#check.btn:hover{
 }
 button#help.btn{
     background-color: var( --blue);
-    display: flex;
-    align-items: center;
+    color: var(--white);
+    /* display: flex;
+   
     justify-content: center;
     gap: 5px;
     padding: 10px 20px;
@@ -38,7 +43,7 @@ button#help.btn{
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-left: 1.5rem;
+    margin-left: 1.5rem; */
 
 }
 
@@ -79,3 +84,86 @@ div.cauhoi{
     color: var(--white);
 }
 
+/* #contain_2 {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+    text-align: center;
+    overflow: hidden;
+    max-width: 200px;
+} */
+
+/* .btn {
+    background-color: #2da0fa;
+    background-color: #bbded6;
+    border: none;
+    color: white;
+    color: grey;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: transform 0.5s ease-in-out;
+    font-size: 25px;} */
+
+/* Nút help */
+#help {
+    padding: 0 10px;
+    margin-top: 10px;
+}
+#backbutton button {
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 10rem;
+}
+
+div#contain_2 {
+    width: 30rem;
+}
+#contain_2 {
+    position: absolute;
+    top: 15%;
+    right: 1%;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+    text-align: center;
+    overflow: hidden;
+    max-width: 185px;
+    margin-left: 3rem;
+}
+.basket {
+    width: 350px;
+    min-height: 330px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background-color: #FFF0F5;
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+    text-align: left;
+}
+.plate {
+    margin-left: 50px;
+    width: 350px;
+    min-height: 330px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background-color: #E0FFFF;
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+    text-align: left;
+}

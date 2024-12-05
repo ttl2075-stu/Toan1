@@ -11,30 +11,51 @@ div.cauhoi{
     color: var(--white);
 
 }
+.inputt {
+    box-shadow: rgb(30, 151, 243) 0px 2px 8px 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    font-weight: bolder;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(148, 0, 211);
+    border-image: initial;
+    margin-top: 300px;
+    border-radius: 20px;
+}
 
-div#contain_2{
+#contain_2 {
+    position: absolute;
+    top: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+    text-align: center;
+    overflow: hidden;
+    max-width: 180px;
     width: 80rem;
-    position: fixed;
     margin-top: 1rem;
     bottom: 20rem;
-    /* top: 10px;  */
-    height: 15rem; 
-   
+    height: 20rem;
+    right: 2%;
 }
 button#check.btn{
     background-color: var( --blue);
     display: flex;
-    align-items: center;
+   
     justify-content: center;
     gap: 5px;
-    padding: 15px 20px;
     color: white;
-    font-size: 1rem;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-left: 1.5rem;
+   
 
 
 
@@ -48,17 +69,14 @@ button#check.btn:hover{
 button#help.btn{
     background-color: var( --blue);
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 5px;
-    padding: 10px 20px;
     color: white;
-    font-size: 1rem;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-left: 1.5rem;
+   
 
 }
 
@@ -71,8 +89,27 @@ div.contain{
 }
 
 div#basket_plate.basket_plate{
-    height: 10rem;
-    margin-left: 5rem;
+    height: 30rem;
+    top: 13rem;
+    right: 8rem;
+    width: 280px;
+
+}
+
+.inputt {
+    box-shadow: rgb(30, 151, 243) 0px 2px 8px 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    font-weight: bolder;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(148, 0, 211);
+    border-image: initial;
+    margin: 120px;
+    border-radius: 20px;
 }
 
 
@@ -138,4 +175,10 @@ button.speaker:hover{
 
 .nuthotro button:hover{
     background-color: var(--yellow);
+}
+
+#backbutton button {
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 10rem;
 }
