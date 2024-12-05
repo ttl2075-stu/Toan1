@@ -12,8 +12,12 @@ th{
     border-radius: 0.5rem;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    font-size: 2rem;
 }
 .btn_giao_bai:hover{
     background-color: var(--bluehover);
     cursor: pointer;
+}
+body{
+    background-color: var(--white) !important;
 }

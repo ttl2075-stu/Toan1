@@ -144,8 +144,8 @@
                         0
                         </td>";
                     }
-                    echo "<td><a class='huy_giao' href='huy_giao_bt.php?id_bai_tap_user=$id_bai_tap_user&id_bai_hoc=$id_bai_hoc&id_khoa_hoc=$id_khoa_hoc&id_user=$id_user1'>Hủy giao bài tập</a>
-                        <a class='lich_su' href='lich_su_lam_bai.php?id_bai_tap_user=$id_bai_tap_user&id_bai_hoc=$id_bai_hoc&id_khoa_hoc=$id_khoa_hoc&id_user=$id_user1''>Xem lịch sử làm bài</a>
+                    echo "<td><a class='huy_giao' href='huy_giao_bt.php?id_bai_tap_user=$id_bai_tap_user&id_bai_hoc=$id_bai_hoc&id_khoa_hoc=$id_khoa_hoc&id_user=$id_user1'><i class='fa-solid fa-xmark'></i></a>
+                        <a class='lich_su' href='lich_su_lam_bai.php?id_bai_tap_user=$id_bai_tap_user&id_bai_hoc=$id_bai_hoc&id_khoa_hoc=$id_khoa_hoc&id_user=$id_user1''><i class='fa-solid fa-eye'></i></a>
                     </td>";
                    
                     $stt++;

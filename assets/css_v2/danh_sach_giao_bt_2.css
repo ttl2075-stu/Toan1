@@ -12,14 +12,35 @@
     cursor: pointer;
 }
 .huy_giao{
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .lich_su{
     font-size: 2rem;
+    padding: 1rem 1rem !important;
 }
+
 .huy_giao:hover{
     background-color: var(--bluehover);
 }
 .lich_su:hover{
     background-color: var(--bluehover);
+}
+body{
+    background-color: var(--white);
+}
+tr, td{
+    font-size: 2rem !important;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+h1{
+    color: var(--blue) !important;
+}
+tr:nth-child(even){
+    background-color: #f9f9f9 !important;
+}
+a{
+    margin: 0.5rem !important;
+    padding: 1rem 1.5rem;
+    font-size: 1.8rem;
 }

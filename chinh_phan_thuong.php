@@ -99,7 +99,7 @@
               
                     <td><b>Phần thưởng hiện tại</b></td>
                     
-                    <td><b>Thay đổi</b></td>
+                    <td><b>Chi tiết</b></td>
                    
                 </tr>";
                 $url ="";
@@ -135,7 +135,7 @@
                     //     echo "</select></td>";
                     //  }  
                      echo "<input type='hidden' name='test$i' value='$id_user'>";
-                     echo "<td><a href='chinh_phan_thuong_chi_tiet.php?id_khoa_hoc=$id_khoa_hoc&id_user=$id_user' class='btn_chi_tiet'>Chi tiết</a></td>";
+                     echo "<td><a href='chinh_phan_thuong_chi_tiet.php?id_khoa_hoc=$id_khoa_hoc&id_user=$id_user' class='btn_chi_tiet'><i class='fa-solid fa-eye'></i></a></td>";
                    
                     $stt++;
                     $i++;

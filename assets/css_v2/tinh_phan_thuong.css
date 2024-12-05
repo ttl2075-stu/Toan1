@@ -1,6 +1,6 @@
 @import url('./style.css');
 table{
-    font-size: 1.5rem;
+    font-size: 2.2rem;
 }
 .btn_doi_mat_khau{
     background-color: var(--blue) !important;
@@ -12,5 +12,14 @@ table{
 .th{
     background-color: var(--blue);
     color: var(--white);
-    font-size: 2rem;
+    font-size: 2.5rem;
+}
+h1{
+    color: var(--blue);
+}
+body{
+    background-color: var(--white);
+}
+form{
+    width: 95% !important;
 }
