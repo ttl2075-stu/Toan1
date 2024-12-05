@@ -1,110 +1,243 @@
 @import url('./style.css');
-body {
-    /* background-color: #f0f8ff; Tông màu nhã nhặn */
-    margin: 0;
-    padding: 0;
-    position:relative;
+
+div.show{
+    max-height: 380px;
+}
+div.score-container.box_flex_column{
+    height: 25rem;
+    width: 19rem;
+}
+/* tiêu đề */
+.boxQuiz h1{
+    font-size: 3rem;
 }
 
-input#btnSubmitSendAns{
+button#traloikeotha.btn.hinhthucTL{
     background-color: var(--blue);
-    margin-top: 30rem;
+
 }
 
-input#btnSubmitSendAns:hover{
+button#traloikeotha.btn.hinhthucTL:hover{
     background-color: var(--yellow);
+    
 }
+
+button#traloithuam.btn.hinhthucTL{
+    background-color: var(--blue);
+    
+}
+
+button#traloithuam.btn.hinhthucTL:hover{
+    background-color: var(--yellow);  
+}
+/*  Thanh hỗ trợ */
+/* div.score-container.box_flex_column{
+  
+} */
+
 div.cauhoi{
     background-color: var(--blue);
-    color: var(--white)
+    color: var(--white);
 }
 
-div.con_vat_item{
-    /* width: 20rem; */
-    height: 20rem;
-}
-div#container{
-    width: 150rem;
-}
-image{
-   height: 10rem;
-   text-align: center;
-   width: 30rem;
-   border: var(--black)
-}
-div#trangthai1{
-    margin-top: 5rem;
-
-}
-button#xemdapan-button{
+#nuthotro button{
     background-color: var(--blue);
+    color: var(--white);
 }
-button#xemdapan-button:hover{
+
+#nuthotro button:hover{
     background-color: var(--yellow);
+    color: var(--white);
 }
-div.flag3{
-    width: 10rem;
-}
-/*  */
-
-button#btn-kieuhotro22.btn.kht.hinhThucHelp{
-    background-color: var( --blue);
-}
-button#btn-kieuhotro22.btn.kht.hinhThucHelp:hover{
-    background-color: var( --yellow);
+#backbutton button{
+    background-color: var(--blue);
+    color: var(--white);
 }
 
-
-button#btn-kieuhotro23.btn.kht.hinhThucHelp{
-    background-color: var( --blue);
-}
-button#btn-kieuhotro23.btn.kht.hinhThucHelp:hover{
-    background-color: var( --yellow);
+#backbutton button:hover{
+    background-color: var(--yellow);
+    color: var(--white);
 }
 
-
-button#btn-kieuhotro24.btn.kht.hinhThucHelp{
-    background-color: var( --blue);
-}
-button#btn-kieuhotro24.btn.kht.hinhThucHelp:hover{
-    background-color: var( --yellow);
+.show-help button{
+    background-color: var(--bluehover);
+    color: var(--white);
 }
 
-
-button#btn-kieuhotro25.btn.kht.hinhThucHelp{
-    background-color: var( --blue);
+.show-help button:hover{
+    background-color: var(--yellow);
+    color: var(--white);
 }
-button#btn-kieuhotro25.btn.kht.hinhThucHelp:hover{
-    background-color: var( --yellow);
+
+/* Hỗ trợ bên trong */
+button#incrementButton{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+button#incrementButton:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+button#decrementButton{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+button#decrementButton:hover{
+    background-color: var(--yellow);
+    color: var(--white);
 }
 
 button.back-button{
-    background-color: var( --blue);
-}
-button.back-button:hover{
-    background-color: var( --yellow);
-}
-
-
-div#bieuThuc{
-    background-color: var( --blue);
-}
-div#bieuThuc:hover{
-    background-color: var( --blue);
-}
-
-button.speaker{
-    background-color: var( --blue);
-
-}
-button.speaker:hover{
-    background-color: var( --yellow);
-}
-
-.nuthotro button {
     background-color: var(--blue);
+    color: var(--white);
 }
 
-.nuthotro button:hover{
+button.back-button:hover{
     background-color: var(--yellow);
+    color: var(--white);
 }
+
+button#check.btn{
+    background-color: var( --blue);
+    display: flex;
+    justify-content: center;
+    width: 14rem;
+    gap: 5px;
+    padding: 15px 15px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* margin-left: 1.5rem; */
+    text-align: center;
+
+}
+
+button#check.btn:hover{
+    background-color: var( --yellow);
+
+}
+button#help.btn{
+    background-color: var( --blue);
+    display: flex;
+    width: 14rem;
+    justify-content: center;
+    gap: 5px;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* margin-left: 1.5rem; */
+    text-align: center;
+
+}
+
+button#help.btn:hover{
+    background-color: var( --yellow);
+}
+
+div#the0_0.tag{
+    background-color: var( --blue);
+    height: 1rem;
+}
+div#the0_0.tag:hover{
+    background-color: var( --yellow);
+}
+
+div#the0_1.tag{
+    background-color: var( --blue);
+    height: 1rem;
+}
+div#the0_1.tag:hover{
+    background-color: var( --yellow);
+}
+
+div#the0_2.tag{
+    background-color: var( --blue);
+    height: 1rem;
+}
+div#the0_2.tag:hover{
+    background-color: var( --yellow);
+}
+
+div#the0_3.tag{
+    background-color: var( --blue);
+    height: 1rem;
+}
+div#the0_3.tag:hover{
+    background-color: var( --yellow);
+}
+/* thu âm */
+button#recordButton{
+    background-color: var( --blue);
+}
+button#recordButton:hover{
+    background-color: var( --yellow);
+}
+button#traloidien.btn.hinhthucTL{
+    background-color: var( --blue);
+}
+
+button#traloidien.btn.hinhthucTL:hover{
+    background-color: var( --yellow);
+}
+/* nút xem đáp án */
+button.xemdapan-button{
+    background-color: var( --blue);
+}
+button.xemdapan-button:hover{
+    background-color: var( --yellow);
+}
+input#btnSubmitSendAns{
+    background-color: var( --blue);
+}
+input#btnSubmitSendAns:hover{
+    background-color: var( --yellow);
+}
+
+/* nút xem đáp án */
+button.xemdapan-button{
+    background-color: var( --blue);
+}
+button.xemdapan-button:hover{
+    background-color: var( --yellow);
+}
+
+#btnSubmitSendAns {
+   
+    top: 70px;
+    right: 45%;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 40px;
+}
+#backbutton button {
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 10rem;
+}
+.speaker {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    font-size: 25px;
+    width: 100px;
+}
+

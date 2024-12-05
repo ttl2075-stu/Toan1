@@ -1,53 +1,58 @@
 @import url('./style.css');
 
-div#contain_2{
-    width: 20rem;
-    /* position: fixed; */
+
+
+.score-container{
+    width: 35%;
 }
-div.help-container.show{
-    width: 400rem;
-}
-button#check.btn{
-    background-color: var( --blue);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 15px 20px;
-    color: white;
-    font-size: 1rem;
-    border-radius: 8px;
+
+.btn {
+    background-color: #2da0fa;
+    background-color: #bbded6;
     border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-left: 1.5rem;
-
-}
-
-button#check.btn:hover{
-    background-color: var( --yellow);
-
-}
-button#help.btn{
-    background-color: var( --blue);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+    color: white;
+    color: grey;
     padding: 10px 20px;
-    color: white;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: none;
+    font-size: 16px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-left: 1.5rem;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: transform 0.5s ease-in-out;
+    font-size: 25px;}
+
+/* Nút help */
+#help {
+    padding: 0 10px;
+    margin-top: 10px;
+}
+/* tiêu đề */
+.boxQuiz h1{
+    font-size: 3rem;
+}
+
+button#traloikeotha.btn.hinhthucTL{
+    background-color: var(--blue);
 
 }
 
-button#help.btn:hover{
-    background-color: var( --yellow);
+button#traloikeotha.btn.hinhthucTL:hover{
+    background-color: var(--yellow);
+    
 }
+
+button#traloithuam.btn.hinhthucTL{
+    background-color: var(--blue);
+    
+}
+
+button#traloithuam.btn.hinhthucTL:hover{
+    background-color: var(--yellow);  
+}
+/*  Thanh hỗ trợ */
+/* div.score-container.box_flex_column{
+  
+} */
+
 div.cauhoi{
     background-color: var(--blue);
     color: var(--white);
@@ -82,28 +87,11 @@ div.cauhoi{
     color: var(--white);
 }
 
-/* div.button-container{
-    background-color: var(--blue);
-    color: var(--white);
-} */
-button#traloikeotha.btn.hinhthucTL{
-    background-color: var(--blue);
-    color: var(--white);
-}
-button#traloithuam.btn.hinhthucTL{
-    background-color: var(--blue);
-    color: var(--white);
-}
-.boxQuiz h1{
-    font-size: 3rem;
-}
-div.show{
-   width: 60rem;
-}
-
+/* Hỗ trợ bên trong */
 button#incrementButton{
     background-color: var(--blue);
     color: var(--white);
+    width: 80px;
 }
 
 button#incrementButton:hover{
@@ -114,6 +102,7 @@ button#incrementButton:hover{
 button#decrementButton{
     background-color: var(--blue);
     color: var(--white);
+    width: 80px;
 }
 
 button#decrementButton:hover{
@@ -131,49 +120,167 @@ button.back-button:hover{
     color: var(--white);
 }
 
+button#check.btn{
+    background-color: var( --blue);
+    display: flex;
+    justify-content: center;
+    width: 14rem;
+    gap: 5px;
+    padding: 15px 15px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* margin-left: 1.5rem; */
+    text-align: center;
+
+}
+
+button#check.btn:hover{
+    background-color: var( --yellow);
+
+}
+button#help.btn{
+    background-color: var( --blue);
+    display: flex;
+    width: 14rem;
+    justify-content: center;
+    gap: 5px;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* margin-left: 1.5rem; */
+    text-align: center;
+
+}
+
+button#help.btn:hover{
+    background-color: var( --yellow);
+}
+
+div#the0_0.tag{
+    background-color: var( --blue);
+    height: 1rem;
+}
+div#the0_0.tag:hover{
+    background-color: var( --yellow);
+}
+
+div#the0_1.tag{
+    background-color: var( --blue);
+    height: 1rem;
+}
+div#the0_1.tag:hover{
+    background-color: var( --yellow);
+}
+
+div#the0_2.tag{
+    background-color: var( --blue);
+    height: 1rem;
+}
+div#the0_2.tag:hover{
+    background-color: var( --yellow);
+}
+
+div#the0_3.tag{
+    background-color: var( --blue);
+    height: 1rem;
+}
+div#the0_3.tag:hover{
+    background-color: var( --yellow);
+}
+/* thu âm */
 button#recordButton{
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var( --blue);
 }
 button#recordButton:hover{
-    background-color: var(--yellow);
-    color: var(--white);
-}
-#tags0 div.tag{
-    background-color: var(--blue);
-    color: var(--white);
-}
-#tags0 div.tag:hover{
-    background-color: var(--yellow);
-    color: var(--white);
+    background-color: var( --yellow);
 }
 button#traloidien.btn.hinhthucTL{
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var( --blue);
 }
 
 button#traloidien.btn.hinhthucTL:hover{
-    background-color: var(--yellow);
-    color: var(--white);
+    background-color: var( --yellow);
 }
-div.box-phepTinh div#box-num1{
-    font-size: 2rem;
-}
-div.box-phepTinh div#box-num2{
-    font-size: 2rem;
-}
-div.box-phepTinh div#box-pheptinh{
-    font-size: 2rem;
-}
+/* nút xem đáp án */
 button.xemdapan-button{
+    background-color: var( --blue);
+}
+button.xemdapan-button:hover{
+    background-color: var( --yellow);
+}
+#backbutton button {
     background-color: var(--blue);
     color: var(--white);
+    margin-top: 8rem;
+}
+/* div.show {
+    position: absolute;
+    top: 15%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+   
+    width: 100%;
+    min-height: 800px;
+    overflow: hidden;
+    display: flex
+;
+    flex-direction: column;
+} */
+div.help-container.show{
+    width: 100%;
 }
 
-button.xemdapan-button:hover{
-    background-color: var(--yellow);
-    color: var(--white);
+div.score-container.box_flex_column {
+    top: 15%;
+    background-color: #fff;
+    padding: 30px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+    text-align: center;
+    overflow: hidden;
+    max-width: 210px;
 }
-
-
-
+div.show{
+    width: 57%;
+}
+.speaker {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    font-size: 25px;
+    width: 100px;
+}
+button {
+    width: 170px;
+    margin: 10px 0px;
+}
+.help-container {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+    display: none;
+    text-align: center;
+    width: 100%;
+    min-height: 700px;
+}
+div.show {
+    max-height: 380px;
+}

@@ -116,7 +116,7 @@ mySetKHT.forEach((u) => {
                       ${buttonLabel} 
                   </button>`;
     // var speakerHTML = `<button class="speaker" type="button" onclick="readButtonContent('btn-kieuhotro${u}')"><img src="./icon/listen.png" alt="Image" style="width: 40px; height: 40px;"></button>`;
-    var speakerHTML = `<button type="button" class="speaker" onclick="readButtonContent('btn-kieuhotro${u}')"><i class="fa-solid fa-volume-high"></i></button>`;
+    var speakerHTML = `<button type="button" class="speaker" onclick="readButtonContent('btn-kieuhotro${u}')"><i class="fa-solid fa-hand-point-right"></i><i class="fa-solid fa-volume-high"></i></button>`;
     // Thêm button và loa vào divbtnHelps
     divbtnHelps.innerHTML += buttonHTML + " "+speakerHTML + "<br>";
 });

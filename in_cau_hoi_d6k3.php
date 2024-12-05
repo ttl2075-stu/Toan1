@@ -570,7 +570,7 @@ function cap_nhat_tg($id_bai_tap_user, $i)
 
 
             // var speakerHTML = `<button type="button" class="speaker" onclick="readButtonContent('btn-kieuhotro${u}')"><img src="./icon/listen.png" alt="Image" style="width: 30px; height: 30px;"></button>`;
-            var speakerHTML = `<button class="speaker" onclick="readButtonContent('btn-kieuhotro${u}')"><i class="fa-solid fa-volume-high"></i></button>`;
+            var speakerHTML = `<button class="speaker" onclick="readButtonContent('btn-kieuhotro${u}')"><i class="fa-solid fa-hand-point-right"></i><i class="fa-solid fa-volume-high"></i></button>`;
 
             // Thêm button và loa vào divbtnHelps
             divbtnHelps.innerHTML += buttonHTML + " " + speakerHTML + "<br>";
