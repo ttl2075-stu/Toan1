@@ -78,7 +78,7 @@
     <a href="danh_sach_giao_bt.php?id_khoa_hoc=<?php echo $id_khoa_hoc; ?>" class="btn_tro_ve">Trở về</a>
     <form action="" method="post">
         <!-- <select name="user" id=""> -->
-        <h1>Tiến độ làm bài tập theo tùng chủ đề của <?php echo $ten; ?></h1>
+        <h1>Tiến độ làm bài tập theo từng chủ đề của <?php echo $ten; ?></h1>
       
         <!-- <select name="user" id="a"> -->
             <?php

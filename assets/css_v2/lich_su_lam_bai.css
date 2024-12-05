@@ -11,7 +11,7 @@ a{
     font-size: 2.5rem;
     width: 10%;
     height: 8vh;
-    padding-bottom: 4rem;
+    padding-bottom: 4.5rem;
 }
 #btn_tro_ve:hover{
     background-color: var(--bluehover) !important;
