@@ -199,7 +199,7 @@ mySetKHT.forEach((u) => {
 
 
     
-    var speakerHTML = `<button class="speaker" onclick="readButtonContent('btn-kieuhotro${u}')"><i class="fa-solid fa-volume-high"></i></button>`;
+    var speakerHTML = `<button class="speaker" onclick="readButtonContent('btn-kieuhotro${u}')"><i class="fa-solid fa-hand-point-right"></i><i class="fa-solid fa-volume-high"></i></button>`;
 
     // Thêm button và loa vào divbtnHelps
     divbtnHelps.innerHTML += buttonHTML + " "+speakerHTML + "<br>";
