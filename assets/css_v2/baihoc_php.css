@@ -1,0 +1,18 @@
+@import url('./style.css');
+
+
+nav#navbar1{
+    background-color: #2A95BF;
+    border-right: 2px inset whitesmoke;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+    color: white;
+}
