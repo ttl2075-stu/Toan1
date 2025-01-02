@@ -22,10 +22,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="src/css/nhap_cau_hoi.css?v=1">
+	<link rel="stylesheet" href="src/css/nhap_cau_hoi.css">
 	<link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
     <link rel="stylesheet" href="./assets/css_v2/style.css">
+
     <title>Cài đặt</title>
     <style>
         :root {
@@ -131,7 +132,8 @@
         <input name="toc_do2" type="range" min="1" max="10" step="0.5" value="<?php echo $toc_do_hien_tai['toc_do_ho_tro_tia_so']; ?>" class="slider" id="myRange2">
         <p>Tốc độ: <span id="demo2"></span></p>
 
-        <input type="submit"  name="btn_cai_dat" value="Cập nhật">
+        <!-- <input type="submit"  name="btn_cai_dat" value="Cập nhật"> -->
+        <center><button type="submit" name="btn_cai_dat" class="button-1 button-darkblue">Cập nhật</button></center>
         <div style="display: none;" class="alert alert-success">
         <strong>Thành công!</strong>Thay đổi giọng và tốc độ đọc thành công
         </div>

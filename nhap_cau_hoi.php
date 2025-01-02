@@ -96,7 +96,8 @@
             ?>
         </div>
 
-        <input class="btn-submit" type="submit" name="btn" value="Nhập câu hỏi"><br>
+        <!-- <input class="btn-submit" type="submit" name="btn" value="Nhập câu hỏi"><br> -->
+        <button class="btn-submit" type="submit" name="btn"><i class="fa-solid fa-circle-chevron-right"></i><span style="display: none;">Nhập câu hỏi</span></button><br>
 
         <?php //echo "<a href='nhap_de_thi.php'><i class='fa-solid fa-file-import'></i>Giao bài tập</a>"?>
 

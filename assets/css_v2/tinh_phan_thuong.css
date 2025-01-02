@@ -2,13 +2,14 @@
 table{
     font-size: 2.2rem;
 }
-.btn_doi_mat_khau{
-    background-color: var(--blue) !important;
-    outline: none;
+/* .btn_doi_mat_khau{
+    background-color: var(--yellow) !important;
+    outline: 1px solid var(--yellowhover) !important;
+    color: var(--blue) !important;
 }
 .btn_doi_mat_khau:hover{
     background-color: var(--bluehover) !important;
-}
+} */
 .th{
     background-color: var(--blue);
     color: var(--white);

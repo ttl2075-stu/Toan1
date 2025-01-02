@@ -77,7 +77,7 @@
     
     <!-- <h1>Nhập bài tập</h1> -->
 
-    <a href="doimatkhau.php" class="btn_doi_mat_khau">Đổi mật khẩu</a>
+    <a href="doimatkhau.php" class="btn_doi_mat_khau button-1 button-orange">Đổi mật khẩu</a>
     <form action="" method="post">
         <!-- <select name="user" id=""> -->
         <h1>Tiến độ làm bài tập của <?php echo $ten; ?></h1>
@@ -139,7 +139,7 @@
                 
                 }
                 echo "<tr>
-                    <td  colspan='5'>tong_phan_thuong:".in_so_sao($tong_phan_thuong,$tong_phan_thuong,$url,"3%") ."($tong_phan_thuong) </td>
+                    <td  colspan='5'>Tổng phần thưởng:".in_so_sao($tong_phan_thuong,$tong_phan_thuong,$url,"3%") ."($tong_phan_thuong) </td>
                 </tr>";
                 // echo "</select>";
                 echo "</table>";

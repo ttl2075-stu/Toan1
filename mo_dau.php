@@ -166,30 +166,30 @@ function updateFolderValue(link, event) {
       <img src="assets/image/logo.jpg" alt="user" />
     </div>
     <ul>
-      <li><a href="template/home.html" target="ndung" onclick="toggleSubMenu(this); scrollToPosition(186.4)">Trang chủ</a></li>
-      <li><a href="tinh_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc; ?>" target="ndung" onclick="toggleSubMenu(this); scrollToPosition(186.4)">Trang cá nhân</a></li>
+      <li><a href="template/home.html" target="ndung" onclick="toggleSubMenu(this); scrollToPosition(186.4)"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+      <li><a href="tinh_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc; ?>" target="ndung" onclick="toggleSubMenu(this); scrollToPosition(186.4)"><i class="fa-solid fa-address-card"></i> Trang cá nhân</a></li>
       <!-- <li><a href="test_js.php?id_khoa_hoc=<?php //echo $id_khoa_hoc?>" target="ndung" onclick="toggleSubMenu(this); scrollToPosition(186.4)">Giao bài tập</a></li> -->
-      <li><a href="khoa_hoc.php" onclick="toggleSubMenu(this); scrollToPosition(186.4)">Trở về</a></li>
+      <li><a href="khoa_hoc.php" onclick="toggleSubMenu(this); scrollToPosition(186.4)"><i class="fa-solid fa-rotate-left"></i> Trở về</a></li>
       <?php
         if($role==1){
           ?>
-          <li><a href="nhap_cau_hoi.php<?php echo"?id_khoa_hoc=$id_khoa_hoc"; ?>" target="ndung" onclick="toggleSubMenu(this)">Nhập câu hỏi</a>
-          <li><a href="them_tu_khoa.php?id_khoa_hoc=<?php echo $id_khoa_hoc; ?>" target="ndung" onclick="toggleSubMenu(this)">Nhập từ khóa</a>
+          <li><a href="nhap_cau_hoi.php<?php echo"?id_khoa_hoc=$id_khoa_hoc"; ?>" target="ndung" onclick="toggleSubMenu(this)"><i class="fa-solid fa-clipboard-question"></i> Nhập câu hỏi</a>
+          <li><a href="them_tu_khoa.php?id_khoa_hoc=<?php echo $id_khoa_hoc; ?>" target="ndung" onclick="toggleSubMenu(this)"><i class="fa-solid fa-keyboard"></i> Nhập từ khóa</a>
           
-          <li><a href="chinh_phan_thuong.php<?php echo"?id_khoa_hoc=$id_khoa_hoc"; ?>" target="ndung" onclick="toggleSubMenu(this); scrollToPosition(186.4)">Thay đổi phần thưởng</a></li>
-          <li><a href="nhap_de_thi.php?id_khoa_hoc=<?php echo $id_khoa_hoc; ?>" target="ndung" onclick="toggleSubMenu(this)">Giao bài tập</a>
+          <li><a href="chinh_phan_thuong.php<?php echo"?id_khoa_hoc=$id_khoa_hoc"; ?>" target="ndung" onclick="toggleSubMenu(this); scrollToPosition(186.4)"><i class="fa-solid fa-gift"></i> Thay đổi phần thưởng</a></li>
+          <li><a href="nhap_de_thi.php?id_khoa_hoc=<?php echo $id_khoa_hoc; ?>" target="ndung" onclick="toggleSubMenu(this)"><i class="fa-solid fa-person-circle-question"></i> Giao bài tập</a>
           <?php
             // echo ($role ==1) ? "nhap_de_thi.php" : " baihoc.php";
         }
         if($role==1 || $role==3){
-          ?><li><a href="danh_sach_giao_bt.php<?php echo"?id_khoa_hoc=$id_khoa_hoc"; ?>" target="ndung" onclick="toggleSubMenu(this)">Danh sách học sinh được giao bài tập</a>
+          ?><li><a href="danh_sach_giao_bt.php<?php echo"?id_khoa_hoc=$id_khoa_hoc"; ?>" target="ndung" onclick="toggleSubMenu(this)"><i class="fa-solid fa-list"></i> Danh sách học sinh được giao bài tập</a>
          <?php
         }
       ?>
       
       <?php
         if($role==2){?>
-          <li><a onclick="toggleSubMenu(this)">Bài học</a> 
+          <li><a onclick="toggleSubMenu(this)"><i class="fa-solid fa-book"></i> Bài học</a> 
           <ul class="submenu0">
             <li><a href="#" onclick="toggleSubMenu(this); updateFolderValue(this, event)" >1. Số và phép tính </a>
               <ul class="submenu1">
@@ -303,7 +303,7 @@ function updateFolderValue(link, event) {
       ?>
       <?php
         if($role==1||$role==3){
-          ?>   <li><a onclick="toggleSubMenu(this)">Tài liệu tham khảo</a> 
+          ?>   <li><a onclick="toggleSubMenu(this)"><i class="fa-solid fa-book-open"></i> Tài liệu tham khảo</a> 
           <ul class="submenu0">
             <li><a href="#" onclick="toggleSubMenu(this); updateFolderValue(this, event)" >1. Số và phép tính </a>
               <ul class="submenu1">
@@ -419,7 +419,7 @@ function updateFolderValue(link, event) {
         }
         
       ?>
-    <li><a target="ndung" href="cai_dat.php">Cài đặt</a></li>
+    <li><a target="ndung" href="cai_dat.php"><i class="fa-solid fa-sliders"></i> Cài đặt</a></li>
       
 
       <!-- <li><a href="lesson/luyentap/index.html" target="ndung" onclick="toggleSubMenu(this); scrollToPosition(186.4)">Luyện tập</a></li>
