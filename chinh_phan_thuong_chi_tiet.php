@@ -31,41 +31,48 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="src/css/nhap_de_thi.css?v=1">
-	<link rel="stylesheet" href="src/css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/nhap_de_thi.css?v=1">
+    <link rel="stylesheet" href="src/css/root.css">
     <link rel="stylesheet" href="src/css/button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css_v2/chinh_phan_thuong_ct.css">
     <title>Tính phần thưởng</title>
     <style>
-        select {
-            width: 200px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #61b1ee;
-            color: #333;
-            }
-        option {
-            background-color: #f8f8f8;
-            color: #333;
-        }
-        .fa-solid{
-            font-size:30px;
-        }
-        .fa-regular{
-            font-size:30px;
-        }
+    select {
+        width: 200px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #61b1ee;
+        color: #333;
+    }
+
+    option {
+        background-color: #f8f8f8;
+        color: #333;
+    }
+
+    .fa-solid {
+        font-size: 30px;
+    }
+
+    .fa-regular {
+        font-size: 30px;
+    }
     </style>
 </head>
+
 <body>
-<a href="chinh_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>" class="btn_tro_ve">Trở về</a>
+    <a href="chinh_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>" class="btn_tro_ve">Trở về</a>
     <?php 
         $sql = "SELECT * FROM `user` WHERE `id_user`='$id_user'";
         $result = mysqli_query($conn, $sql);
@@ -74,15 +81,15 @@
         $src_anh=get_url_anh($row['id_anh_phan_thuong']);
         // $src_anh= $row['url_anh'];
     ?>
-    
+
     <!-- <h1>Nhập bài tập</h1> -->
 
     <!-- <a href="danh_sach_giao_bt.php">Trở về</a> -->
     <h1>Thay đổi phần thưởng</h1>
     <a href="upload_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>" class="btn_upload">Upload ảnh</a>
     <!-- <button>Up load ảnh</button> -->
-        <!-- <select name="user" id="a"> -->
-            <?php
+    <!-- <select name="user" id="a"> -->
+    <?php
             
             
              $sql ="SELECT * FROM `thanh_vien_khoa_hoc` INNER JOIN `user` WHERE `id_khoa_hoc`='$id_khoa_hoc' AND `thanh_vien_khoa_hoc`.`id_user` = `user`.`id_user` AND `user`.`quyen`=2 AND `user`.`id_user`='$id_user1'";
@@ -94,12 +101,12 @@
                 $stt=1;
                 echo "<table>";
                 echo "<tr class='th'>
-                    <td><b>STT</b></td>
-                    <td style='min-width: 300px;'><b>Họ tên</b></td>
+                    <td style='width:10%; text-align:center;'><b>STT</b></td>
+                    <td style='width:30%; text-align:center;'><b>Họ tên</b></td>
               
-                    <td><b>Phần thưởng hiện tại</b></td>
-                    <td><b>Lựa chọn ảnh</b></td>
-                    <td><b>Thay đổi</b></td>
+                    <td style='width:30%; text-align:center;'><b>Phần thưởng hiện tại</b></td>
+                    <td style='width:15%; text-align:center;'><b>Lựa chọn ảnh</b></td>
+                    <td style='width:15%; text-align:center;'><b>Thay đổi</b></td>
                    
                 </tr>";
                 $url ="";
@@ -108,12 +115,12 @@
                 while($row = mysqli_fetch_assoc($result)) {
                     $id_user = $row['id_user'];
                     // echo "<option value='".$row['id_user']."'>".$row['ten'] ."</option>";
-                    echo "<tr><td>". $stt."</td>";
-                    echo "<td>".$row['ten']."</td>";
+                    echo "<tr><td style='text-align: center;'>". $stt."</td>";
+                    echo "<td style='text-align: center;'>".$row['ten']."</td>";
                     // $tt = ($row['trang_thai']==1) ? "<i class='fa-solid fa-circle-check' style='color: #63E6BE;'></i>" : "<i class='fa-regular fa-rectangle-xmark' style='color: #d26565;'></i>";
                     // echo "<td>".$tt."</td>";
                     $url="./anh/phan_thuong/".get_anh_user($id_user);
-                    echo "<td><img style='width:7%' src='$url' ></td>";
+                    echo "<td style='text-align: center;'><img style='width:7%' src='$url' ></td>";
                     // lựa chọn ảnh
                     // $anh=get_all_url_anh();
                     // print_r($anh);
@@ -245,6 +252,7 @@
                 return $kq;
             }
             ?>
-   
+
 </body>
+
 </html>
