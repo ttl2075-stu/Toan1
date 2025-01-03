@@ -19,9 +19,15 @@
 	<!-- Begin bootstrap cdn -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="	sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/css_v2/style.css">
 	<!-- End bootstrap cdn -->
   <style>
-    .btn-primary{
+    .btn{
+      min-height: 0;
+      font-weight: 800;
+      padding: 5px 10px;
+    }
+    /* .btn-primary{
       background-color: var(--blue);
       border-color: #1a6bb2;
     }
@@ -29,7 +35,7 @@
     .btn-primary:hover{
       background-color: var(--bluehover);
       border-color: #1a6bb2;
-    }
+    } */
   </style>
 </head>
 <body>
@@ -70,7 +76,7 @@
                           
 				 	      <div class="card-body">
 				 	        <h5 class="card-title" style="font-size: 2rem;"><?php echo $khoaHoc['ten_khoa_hoc']; ?></h5>
-				 	        <a target="_parent" href="mo_dau.php?id_khoa_hoc=<?php echo $khoaHoc['id_khoa_hoc']; ?>" class="btn btn-primary">Truy cập</a>
+				 	        <a target="_parent" href="mo_dau.php?id_khoa_hoc=<?php echo $khoaHoc['id_khoa_hoc']; ?>" class="btn btn-primary button-1 button-blue">Truy cập</a>
 				 	      </div>
 				 	    </div>
 				 	</div>
@@ -95,7 +101,7 @@
                                       <img  src="./anh/<?php echo $khoaHoc['url_anh']; ?>" class="card-img-top" alt="Course Image">
                                     <div class="card-body">
                                         <h5 class="card-title" style="font-size: 2rem;"><?php echo $khoaHoc['ten_khoa_hoc']; ?></h5>
-                                        <a target="_parent" href="mo_dau.php?id_khoa_hoc=<?php echo $khoaHoc['id_khoa_hoc']; ?>" class="btn btn-primary">Truy cập</a>
+                                        <a target="_parent" href="mo_dau.php?id_khoa_hoc=<?php echo $khoaHoc['id_khoa_hoc']; ?>" class="btn button-1 button-red">Truy cập</a>
                                     </div>
                                     </div>
                                 </div>

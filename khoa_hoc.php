@@ -59,6 +59,9 @@
     height: 400px;
     overflow: hidden;
   }
+  .card:hover{
+    box-shadow: rgba(255, 0, 0, 0.19) 0px 10px 20px, rgba(255, 0, 0, 0.23) 0px 6px 6px;
+  }
 
   .card img {
     width: 100%;

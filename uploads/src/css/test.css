@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -31,7 +30,7 @@ a:hover {
 }
 form {
     max-width: 60%;
-    top:10%;
+    top: 10%;
     margin: 0 auto;
     /* overflow-y: auto; 
     max-height: 500px; 
@@ -41,51 +40,51 @@ form {
     width: 95%;
     border-radius: 10px;
     padding: 30px;
-    box-shadow: var(--shadow); 
-    background-color: var(--container); 
-        }
+    box-shadow: var(--shadow);
+    background-color: var(--container);
+}
 
 form input[type='text'] {
-    width: 200px; 
+    width: 200px;
 }
 
 form input[type='file'] {
-    width: auto; 
+    width: auto;
 }
 
 form input[type='text'],
 form input[type='file'],
 form input[type='submit'] {
-    display: block; 
-    margin-bottom: 10px; 
-    width: calc(100% - 20px); 
+    display: block;
+    margin-bottom: 10px;
+    width: calc(100% - 20px);
 }
 
 form br {
-    display: none; 
+    display: none;
 }
 
-i{
+i {
     font-size: 30px;
     margin-right: 10px;
 }
 
-form h1{
+form h1 {
     font-size: 30px;
     text-align: center;
     color: var(--color);
 }
 form label,
-form input[type="text"],
-form input[type="submit"],
-form input[type="file"] {
+form input[type='text'],
+form input[type='submit'],
+form input[type='file'] {
     display: block;
     margin-bottom: 10px;
 }
 
-form input[type="text"],
-form input[type="password"],
-form input[type="file"]{
+form input[type='text'],
+form input[type='password'],
+form input[type='file'] {
     width: 100%;
     padding: 10px;
     border: 1px solid var(--primary);
@@ -95,20 +94,20 @@ form input[type="file"]{
     outline: 2px solid var(--primary);
 }
 
-form input[type="text"]:hover,
-form input[type="password"]:hover,
-form input[type="file"]:hover {
+form input[type='text']:hover,
+form input[type='password']:hover,
+form input[type='file']:hover {
     border: 2px solid var(--color);
     cursor: pointer;
 }
 
-form input[type="text"]:focus,
-form input[type="password"]:focus,
+form input[type='text']:focus,
+form input[type='password']:focus,
 form select:focus {
     border: 2px solid var(--color);
 }
 
-form input[type="submit"] {
+form input[type='submit'] {
     background-color: #007bff;
     color: white;
     padding: 12px 20px;
@@ -120,7 +119,7 @@ form input[type="submit"] {
     font-size: 25px;
 }
 
-form input[type="submit"]:hover {
+form input[type='submit']:hover {
     background-color: orangered;
     transform: translateY(-5px);
 }
