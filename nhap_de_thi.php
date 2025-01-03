@@ -163,13 +163,18 @@ select+select {
     <tr>
         <th>Chọn</th>
         <th>STT</th>
-        <th class="ten-bai">Tên bài</th>
+        <th>Tên bài</th>
         <th>Thời gian tạo bài</th>
         <th>Trạng thái</th>
         <th>Xem chi tiết</th>
     </tr>
     <!-- Dữ liệu câu hỏi -->
 </table>
+<style>
+tr td:nth-child(3) {
+    text-align: left;
+}
+</style>
 
 <script>
 function loadQuestions() {

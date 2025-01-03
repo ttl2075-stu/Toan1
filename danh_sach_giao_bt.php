@@ -99,8 +99,8 @@
                 while($row = mysqli_fetch_assoc($result)) {
                     // echo "<option value='".$row['id_user']."'>".$row['ten'] ."</option>";
                     echo "<tr ><td style='font-weight: bold;font-size: 25px; text-align:center;'>". $stt."</td>";
-                    echo "<td style='font-weight: bold;font-size: 25px;text-align:center;'>".$row['ten'] ."</td>";
-                    echo "<td style='text-align:center;'> <a href='danh_sach_giao_bt_chi_tiet_1.php?id_khoa_hoc=$id_khoa_hoc&id_user=".$row['id_user']."' class = 'btn_tien_do'><i class='fa-solid fa-eye'></i></a></td>";
+                    echo "<td style='font-weight: bold;font-size: 25px;'>".$row['ten'] ."</td>";
+                    echo "<td style='text-align:center;'> <a href='danh_sach_giao_bt_chi_tiet_1.php?id_khoa_hoc=$id_khoa_hoc&id_user=".$row['id_user']."' class = 'btn_tien_do button-1 button-blue'><i class='fa-solid fa-eye'></i></a></td>";
                     // echo "<td>".$row['ten'] ."</td></tr>";
                     $stt++;
                 }

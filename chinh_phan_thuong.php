@@ -142,7 +142,7 @@
                     //     echo "</select></td>";
                     //  }  
                      echo "<input type='hidden' name='test$i' value='$id_user'>";
-                     echo "<td style='text-align: center;'><a href='chinh_phan_thuong_chi_tiet.php?id_khoa_hoc=$id_khoa_hoc&id_user=$id_user' class='btn_chi_tiet'><i class='fa-solid fa-eye'></i></a></td>";
+                     echo "<td style='text-align: center;'><a href='chinh_phan_thuong_chi_tiet.php?id_khoa_hoc=$id_khoa_hoc&id_user=$id_user' class='btn_chi_tiet button-1 button-blue-revert'><i class='fa-solid fa-eye'></i></a></td>";
                    
                     $stt++;
                     $i++;
