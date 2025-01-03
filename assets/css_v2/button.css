@@ -178,3 +178,14 @@
 .button-35:hover {
     box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
+
+
+.button-blue-revert {
+    background: var(--white) !important;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+}
+.button-blue-revert:hover, .button-blue-revert:active {
+    color: var(--white);
+    background-color: var(--blue) !important;
+}
