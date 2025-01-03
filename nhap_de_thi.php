@@ -62,6 +62,38 @@ table tr:hover {
 
 /* Định dạng nút "Xem chi tiết" */
 .btn_xem_chi_tiet {
+    background: var(--white) !important;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 800;
+    min-height: 40px;
+    outline: 0;
+    padding: 10px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+.btn_xem_chi_tiet:hover,
+.btn_xem_chi_tiet:active {
+    color: var(--white);
+    background-color: var(--blue) !important;
+    background-color: initial;
+    background-position: 0 0;
+}
+.btn_xem_chi_tiet:active {
+    opacity: 0.5;
+}
+
+/* .btn_xem_chi_tiet {
     display: inline-block;
     padding: 8px 12px;
     background-color: #3498db;
@@ -74,12 +106,12 @@ table tr:hover {
 
 .btn_xem_chi_tiet:hover {
     background-color: #2980b9;
-}
+} */
 
 /* Định dạng icon trong nút */
-.btn_xem_chi_tiet i {
+/* .btn_xem_chi_tiet i {
     margin-right: 6px;
-}
+} */
 
 /* Thông báo khi không có câu hỏi */
 td[colspan="4"] {

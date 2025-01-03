@@ -8,9 +8,10 @@ table{
     font-size: 1.8rem !important;
 }
 .btn_chi_tiet{
-    background-color: var(--blue);
+    /* background-color: var(--blue);
     outline: none;
-    font-size: 2rem;
+    font-size: 2rem; */
+    padding: 10px;
 }
 a:hover{
     background-color: var(--bluehover);

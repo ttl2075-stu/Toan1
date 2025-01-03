@@ -61,13 +61,13 @@
         color: #333;
     }
 
-    .fa-solid {
+    /* .fa-solid {
         font-size: 30px;
     }
 
     .fa-regular {
         font-size: 30px;
-    }
+    } */
     </style>
 </head>
 

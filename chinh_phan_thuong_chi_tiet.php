@@ -50,9 +50,9 @@
         width: 200px;
         padding: 10px;
         font-size: 16px;
-        border: 1px solid #ccc;
+        border: 1px solid var(--blue) !important;
         border-radius: 5px;
-        background-color: #61b1ee;
+        /* background-color: #61b1ee; */
         color: #333;
     }
 
@@ -72,7 +72,7 @@
 </head>
 
 <body>
-    <a href="chinh_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>" class="btn_tro_ve">Trở về</a>
+    <a href="chinh_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>" class="btn_tro_ve button-1 button-orange-revert">Trở về</a>
     <?php 
         $sql = "SELECT * FROM `user` WHERE `id_user`='$id_user'";
         $result = mysqli_query($conn, $sql);
@@ -86,7 +86,7 @@
 
     <!-- <a href="danh_sach_giao_bt.php">Trở về</a> -->
     <h1>Thay đổi phần thưởng</h1>
-    <a href="upload_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>" class="btn_upload">Upload ảnh</a>
+    <a href="upload_phan_thuong.php?id_khoa_hoc=<?php echo $id_khoa_hoc?>" class="btn_upload button-1 button-blue"><i class="fa-solid fa-upload" style="display: none;"></i><span>Upload ảnh</span></a>
     <!-- <button>Up load ảnh</button> -->
     <!-- <select name="user" id="a"> -->
     <?php
@@ -120,7 +120,7 @@
                     // $tt = ($row['trang_thai']==1) ? "<i class='fa-solid fa-circle-check' style='color: #63E6BE;'></i>" : "<i class='fa-regular fa-rectangle-xmark' style='color: #d26565;'></i>";
                     // echo "<td>".$tt."</td>";
                     $url="./anh/phan_thuong/".get_anh_user($id_user);
-                    echo "<td style='text-align: center;'><img style='width:7%' src='$url' ></td>";
+                    echo "<td style='text-align: center;'><img style='width:10%' src='$url' ></td>";
                     // lựa chọn ảnh
                     // $anh=get_all_url_anh();
                     // print_r($anh);
@@ -144,7 +144,7 @@
                         echo "</select></td>";
                      }  
                     //  echo "<input type='hidden' name='test$i' value='$id_user'>";
-                     echo "<td><input type='submit' name='thay_doi' value='Thay đổi' class='btn_thay_doi'></td>";
+                     echo "<td style='display: flex;'><button type='submit' name='thay_doi' value='Thay đổi' class='btn_thay_doi button-1 button-blue'><i class='fa-solid fa-floppy-disk'></i></button></td>";
                    
                     $stt++;
                     $i++;

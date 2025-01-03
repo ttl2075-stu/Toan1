@@ -189,3 +189,13 @@
     color: var(--white);
     background-color: var(--blue) !important;
 }
+
+.button-orange-revert {
+    background: var(--white) !important;
+    border: 1px solid #ff8c00;
+    color: #ff8c00;
+}
+.button-orange-revert:hover, .button-orange-revert:active {
+    color: var(--white);
+    background-color: #ff8c00 !important;
+}
