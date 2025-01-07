@@ -195,10 +195,21 @@ button.xemdapan-button:hover{
     background-color: var( --yellow);
 }
 input#btnSubmitSendAns{
-    background-color: var( --blue);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: transform 0.5s ease-in-out;
+    font-size: 25px;
+    background: #ff4742 ;
+    border: 1px solid #ff4742 ;
+    color: #ffffff !important;
 }
 input#btnSubmitSendAns:hover{
-    background-color: var( --yellow);
+    background-color: white !important;
+        transform: translateY(-5px);
+        color: red !important;
 }
 
 /* nút xem đáp án */
@@ -240,4 +251,5 @@ button.xemdapan-button:hover{
     font-size: 25px;
     width: 100px;
 }
+
 

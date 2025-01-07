@@ -37,7 +37,9 @@ function cap_nhat_tg($id_bai_tap_user, $i)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài tập Dạng D6.K2</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./src/css/form.css">
     <link rel="stylesheet" href="./src/css/setting.css">
     <link rel="stylesheet" href="./src/css/button.css">
@@ -53,18 +55,18 @@ function cap_nhat_tg($id_bai_tap_user, $i)
     <link rel="stylesheet" href="./assets/css_v2/InCauHoi_php.css">
     <script src="./src/js/function.js"></script>
     <script>
-        // Loại bỏ sự kiện beforeunload
-        window.removeEventListener('beforeunload', function(e) {
-            // Không làm gì cả sẽ ngăn chặn thông báo
-        });
-        localStorage.setItem("luu_vet", JSON.stringify([]));
+    // Loại bỏ sự kiện beforeunload
+    window.removeEventListener('beforeunload', function(e) {
+        // Không làm gì cả sẽ ngăn chặn thông báo
+    });
+    localStorage.setItem("luu_vet", JSON.stringify([]));
 
-        // Đảm bảo rằng không có sự kiện beforeunload nào được thêm mới
-        window.onbeforeunload = null;
+    // Đảm bảo rằng không có sự kiện beforeunload nào được thêm mới
+    window.onbeforeunload = null;
 
-        function upLocalStorage(key, value) {
-            localStorage.setItem(key, JSON.stringify(value))
-        }
+    function upLocalStorage(key, value) {
+        localStorage.setItem(key, JSON.stringify(value))
+    }
     </script>
     <!-- <script>
         // Loại bỏ sự kiện beforeunload
@@ -77,233 +79,257 @@ function cap_nhat_tg($id_bai_tap_user, $i)
     </script> -->
 </head>
 <style>
-    .con_vat_item .item input[type="text"],
-    .active-convat-box .item input[type="text"] {
-        width: fit-content;
-        width: 100px;
-        height: 70px;
-        border-radius: 5px;
-        border: none;
-        background-color: #f2f2f2;
-        color: blue;
-        font-weight: bolder;
-        font-size: 35px;
+.con_vat_item .item input[type="text"],
+.active-convat-box .item input[type="text"] {
+    width: fit-content;
+    width: 100px;
+    height: 70px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    color: blue;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.canh_dieu_item .item input[type="number"] {
+    width: fit-content;
+    top: 15%;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 35px !important;
+    color: black;
+}
+
+#debai {
+    font-size: 30px;
+}
+
+#debais {
+    font-size: 30px;
+}
+
+.div_btn {
+    position: fixed;
+    top: 70px;
+    right: 45%;
+    display: block;
+}
+
+.div_btn button {
+    position: fixed;
+    display: block;
+    margin: 0 10px;
+    /* Căn lề giữa các button */
+    top: 70px;
+    left: 10%;
+}
+
+.div_btn .back_button {
+    position: fixed;
+    display: block;
+    margin: 0 10px;
+    /* Căn lề giữa các button */
+    top: 70px;
+    left: 10%;
+}
+
+.div_btn .back_button {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.div_btn .back_button:hover {
+    /* background-color: #0056b3;  */
+    background-color: orangered;
+    transform: translateY(-5px);
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#notice-container {
+    position: fixed;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px 0px #1E97F3;
+    /* display: none; */
+    text-align: center;
+    width: 100%;
+    min-height: 550px;
+    display: none;
+}
+
+.showNotice {
+    display: block;
+    position: absolute;
+    width: 100%;
+    background: white;
+}
+
+div.btn-div-notice {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20% 10%;
+    align-items: center;
+}
+
+div.btn-div-notice button {
+    margin: 20px 0;
+    max-width: 50%;
+    min-width: 50%;
+}
+
+#trangthai1 {
+    display: flex;
+    top: 15px;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    background: #ffffff;
+}
+
+
+.special img {
+    margin-top: 200px;
+}
+
+.pheptinh {
+    font-size: 35px;
+    color: blue;
+    font-weight: bold;
+    position: absolute;
+    top: 140px;
+    margin-left: 70px;
+}
+
+.dapan {
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 250px;
+    margin-left: 70px;
+
+}
+
+#help {
+    padding: 0px;
+}
+
+#help img {
+    width: 50px;
+    height: 50px;
+}
+
+.btn {
+    /* background-color: #2da0fa;
+    /* Màu nền */
+    /* border: none;
+    color: white; */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: transform 0.5s ease-in-out;
+    font-size: 25px;
+}
+
+.button-red {
+    background: #ff4742 !important;
+    border: 1px solid #ff4742;
+    color: #ffffff;
+}
+
+.button-1 {
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 800;
+    min-height: 40px;
+    outline: 0;
+    padding: 15px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.btn i {
+    color: white;
+}
+
+.btn:hover {
+    background-color: white !important;
+    transform: translateY(-5px);
+    color: red !important;
+}
+
+#help {
+    padding: 0 10px;
+    margin-top: 10px;
+    /* width: 50px; */
+}
+
+#help img {
+    width: 50px;
+    /* Độ rộng của hình ảnh */
+    margin-left: 5px;
+    /* Khoảng cách giữa hình ảnh và văn bản */
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    /* Giảm kích thước chữ */
+}
+
+@media (max-width: 768px) {
+    .bocso {
+        font-size: 14px;
     }
 
-    .canh_dieu_item .item input[type="number"] {
-        width: fit-content;
-        top: 15%;
-        left: 40%;
-        transform: translateX(-50%);
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: none;
-        background-color: rgba(255, 255, 255, 0.5);
-        text-align: center;
-        font-weight: bolder;
-        font-size: 35px !important;
-        color: black;
+    td,
+    th {
+        padding: 5px;
+        /* font-size: 12px; */
+        /* Giảm padding */
     }
-
-    #debai {
-        font-size: 30px;
-    }
-
-    #debais {
-        font-size: 30px;
-    }
-
-    .div_btn {
-        position: fixed;
-        top: 70px;
-        right: 45%;
-        display: block;
-    }
-
-    .div_btn button {
-        position: fixed;
-        display: block;
-        margin: 0 10px;
-        /* Căn lề giữa các button */
-        top: 70px;
-        left: 10%;
-    }
-
-    .div_btn .back_button {
-        position: fixed;
-        display: block;
-        margin: 0 10px;
-        /* Căn lề giữa các button */
-        top: 70px;
-        left: 10%;
-    }
-
-    .div_btn .back_button {
-        display: block;
-        background-color: #007bff;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: transform 0.5s ease-in-out;
-        font-weight: bold;
-        font-size: 25px;
-        margin-bottom: 10px;
-    }
-
-    .div_btn .back_button:hover {
-        /* background-color: #0056b3;  */
-        background-color: orangered;
-        transform: translateY(-5px);
-    }
-
-    .container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-        top: 100px;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    #notice-container {
-        position: fixed;
-        top: 7%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0px 2px 8px 0px #1E97F3;
-        /* display: none; */
-        text-align: center;
-        width: 100%;
-        min-height: 550px;
-        display: none;
-    }
-
-    .showNotice {
-        display: block;
-        position: absolute;
-        width: 100%;
-        background: white;
-    }
-
-    div.btn-div-notice {
-        flex-direction: column;
-        display: flex;
-        justify-content: space-evenly;
-        margin: 20% 10%;
-        align-items: center;
-    }
-
-    div.btn-div-notice button {
-        margin: 20px 0;
-        max-width: 50%;
-        min-width: 50%;
-    }
-
-    #trangthai1 {
-        display: flex;
-        top: 15px;
-        flex-direction: row;
-        justify-content: space-around;
-        position: relative;
-        background: #ffffff;
-    }
-
-
-    .special img {
-        margin-top: 200px;
-    }
-
-    .pheptinh {
-        font-size: 35px;
-        color: blue;
-        font-weight: bold;
-        position: absolute;
-        top: 140px;
-        margin-left: 70px;
-    }
-
-    .dapan {
-        font-size: 35px;
-        color: black;
-        font-weight: bold;
-        position: absolute;
-        top: 250px;
-        margin-left: 70px;
-
-    }
-
-    #help {
-        padding: 0px;
-    }
-
-    #help img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .btn {
-        background-color: #2da0fa;
-        /* Màu nền */
-        border: none;
-        color: white;
-        /* Màu chữ */
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-right: 10px;
-        transition: transform 0.5s ease-in-out;
-        font-size: 25px;
-    }
-
-    .btn i {
-        color: white;
-    }
-
-    .btn:hover {
-        background-color: yellow;
-        transform: translateY(-5px);
-        color: black;
-    }
-
-    #help {
-        padding: 0 10px;
-        margin-top: 10px;
-        /* width: 50px; */
-    }
-
-    #help img {
-        width: 50px;
-        /* Độ rộng của hình ảnh */
-        margin-left: 5px;
-        /* Khoảng cách giữa hình ảnh và văn bản */
-    }
-
-    table {
-        width: 100%;
-        table-layout: fixed;
-        /* Giảm kích thước chữ */
-    }
-
-    @media (max-width: 768px) {
-        .bocso {
-            font-size: 14px;
-        }
-
-        td,
-        th {
-            padding: 5px;
-            /* font-size: 12px; */
-            /* Giảm padding */
-        }
-    }
+}
 </style>
 
 <body>
@@ -357,10 +383,10 @@ function cap_nhat_tg($id_bai_tap_user, $i)
             echo "<input type='hidden' name='id_cau_hoi' value='$id_cau_hoi'>";
         ?>
 
-            <!-- <input type="submit" name="btn" value="Nộp bài"> -->
+        <!-- <input type="submit" name="btn" value="Nộp bài"> -->
     </form>
 
-<?php
+    <?php
 
         } elseif ($row1['id_loai_hien_thi'] == 2 || $row1['id_loai_hien_thi'] == 8) {
 ?>
@@ -375,37 +401,40 @@ function cap_nhat_tg($id_bai_tap_user, $i)
 
             if (mysqli_num_rows($resultCauHoi) > 0) {
         ?>
-            <div class="convat_1">
-                <?php
+        <div class="convat_1">
+            <?php
                 $rowSeparateCountCauHoi = ceil(mysqli_num_rows($resultCauHoi) / 2);
                 // Lấy toàn bộ kết quả vào một mảng
                 $rowsCauhoi = mysqli_fetch_all($resultCauHoi, MYSQLI_ASSOC);
                 for ($i = 0; $i < $rowSeparateCountCauHoi; $i++) {
                     $row = $rowsCauhoi[$i];
                 ?>
-                    <div class="con_vat_item" data-id="<?= $row['id_dap_d6k2'] ?>">
-                        <div class="item" id="id-<?= $row['id_dap_d6k2'] ?>">
-                            <?php if ($row1['id_loai_hien_thi'] == 2) {
+            <div class="con_vat_item" data-id="<?= $row['id_dap_d6k2'] ?>">
+                <div class="item" id="id-<?= $row['id_dap_d6k2'] ?>">
+                    <?php if ($row1['id_loai_hien_thi'] == 2) {
                             ?>
-                                <img src="./anh/convat/<?= $row['url_anh'] ?>" alt="Con vật <?= $row['id_dap_d6k2'] ?>">
-                                <input readonly="true" value="<?= $row['ten_dap_an'] ?>" type="text" placeholder="?"> <?php
+                    <img src="./anh/convat/<?= $row['url_anh'] ?>" alt="Con vật <?= $row['id_dap_d6k2'] ?>">
+                    <input readonly="true" value="<?= $row['ten_dap_an'] ?>" type="text" placeholder="?">
+                    <?php
                                                                                                                     } else {
                                                                                                                         ?>
-                                <?php for ($i = 0; $i < $row['ten_dap_an']; $i++) {
-                                ?><img src="./anh/convat/<?= $row['url_anh'] ?>" alt="Con vật <?= $row['id_dap_d6k2'] ?>"><?php
+                    <?php for ($i = 0; $i < $row['ten_dap_an']; $i++) {
+                                ?><img src="./anh/convat/<?= $row['url_anh'] ?>"
+                        alt="Con vật <?= $row['id_dap_d6k2'] ?>"><?php
                                                                                                                             } ?>
 
-                                <input hidden readonly="true" value="<?= $row['ten_dap_an'] ?>" type="text" placeholder="?"> <?php
+                    <input hidden readonly="true" value="<?= $row['ten_dap_an'] ?>" type="text" placeholder="?">
+                    <?php
                                                                                                                             } ?>
 
 
-                        </div>
-                    </div>
-                <?php
-                }
-                ?>
+                </div>
             </div>
             <?php
+                }
+                ?>
+        </div>
+        <?php
                 $sqlDapAn = "SELECT * FROM `dap_an_d6k2` WHERE `id_cau_hoi`='$id_cau_hoi' and `cot` = 1";
                 // Thực thi câu truy vấn và gán vào $result
                 $resultDapAn = mysqli_query($conn, $sqlDapAn);
@@ -413,86 +442,91 @@ function cap_nhat_tg($id_bai_tap_user, $i)
                 if (mysqli_num_rows($resultDapAn) > 0) {
                     $rowSeparateCountDapAn = ceil(mysqli_num_rows($resultDapAn) / 2);
             ?>
-                <div class="canhdieu_1">
-                    <?php
+        <div class="canhdieu_1">
+            <?php
                     // Lấy toàn bộ kết quả vào một mảng
                     $rowsDapAn = mysqli_fetch_all($resultDapAn, MYSQLI_ASSOC);
                     for ($i = 0; $i < $rowSeparateCountDapAn; $i++) {
                         $row = $rowsDapAn[$i];
                     ?>
-                        <div class="canh_dieu_box" id="canh_dieu_box-<?= $row['id_dap_d6k2'] ?>">
-                            <div class="canh_dieu_item" data-id="<?= $row['id_dap_d6k2'] ?>">
-                                <div class="item hh" draggable="true" id="box-<?= $row['id_dap_d6k2'] ?>">
-                                    <?php if ($row1['id_loai_hien_thi'] == 2) {
-                                    ?><img src="./anh/canhdieu/<?= $row['url_anh'] ?>" alt="Cánh diều <?= $row['id_dap_d6k2'] ?>"><?php
+            <div class="canh_dieu_box" id="canh_dieu_box-<?= $row['id_dap_d6k2'] ?>">
+                <div class="canh_dieu_item" data-id="<?= $row['id_dap_d6k2'] ?>">
+                    <div class="item hh" draggable="true" id="box-<?= $row['id_dap_d6k2'] ?>">
+                        <?php if ($row1['id_loai_hien_thi'] == 2) {
+                                    ?><img src="./anh/canhdieu/<?= $row['url_anh'] ?>"
+                            alt="Cánh diều <?= $row['id_dap_d6k2'] ?>"><?php
                                                                                                                                     } ?>
 
-                                    <input readonly="true" type="number" value="<?= $row['ten_dap_an'] ?>" placeholder="?">
-                                </div>
-                            </div>
-                        </div>
-                    <?php
+                        <input readonly="true" type="number" value="<?= $row['ten_dap_an'] ?>" placeholder="?">
+                    </div>
+                </div>
+            </div>
+            <?php
                     }
                     ?>
-                </div>
-                <div class="show-check-value-box">
-                    <input class="close-check-value-box-btn" type="button"></input>
-                    <img src="./icon/sai.png" alt="" class="show-check-value-box-error">
-                    <img src="./icon/dung.png" alt="" class="show-check-value-box-success">
-                </div>
-                <div class="canhdieu_2">
-                    <?php
+        </div>
+        <div class="show-check-value-box">
+            <input class="close-check-value-box-btn" type="button"></input>
+            <img src="./icon/sai.png" alt="" class="show-check-value-box-error">
+            <img src="./icon/dung.png" alt="" class="show-check-value-box-success">
+        </div>
+        <div class="canhdieu_2">
+            <?php
                     for ($i = $rowSeparateCountDapAn; $i < mysqli_num_rows($resultDapAn); $i++) {
                         $row = $rowsDapAn[$i];
                     ?>
-                        <div class="canh_dieu_box" id="canh_dieu_box-<?= $row['id_dap_d6k2'] ?>">
-                            <div class="canh_dieu_item" data-id="<?= $row['id_dap_d6k2'] ?>">
-                                <div class="item " draggable="true" id="box-<?= $row['id_dap_d6k2'] ?>">
-                                    <?php if ($row1['id_loai_hien_thi'] == 2) {
-                                    ?><img src="./anh/canhdieu/<?= $row['url_anh'] ?>" alt="Cánh diều <?= $row['id_dap_d6k2'] ?>">
+            <div class="canh_dieu_box" id="canh_dieu_box-<?= $row['id_dap_d6k2'] ?>">
+                <div class="canh_dieu_item" data-id="<?= $row['id_dap_d6k2'] ?>">
+                    <div class="item " draggable="true" id="box-<?= $row['id_dap_d6k2'] ?>">
+                        <?php if ($row1['id_loai_hien_thi'] == 2) {
+                                    ?><img src="./anh/canhdieu/<?= $row['url_anh'] ?>"
+                            alt="Cánh diều <?= $row['id_dap_d6k2'] ?>">
 
-                                    <?php
+                        <?php
                                     } ?>
 
-                                    <input readonly="true" type="number" value="<?= $row['ten_dap_an'] ?>" placeholder="?">
-                                </div>
-                            </div>
-                        </div>
-                    <?php
-                    } ?>
+                        <input readonly="true" type="number" value="<?= $row['ten_dap_an'] ?>" placeholder="?">
+                    </div>
                 </div>
+            </div>
             <?php
+                    } ?>
+        </div>
+        <?php
                 } else {
                     echo "Không có record nào";
                 }
             ?>
-            <div class="convat_2">
+        <div class="convat_2">
 
-                <?php
+            <?php
                 for ($i = $rowSeparateCountCauHoi; $i < mysqli_num_rows($resultCauHoi); $i++) {
                     $row = $rowsCauhoi[$i];
                 ?>
-                    <div class="con_vat_item" data-id="<?= $row['id_dap_d6k2'] ?>">
-                        <div class="item" id="id-<?= $row['id_dap_d6k2'] ?>">
-                            <?php if ($row1['id_loai_hien_thi'] == 2) {
+            <div class="con_vat_item" data-id="<?= $row['id_dap_d6k2'] ?>">
+                <div class="item" id="id-<?= $row['id_dap_d6k2'] ?>">
+                    <?php if ($row1['id_loai_hien_thi'] == 2) {
                             ?><img src="./anh/convat/<?= $row['url_anh'] ?>" alt="Con vật <?= $row['id_dap_d6k2'] ?>">
-                                <input readonly="true" value="<?= $row['ten_dap_an'] ?>" type="text" placeholder="?"><?php
+                    <input readonly="true" value="<?= $row['ten_dap_an'] ?>" type="text"
+                        placeholder="?"><?php
                                                                                                                     } else {
                                                                                                                         for ($i = 0; $i < $row['ten_dap_an']; $i++) { ?>
-                                    <img src="./anh/convat/<?= $row['url_anh'] ?>" alt="Con vật <?= $row['id_dap_d6k2'] ?>"><?php
+                    <img src="./anh/convat/<?= $row['url_anh'] ?>"
+                        alt="Con vật <?= $row['id_dap_d6k2'] ?>"><?php
                                                                                                                         }
                                                                                                                             ?>
 
-                                <input hidden readonly="true" value="<?= $row['ten_dap_an'] ?>" type="text" placeholder="?"><?php
+                    <input hidden readonly="true" value="<?= $row['ten_dap_an'] ?>" type="text"
+                        placeholder="?"><?php
                                                                                                                         } ?>
 
-                        </div>
-                    </div>
+                </div>
+            </div>
 
-                <?php
+            <?php
                 }
                 ?>
-            </div>
+        </div>
         <?php
             } else {
                 echo "Không có record nào";
@@ -504,7 +538,7 @@ function cap_nhat_tg($id_bai_tap_user, $i)
     <!-- <input type="button" name="btn" id="btnSubmitSendAns" value="Nộp bài"> -->
     <!-- <button type="button" class="back_button"><i class="fa-solid fa-backward"></i>Trở về</button> -->
     <div class="div_btn">
-        <input type="button" name="btn" id="btnSubmitSendAns" value="Nộp bài">
+        <input type="button" name="btn button-red button-1" id="btnSubmitSendAns" value="Nộp bài">
     </div>
 
     <div class="active-convat-container">
@@ -561,50 +595,53 @@ function cap_nhat_tg($id_bai_tap_user, $i)
             <div id="support"></div>
         </center>
         <div class='div-btn'>
-            <button type="button" class="back-button"><img src="./icon/trove.png" style="width:30px; height:30px; margin-right: 5px; ">Trở về</button>
+            <button type="button" class="back-button"><img src="./icon/trove.png"
+                    style="width:30px; height:30px; margin-right: 5px; ">Trở về</button>
         </div>
     </div>
     <div id="notice-container">
         <div class='btn-div-notice'>
-            <button type="button" id="tieptuclam" onclick="tieptuclam()"><i class="fa-solid fa-pen-to-square"></i>Tiếp tục làm</button>
-            <button type="button" id="xemdapan-button" onclick="xemdapan()"><i class="fa-solid fa-eye"></i>Xem lại đáp án đúng</button>
+            <button type="button" id="tieptuclam" onclick="tieptuclam()"><i class="fa-solid fa-pen-to-square"></i>Tiếp
+                tục làm</button>
+            <button type="button" id="xemdapan-button" onclick="xemdapan()"><i class="fa-solid fa-eye"></i>Xem lại đáp
+                án đúng</button>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        const correctAudioEle = document.getElementById('correct-audio');
-        const incorrectAudioEle = document.getElementById('incorrect-audio');
-        const correctImgEle = document.querySelector('.show-check-value-box-success');
-        const incorrectImgEle = document.querySelector('.show-check-value-box-error');
+    const correctAudioEle = document.getElementById('correct-audio');
+    const incorrectAudioEle = document.getElementById('incorrect-audio');
+    const correctImgEle = document.querySelector('.show-check-value-box-success');
+    const incorrectImgEle = document.querySelector('.show-check-value-box-error');
 
-        // Bắt sự kiện khi âm thanh kết thúc
-        correctAudioEle.addEventListener('ended', function() {
-            // Ẩn thẻ <img> hiển thị kết quả đúng
-            correctImgEle.classList.remove('active');
-        });
+    // Bắt sự kiện khi âm thanh kết thúc
+    correctAudioEle.addEventListener('ended', function() {
+        // Ẩn thẻ <img> hiển thị kết quả đúng
+        correctImgEle.classList.remove('active');
+    });
 
-        incorrectAudioEle.addEventListener('ended', function() {
-            // Ẩn thẻ <img> hiển thị kết quả sai
-            incorrectImgEle.classList.remove('active');
-        });
+    incorrectAudioEle.addEventListener('ended', function() {
+        // Ẩn thẻ <img> hiển thị kết quả sai
+        incorrectImgEle.classList.remove('active');
+    });
     </script>
     <script>
-        function goBack() {
-            window.location.href = 'nhap_cau_hoi.php'; // Điều hướng trở về trang nhap_cau_hoi.php
-        }
-        localStorage.removeItem("selectedButtons");
-        $(document).ready(function() {
-            $('.help-container .back-button').click(function() {
-                $(this).closest('.help-container').removeClass('show');
-                $('#tableContainer').empty();
-                $('#legoContainer').empty();
-                $('#support').empty();
-                $('.show-help').empty();
-            });
-            $('.notice-container button').click(function() {
-                $(this).closest('.notice-container').removeClass('showNotice');
-            });
+    function goBack() {
+        window.location.href = 'nhap_cau_hoi.php'; // Điều hướng trở về trang nhap_cau_hoi.php
+    }
+    localStorage.removeItem("selectedButtons");
+    $(document).ready(function() {
+        $('.help-container .back-button').click(function() {
+            $(this).closest('.help-container').removeClass('show');
+            $('#tableContainer').empty();
+            $('#legoContainer').empty();
+            $('#support').empty();
+            $('.show-help').empty();
         });
+        $('.notice-container button').click(function() {
+            $(this).closest('.notice-container').removeClass('showNotice');
+        });
+    });
     </script>
     <script src="./src/js/d6k2.js"></script>
     <!-- <script src="./src/js/help.js"></script>
@@ -612,200 +649,203 @@ function cap_nhat_tg($id_bai_tap_user, $i)
     <!-- <script src="./src/js/the.js"></script> -->
 
     <script>
-        const convats = document.querySelectorAll('.con_vat_item')
-        const canh_dieus = document.querySelectorAll('.canh_dieu_item')
-        const convatActiveContainer = document.querySelector('.active-convat-container')
-        const convatActiveBox = document.querySelector('.active-convat-box')
-        const closeActiveBoxBtn = document.querySelector('.close-active-box-btn')
-        const supportBtn = document.querySelector('.btn-support')
-        const urlGuiCauTraLoi = 'nhan_cau_tra_loi_d6k2.php'
-        let prevConVatActive = null
-        const showCheckValueBox = document.querySelector('.show-check-value-box')
-        const closeCheckValueBoxBtn = document.querySelector('.close-check-value-box-btn')
+    const convats = document.querySelectorAll('.con_vat_item')
+    const canh_dieus = document.querySelectorAll('.canh_dieu_item')
+    const convatActiveContainer = document.querySelector('.active-convat-container')
+    const convatActiveBox = document.querySelector('.active-convat-box')
+    const closeActiveBoxBtn = document.querySelector('.close-active-box-btn')
+    const supportBtn = document.querySelector('.btn-support')
+    const urlGuiCauTraLoi = 'nhan_cau_tra_loi_d6k2.php'
+    let prevConVatActive = null
+    const showCheckValueBox = document.querySelector('.show-check-value-box')
+    const closeCheckValueBoxBtn = document.querySelector('.close-check-value-box-btn')
 
-        // reset localstorage
-        Object.keys(localStorage).forEach(keyStorage => {
-            if (keyStorage.includes('d6k2_baiDien')) {
-                localStorage.removeItem(keyStorage)
-            }
-        })
+    // reset localstorage
+    Object.keys(localStorage).forEach(keyStorage => {
+        if (keyStorage.includes('d6k2_baiDien')) {
+            localStorage.removeItem(keyStorage)
+        }
+    })
     </script>
 
     <script>
+    convats.forEach(convat => {
+        convat.onclick = (e) => {
+            convatActiveBox.innerHTML = ''
+            prevConVatActive = convat.dataset.id
+
+            // thêm vào localstorage
+            let lessons = JSON.parse(localStorage.getItem('d6k2_baiDien')) || [];
+            const bieuThuc = convat.querySelector('input[type="text"]').value
+            if (lessons) {
+                lessons = [{
+                    bieuThuc: bieuThuc,
+                    dapAn: "1",
+                    mucHelp: 0,
+                    suDungTroGiupMuc: 0
+                }]
+                localStorage.setItem('d6k2_baiDien', JSON.stringify(lessons))
+                localStorage.setItem("idCauHoi", prevConVatActive);
+            }
+            convatActiveBox.appendChild(convat.querySelector('.item').cloneNode(true))
+            convatActiveContainer.style = "display: flex"
+
+            // thêm vào localstorage
+            let lesson = localStorage.getItem(`d6k2_baiDien-${prevConVatActive}`)
+            if (!lesson) {
+                lesson = [{
+                    bieuThuc: bieuThuc,
+                    dapAn: "1",
+                    mucHelp: 0,
+                    suDungTroGiupMuc: 0
+                }]
+                localStorage.setItem(`d6k2_baiDien-${prevConVatActive}`, JSON.stringify(lesson))
+            }
+        }
+    })
+    closeActiveBoxBtn.onclick = () => {
+        convatActiveContainer.style = "display: none"
         convats.forEach(convat => {
-            convat.onclick = (e) => {
-                convatActiveBox.innerHTML = ''
-                prevConVatActive = convat.dataset.id
-
-                // thêm vào localstorage
-                let lessons = JSON.parse(localStorage.getItem('d6k2_baiDien')) || [];
-                const bieuThuc = convat.querySelector('input[type="text"]').value
-                if (lessons) {
-                    lessons = [{
-                        bieuThuc: bieuThuc,
-                        dapAn: "1",
-                        mucHelp: 0,
-                        suDungTroGiupMuc: 0
-                    }]
-                    localStorage.setItem('d6k2_baiDien', JSON.stringify(lessons))
-                    localStorage.setItem("idCauHoi", prevConVatActive);
-                }
-                convatActiveBox.appendChild(convat.querySelector('.item').cloneNode(true))
-                convatActiveContainer.style = "display: flex"
-
-                // thêm vào localstorage
-                let lesson = localStorage.getItem(`d6k2_baiDien-${prevConVatActive}`)
-                if (!lesson) {
-                    lesson = [{
-                        bieuThuc: bieuThuc,
-                        dapAn: "1",
-                        mucHelp: 0,
-                        suDungTroGiupMuc: 0
-                    }]
-                    localStorage.setItem(`d6k2_baiDien-${prevConVatActive}`, JSON.stringify(lesson))
-                }
+            if (convat.classList.contains('active')) {
+                convat.classList.remove('active')
             }
         })
-        closeActiveBoxBtn.onclick = () => {
-            convatActiveContainer.style = "display: none"
-            convats.forEach(convat => {
-                if (convat.classList.contains('active')) {
-                    convat.classList.remove('active')
-                }
-            })
-            document.querySelector(`.con_vat_item[data-id="${prevConVatActive}"]`)?.classList?.add('active')
-        }
-        // supportBtn.onclick = () => {
-        //     helpD6k2(prevConVatActive)
-        // }
+        document.querySelector(`.con_vat_item[data-id="${prevConVatActive}"]`)?.classList?.add('active')
+    }
+    // supportBtn.onclick = () => {
+    //     helpD6k2(prevConVatActive)
+    // }
     </script>
     <script>
-        convats.forEach(convat => {
-            convat.ondragover = allowDrop
-            convat.ondrop = drop
-        })
+    convats.forEach(convat => {
+        convat.ondragover = allowDrop
+        convat.ondrop = drop
+    })
 
-        canh_dieus.forEach(canhdieu => {
-            canhdieu.ondragstart = drag
-        })
+    canh_dieus.forEach(canhdieu => {
+        canhdieu.ondragstart = drag
+    })
 
-        function allowDrop(ev) {
-            ev.preventDefault();
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("elemenetId", ev.currentTarget.querySelector('.item').id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var elemenetId = ev.dataTransfer.getData("elemenetId");
+
+        const elemenetExist = ev.currentTarget.querySelector('.canh_dieu_item .item ')
+        if (elemenetExist) {
+            const canhDieuBox = document.querySelector(`.canh_dieu_box#canh_dieu_${elemenetExist.id}`)
+            canhDieuBox.appendChild(elemenetExist.parentNode)
         }
+        ev.currentTarget.appendChild(document.getElementById(elemenetId).parentNode);
+    }
 
-        function drag(ev) {
-            ev.dataTransfer.setData("elemenetId", ev.currentTarget.querySelector('.item').id);
-        }
-
-        function drop(ev) {
-            ev.preventDefault();
-            var elemenetId = ev.dataTransfer.getData("elemenetId");
-
-            const elemenetExist = ev.currentTarget.querySelector('.canh_dieu_item .item ')
-            if (elemenetExist) {
-                const canhDieuBox = document.querySelector(`.canh_dieu_box#canh_dieu_${elemenetExist.id}`)
-                canhDieuBox.appendChild(elemenetExist.parentNode)
+    document.getElementById('btnSubmitSendAns').addEventListener('click', function() {
+        let isFalsed = false
+        for (const convatItem of convats) {
+            convatItem.style = "border: 1px solid #333"
+            const inputPhepTinh = convatItem.querySelector('input[type="text"]')
+            const inputKetQuaTemp = convatItem.querySelector('input[type="number"]')
+            if (!inputKetQuaTemp) {
+                alert("Bạn chưa điền hết các kết quả.")
+                return
             }
-            ev.currentTarget.appendChild(document.getElementById(elemenetId).parentNode);
-        }
+            const calculateExpression = new Function(`return ${inputPhepTinh.value};`);
+            const ketQua = calculateExpression();
 
-        document.getElementById('btnSubmitSendAns').addEventListener('click', function() {
-            let isFalsed = false
-            for (const convatItem of convats) {
-                convatItem.style = "border: 1px solid #333"
-                const inputPhepTinh = convatItem.querySelector('input[type="text"]')
-                const inputKetQuaTemp = convatItem.querySelector('input[type="number"]')
-                if (!inputKetQuaTemp) {
-                    alert("Bạn chưa điền hết các kết quả.")
-                    return
+            if (ketQua !== +inputKetQuaTemp.value) {
+                if (!isFalsed) {
+                    isFalsed = true
                 }
-                const calculateExpression = new Function(`return ${inputPhepTinh.value};`);
-                const ketQua = calculateExpression();
 
-                if (ketQua !== +inputKetQuaTemp.value) {
-                    if (!isFalsed) {
-                        isFalsed = true
-                    }
-
-                    convatItem.style = "border: 5px solid red"
-                    continue
-                }
-                convatItem.style = "border: 5px solid green"
-                convatItem.querySelector('.canh_dieu_item').ondragstart = (e) => {
-                    e.preventDefault()
-                }
+                convatItem.style = "border: 5px solid red"
+                continue
             }
-            // nếu muốn gửi lên database
-            // sendCauTraLoi()
-            if (isFalsed) {
-                incorrectAudioEle.play()
-                showCheckValueBox.classList.add('active')
-                showCheckValueBox.querySelector('.show-check-value-box-error').classList.add('active')
-                showCheckValueBox.querySelector('.show-check-value-box-success').classList.remove('active')
-            } else {
-                correctAudioEle.play()
-                showCheckValueBox.classList.add('active')
-                showCheckValueBox.querySelector('.show-check-value-box-success').classList.add('active')
-                showCheckValueBox.querySelector('.show-check-value-box-error').classList.remove('active')
+            convatItem.style = "border: 5px solid green"
+            convatItem.querySelector('.canh_dieu_item').ondragstart = (e) => {
+                e.preventDefault()
             }
-        });
+        }
+        // nếu muốn gửi lên database
+        // sendCauTraLoi()
+        if (isFalsed) {
+            incorrectAudioEle.play()
+            showCheckValueBox.classList.add('active')
+            showCheckValueBox.querySelector('.show-check-value-box-error').classList.add('active')
+            showCheckValueBox.querySelector('.show-check-value-box-success').classList.remove('active')
+        } else {
+            correctAudioEle.play()
+            showCheckValueBox.classList.add('active')
+            showCheckValueBox.querySelector('.show-check-value-box-success').classList.add('active')
+            showCheckValueBox.querySelector('.show-check-value-box-error').classList.remove('active')
+        }
+    });
 
-        closeCheckValueBoxBtn.onclick = () => {
-            showCheckValueBox.classList.remove('active')
+    closeCheckValueBoxBtn.onclick = () => {
+        showCheckValueBox.classList.remove('active')
+    }
+
+    const sendCauTraLoi = async () => {
+        const cauTraLoi = {}; // Tạo object chứa các câu trả lời
+        // Lặp qua từng phần tử convat để lấy câu trả lời và id của câu hỏi
+        for (const convatItem of convats) {
+            const inputPhepTinh = convatItem.querySelector('input[type="text"]');
+            const inputKetQuaTemp = convatItem.querySelector('input[type="number"]');
+            const canhDieuItem = convatItem.querySelector('.canh_dieu_item');
+            // Lấy thông tin câu trả lời và id của câu hỏi
+            const valuesLs = localStorage.getItem(`d6k2_baiDien-${convatItem.dataset.id}`);
+
+            // Thêm dữ liệu vào object cauTraLoi
+            cauTraLoi[convatItem.dataset.id] = {
+                dapAn: canhDieuItem.dataset.id,
+                stt: valuesLs ? JSON.parse(valuesLs)[0].suDungTroGiupMuc : 0
+            };
         }
 
-        const sendCauTraLoi = async () => {
-            const cauTraLoi = {}; // Tạo object chứa các câu trả lời
-            // Lặp qua từng phần tử convat để lấy câu trả lời và id của câu hỏi
-            for (const convatItem of convats) {
-                const inputPhepTinh = convatItem.querySelector('input[type="text"]');
-                const inputKetQuaTemp = convatItem.querySelector('input[type="number"]');
-                const canhDieuItem = convatItem.querySelector('.canh_dieu_item');
-                // Lấy thông tin câu trả lời và id của câu hỏi
-                const valuesLs = localStorage.getItem(`d6k2_baiDien-${convatItem.dataset.id}`);
+        // Lấy id_user từ phiên
+        const id_user = "<?php echo $id_user ?>"; // Thay đổi cách lấy id_user tùy theo cách bạn đang sử dụng
 
-                // Thêm dữ liệu vào object cauTraLoi
-                cauTraLoi[convatItem.dataset.id] = {
-                    dapAn: canhDieuItem.dataset.id,
-                    stt: valuesLs ? JSON.parse(valuesLs)[0].suDungTroGiupMuc : 0
-                };
-            }
-
-            // Lấy id_user từ phiên
-            const id_user = "<?php echo $id_user ?>"; // Thay đổi cách lấy id_user tùy theo cách bạn đang sử dụng
-
-            // Gửi dữ liệu lên server bằng Fetch API
-            const muc_do = localStorage.getItem('mucdo_2');
-            var luu_vet1 = localStorage.getItem('luu_vet');
-            const formData = new FormData();
-            formData.append('id_user', id_user); // Thêm id_user vào FormData
-            formData.append('cauTraLoi', JSON.stringify(cauTraLoi)); // Chuyển object cauTraLoi thành chuỗi JSON và gửi lên server
-            formData.append('idCauHoi', "<?php echo $row1['id_cau_hoi']; ?>"); // Gửi ID của câu hỏi
-            formData.append('mucdo', muc_do)
-            formData.append('luu_vet1', luu_vet1)
-            const response = await fetch('nhan_cau_tra_loi_d6k2.php', { // Gửi request POST đến nhan_cau_tra_loi_d6k2.php
+        // Gửi dữ liệu lên server bằng Fetch API
+        const muc_do = localStorage.getItem('mucdo_2');
+        var luu_vet1 = localStorage.getItem('luu_vet');
+        const formData = new FormData();
+        formData.append('id_user', id_user); // Thêm id_user vào FormData
+        formData.append('cauTraLoi', JSON.stringify(
+            cauTraLoi)); // Chuyển object cauTraLoi thành chuỗi JSON và gửi lên server
+        formData.append('idCauHoi', "<?php echo $row1['id_cau_hoi']; ?>"); // Gửi ID của câu hỏi
+        formData.append('mucdo', muc_do)
+        formData.append('luu_vet1', luu_vet1)
+        const response = await fetch(
+            'nhan_cau_tra_loi_d6k2.php', { // Gửi request POST đến nhan_cau_tra_loi_d6k2.php
                 method: 'POST',
                 body: formData, // Gửi dữ liệu form
             });
-            const message = await response.json(); // Nhận kết quả từ server (ví dụ: thông báo lưu thành công)
-            alert(message); // Hiển thị thông báo từ server
-        };
+        const message = await response.json(); // Nhận kết quả từ server (ví dụ: thông báo lưu thành công)
+        alert(message); // Hiển thị thông báo từ server
+    };
 
-        // Gán sự kiện click cho nút "Nộp bài"
-        const btnSubmitSendAns = document.getElementById('btnSubmitSendAns');
-        btnSubmitSendAns.onclick = sendCauTraLoi; // Khi click vào nút "Nộp bài", gọi hàm sendCauTraLoi để gửi dữ liệu lên server
+    // Gán sự kiện click cho nút "Nộp bài"
+    const btnSubmitSendAns = document.getElementById('btnSubmitSendAns');
+    btnSubmitSendAns.onclick =
+        sendCauTraLoi; // Khi click vào nút "Nộp bài", gọi hàm sendCauTraLoi để gửi dữ liệu lên server
     </script>
 
     <?php
     ?>
 
     </form>
-<?php
+    <?php
 
         }
 ?>
 
-<?php
+    <?php
 // Lấy id loại hiển thị
 $sql = "SELECT * FROM `cau_hoi` WHERE `id_cau_hoi`=$id_cau_hoi";
 $kq = mysqli_query($conn, $sql);
@@ -848,7 +888,7 @@ if (isset($_GET['btn-support'])) {
 }
 ?>
 
-<?php
+    <?php
 $id_btuser = $_GET['id_bai_tap_user'];
 $kiem_tra = "SELECT * FROM `bai_tap_user` WHERE `id_bai_tap_user`=$id_btuser ORDER BY trang_thai DESC LIMIT 1;";
 $trangthai = mysqli_query($conn, $kiem_tra);
@@ -871,8 +911,8 @@ if (isset($rows)) {
         
         </style>"
 ?>
-        <div id="trangthai1">
-            <?php
+    <div id="trangthai1">
+        <?php
 
             $sql = "SELECT ten_dap_an, url_anh, flag, cot FROM dap_an_d6k2 WHERE id_cau_hoi = $id_cau_hoi";
             $result = $conn->query($sql);
@@ -944,8 +984,8 @@ if (isset($rows)) {
 
             ?>
 
-        </div>
-<?php
+    </div>
+    <?php
         echo "<script>
     document.getElementById('trangthai1').style.display = 'none';
 </script>";
@@ -971,7 +1011,7 @@ if (isset($rows)) {
     }
 }
 ?>
-<script>
+    <script>
     document.getElementById('xemdapan-button').addEventListener('click', function xemdapan() {
         document.getElementById('notice-container').style.display = 'none'
         document.getElementById('trangthai1').style.display = 'block'
@@ -981,7 +1021,7 @@ if (isset($rows)) {
     document.getElementById('tieptuclam').addEventListener('click', function tieptuclam() {
         document.getElementById('notice-container').style.display = 'none'
     })
-</script>
+    </script>
 
 </body>
 

@@ -233,9 +233,7 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
     }
 
     .btn {
-        background-color: #2da0fa;
-        border: none;
-        color: white;
+        /* background-color: #2da0fa; */
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
@@ -243,6 +241,28 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
         margin-right: 10px;
         transition: transform 0.5s ease-in-out;
         font-size: 25px;
+        background: #ff4742 !important;
+        border: 1px solid #ff4742 !important;
+        color: #ffffff !important;
+    }
+
+    .button-1 {
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 800;
+        min-height: 40px;
+        outline: 0;
+        padding: 15px;
+        text-align: center;
+        text-rendering: geometricprecision;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
     }
 
     .btn i {
@@ -250,9 +270,9 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
     }
 
     .btn:hover {
-        background-color: yellow;
+        background-color: white !important;
         transform: translateY(-5px);
-        color: black;
+        color: red !important;
     }
 
     #help {
@@ -316,7 +336,7 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
         <form action="" method="post">
 
 
-            <button style="margin-bottom: 50%;" type="button" class="btn" id="check" name="btn_check"
+            <button style="margin-bottom: 50%;" type="button" class="btn button-1" id="check" name="btn_check"
                 onclick="checkAnswer()"><img src="./icon/check.png" style="width:30px; height:30px;">Kiểm tra</button>
 
 

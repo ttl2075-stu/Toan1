@@ -96,11 +96,14 @@ while ($row = mysqli_fetch_assoc($a)) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./src/css/d6_k3.css">
     <link rel="stylesheet" href="./src/css/root.css">
     <link rel="stylesheet" href="./assets/css_v2/style.css">
@@ -108,103 +111,142 @@ while ($row = mysqli_fetch_assoc($a)) {
     <script src="./src/js/function.js"></script>
     <!-- Chuyen session php sang localstorage -->
     <style>
-        #help{
-            padding: 0px;
-        }
-        #help img{
-            width: 50px;
-            height: 50px;
-        }
+    #help {
+        padding: 0px;
+    }
 
-        .btn {
-            /* background-color: #2da0fa;  */
-            background-color: #bbded6;
-            border: none; 
-            /* color: white;  */
-            color: grey;
-            padding: 10px 20px; 
-            font-size: 16px; 
-            cursor: pointer; 
-            border-radius: 5px; 
-            margin-right: 10px; 
-            transition: transform 0.5s ease-in-out;
-            font-size: 25px;
-        }
+    #help img {
+        width: 50px;
+        height: 50px;
+    }
 
-        .btn i{
-            color:white;
-        }
-        .btn:hover {
-            background-color: yellow;
-            transform: translateY(-5px);
-            color: black;
-        }
+    .btn {
+        /* background-color: #2da0fa;  */
+        background-color: #bbded6;
+        border: none;
+        /* color: white;  */
+        color: grey;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-right: 10px;
+        transition: transform 0.5s ease-in-out;
+        font-size: 25px;
+    }
 
-        #help{
-            padding: 0 10px;
-            margin-top: 10px;
-        }
-        #help img {
-            width: 50px; 
-            margin-left: 5px; 
-        }
+    .button-red {
+        background: #ff4742 !important;
+        border: 1px solid #ff4742;
+        color: #ffffff;
+    }
 
-        /* CSS cho phần tử chứa số */
-.so, #so1, #so2{
-    display: inline-block;
-    font-size: 90px; /* Kích thước chữ */
-    width: 120px; /* Điều chỉnh chiều rộng của số */
-    height: 120px; /* Điều chỉnh chiều cao của số */
-    line-height: 120px; /* Căn giữa theo chiều cao */
-    /* margin-left: 10px; */
-    border: 2px solid black;
-    border-radius: 20px;
-    box-shadow: 0px 2px 8px 0px var(--secondary-light);
-    font-weight: bold;
-    /* margin-top: px;  */
-}
+    .button-1 {
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 800;
+        min-height: 40px;
+        outline: 0;
+        padding: 15px;
+        text-align: center;
+        text-rendering: geometricprecision;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+    }
 
-#so2{
-    margin-top: 150px ;
-}
+    .btn i {
+        color: white;
+    }
 
-#so1{
-    color: orange;
-}
+    .btn:hover {
+        background-color: white !important;
+        transform: translateY(-5px);
+        color: red !important;
+    }
 
-#so2{
-    color: purple;
-}
-/* CSS cho phần tử hình ảnh */
-.anhsosanh {
-    width: 200px; /* Điều chỉnh chiều rộng của ảnh */
-    height: 200px; /* Điều chỉnh chiều cao của ảnh */
-    vertical-align: middle; /* Căn giữa theo chiều dọc */
-    margin-top: 0px;
-}
-    
-#quanh_ham{
-    display: flex;
-    flex-wrap: wrap;
-}
+    #help {
+        padding: 0 10px;
+        margin-top: 10px;
+    }
+
+    #help img {
+        width: 50px;
+        margin-left: 5px;
+    }
+
+    /* CSS cho phần tử chứa số */
+    .so,
+    #so1,
+    #so2 {
+        display: inline-block;
+        font-size: 90px;
+        /* Kích thước chữ */
+        width: 120px;
+        /* Điều chỉnh chiều rộng của số */
+        height: 120px;
+        /* Điều chỉnh chiều cao của số */
+        line-height: 120px;
+        /* Căn giữa theo chiều cao */
+        /* margin-left: 10px; */
+        border: 2px solid black;
+        border-radius: 20px;
+        box-shadow: 0px 2px 8px 0px var(--secondary-light);
+        font-weight: bold;
+        /* margin-top: px;  */
+    }
+
+    #so2 {
+        margin-top: 150px;
+    }
+
+    #so1 {
+        color: orange;
+    }
+
+    #so2 {
+        color: purple;
+    }
+
+    /* CSS cho phần tử hình ảnh */
+    .anhsosanh {
+        width: 200px;
+        /* Điều chỉnh chiều rộng của ảnh */
+        height: 200px;
+        /* Điều chỉnh chiều cao của ảnh */
+        vertical-align: middle;
+        /* Căn giữa theo chiều dọc */
+        margin-top: 0px;
+    }
+
+    #quanh_ham {
+        display: flex;
+        flex-wrap: wrap;
+    }
     </style>
     <script>
-        localStorage.setItem("luu_vet", JSON.stringify([]));
-        let loaihienthi = <?php echo $id_loai_hien_thi; ?>;
-        let sessionData = <?php echo $sessionDataJSON; ?>;
-        let quizs = JSON.parse(sessionData);
-        upLocalStorage("d4k1_baiDien", quizs);
-        upLocalStorage("loai_hien_thi", loaihienthi)
+    localStorage.setItem("luu_vet", JSON.stringify([]));
+    let loaihienthi = <?php echo $id_loai_hien_thi; ?>;
+    let sessionData = <?php echo $sessionDataJSON; ?>;
+    let quizs = JSON.parse(sessionData);
+    upLocalStorage("d4k1_baiDien", quizs);
+    upLocalStorage("loai_hien_thi", loaihienthi)
     </script>
 </head>
+
 <body>
-<form action="" method="post" id="form_ban_dau">
-    <div id="boc_tong" class="kiemtra">
-        <!-- <button type="submit" name="quay_ve">Quay lại</button> -->
-        <br>
-        <!-- em thêm class -->
-        <div class="cauhoi">Câu hỏi:  
-            <span id="debai"> 
+    <form action="" method="post" id="form_ban_dau">
+        <div id="boc_tong" class="kiemtra">
+            <!-- <button type="submit" name="quay_ve">Quay lại</button> -->
+            <br>
+            <!-- em thêm class -->
+            <div class="cauhoi">Câu hỏi:
+                <span id="debai">
                     <?php 
                         $sql ="SELECT ten_cau_hoi FROM `cau_hoi` WHERE cau_hoi.id_cau_hoi = $id_cau_hoi";
                         $a = mysqli_query($conn, $sql);
@@ -212,24 +254,25 @@ while ($row = mysqli_fetch_assoc($a)) {
                             echo $row['ten_cau_hoi'];
                         };
                     ?>
-            </span>
-        </div>
-        
-        <div style="display: flex;">
-            <div class="contain"style="display: flex;">
-                <div id="container">
-                    <div style="display: flex; margin-top: 100px;">
-                        <div class="basket" id="basket"></div>
-                        <div class="plate" id="plate"></div>
+                </span>
+            </div>
+
+            <div style="display: flex;">
+                <div class="contain" style="display: flex;">
+                    <div id="container">
+                        <div style="display: flex; margin-top: 100px;">
+                            <div class="basket" id="basket"></div>
+                            <div class="plate" id="plate"></div>
+                        </div>
                     </div>
-                </div>
-                <?php 
+                    <?php 
                 $readonly1 = '';
                 $readonly2 = '';
                 $readonly3 = '';            
                 ?>
-                <div class="box-phepTinh">
-                                <div class="square" id="square1"><input type="text" class="inputt" id='inputt1' name='inputt1' placeholder="?" required value="<?php 
+                    <div class="box-phepTinh">
+                        <div class="square" id="square1"><input type="text" class="inputt" id='inputt1' name='inputt1'
+                                placeholder="?" required value="<?php 
                 if((isset($_POST['inputt1']) && $_POST['inputt1'] == $mang_rong[0]) || $_SESSION['trang_thai'][0] == 1){
                     echo $mang_rong[0]; 
                     if($_SESSION['trang_thai'][0] == 1){
@@ -237,7 +280,8 @@ while ($row = mysqli_fetch_assoc($a)) {
                     }
                 }
                 ?>" <?php echo $readonly1; ?>></div>
-                                    <div class="square" id="square2"><input type="text" class="inputt2" id='inputt2' name='inputt2' placeholder="?" required value="<?php 
+                        <div class="square" id="square2"><input type="text" class="inputt2" id='inputt2' name='inputt2'
+                                placeholder="?" required value="<?php 
                 if((isset($_POST['inputt2']) && $_POST['inputt2'] == $mang_rong[1]) || $_SESSION['trang_thai'][1] == 1){
                     echo $mang_rong[1]; 
                     if($_SESSION['trang_thai'][1] == 1){
@@ -245,7 +289,8 @@ while ($row = mysqli_fetch_assoc($a)) {
                     }
                 }   
                 ?>" <?php echo $readonly2; ?>></div>
-                                    <div class="square" id="square3"><input type="text" class="inputt" id='inputt3' name='inputt3' placeholder="?" required value="<?php 
+                        <div class="square" id="square3"><input type="text" class="inputt" id='inputt3' name='inputt3'
+                                placeholder="?" required value="<?php 
                 if((isset($_POST['inputt3']) && $_POST['inputt3'] == $mang_rong[2])  || $_SESSION['trang_thai'][2] == 1){
                     echo $mang_rong[2]; 
                     if($_SESSION['trang_thai'][2] == 1){
@@ -253,19 +298,21 @@ while ($row = mysqli_fetch_assoc($a)) {
                     }
                 }   
                 ?>" <?php echo $readonly3; ?>></div>
-                </div>
-                <!-- <div class="dien" id="dien"><center>
+                    </div>
+                    <!-- <div class="dien" id="dien"><center>
                                 <br>
                                     <button type='button' id="incrementButton">&nbsp;<i class="fa-solid fa-angle-up"></i></button>
                                     <button type='button' id="decrementButton">&nbsp;<i class="fa-solid fa-angle-down"></i></button>
                                 </center>
                                 </div> -->
-            </div>
+                </div>
 
-            <div id="contain_1">
-                <div id="contain_2">
-                        <button type="button" class="btn" id="check" name="btn_check" onclick="checkAnswer()"><img src="./icon/check.png" style="width:30px; height:30px;">Kiểm tra</button>
-                        <button type="button" class="btn" id="help" name='btn_hd' value="
+                <div id="contain_1">
+                    <div id="contain_2">
+                        <button type="button" class="btn button-1 button-red" id="check" name="btn_check"
+                            onclick="checkAnswer()"><img src="./icon/check.png" style="width:30px; height:30px;">Kiểm
+                            tra</button>
+                        <button type="button" class="btn button-1 button-red" id="help" name='btn_hd' value="
                             <?php
                             // $sql="SELECT * FROM `ho_tro_hien_thi` WHERE `id_loai_hien_thi`=$id_loai_hien_thi";
                             $sql = " SELECT * FROM `kieu_ho_tro_chi_tiet` INNER JOIN `ho_tro_hien_thi` WHERE `kieu_ho_tro_chi_tiet`.`id_kieu_ho_tro` = `ho_tro_hien_thi`.`id_kieu_ho_tro` 
@@ -293,53 +340,56 @@ while ($row = mysqli_fetch_assoc($a)) {
                             $i = 0;
                             ?>
                         "><img src="./icon/support.png" style="margin-right: 10px;">Hỗ trợ</button>
+                    </div>
+                </div>
+            </div>
+            <span class='notice hidden'>
+            </span>
+            <div class="checkdungsai">
+                <div class="Notice_True" style="display: none;">
+                    <img src="./icon/dung.png" class="trueVideo">
+
+                    <audio class="trueAudio" src="mp4/True.mp4" type="audio/mp4">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="Notice_False" style="display: none;">
+                    <img src="./icon/sai.png" class="falseVideo">
+
+                    <audio class="falseAudio" src="mp4/False.mp4" type="audio/mp4">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
             </div>
         </div>
-        <span class='notice hidden'>
+        <div id="notice-container">
+            <div class='btn-div-notice'>
+                <button type="button" id="tieptuclam" onclick="tieptuclam()"><i
+                        class="fa-solid fa-pen-to-square"></i>Tiếp tục làm</button>
+                <button type="button" id="xemdapan-button" onclick="xemdapan()"><i class="fa-solid fa-eye"></i>Xem lại
+                    đáp án đúng</button>
+            </div>
+        </div>
+        <span class='notice'>
         </span>
-        <div class="checkdungsai">
-            <div class="Notice_True" style="display: none;">
-                <img src="./icon/dung.png" class="trueVideo">
 
-                <audio class="trueAudio" src="mp4/True.mp4" type="audio/mp4">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-
-            <div class="Notice_False" style="display: none;">
-                <img src="./icon/sai.png" class="falseVideo">
-
-                <audio class="falseAudio" src="mp4/False.mp4" type="audio/mp4">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        </div>
-    </div>
-    <div id="notice-container">
-        <div class='btn-div-notice'>
-            <button type="button" id="tieptuclam" onclick="tieptuclam()"><i class="fa-solid fa-pen-to-square"></i>Tiếp tục làm</button>
-            <button type="button" id="xemdapan-button" onclick="xemdapan()"><i class="fa-solid fa-eye"></i>Xem lại đáp án đúng</button>
-        </div>
-    </div>
-    <span class='notice'>
-    </span>
-
-    <div class="help-container" id="helpcontain">
-        <center>
-            <div id="tableContainer"></div>
-            <div id="support"></div>
-            <div class="show-help"></div>
-            <div id="legoContainer"></div>
-            <div id="nuthotro"></div>
-        </center>
+        <div class="help-container" id="helpcontain">
+            <center>
+                <div id="tableContainer"></div>
+                <div id="support"></div>
+                <div class="show-help"></div>
+                <div id="legoContainer"></div>
+                <div id="nuthotro"></div>
+            </center>
             <div class='div-btn' id="backbutton">
-                <button type="button" class="back-button" style="width:150px; height:50px;"><img src="./icon/trove.png" style="width:30px; height:30px; margin-right: 5px; ">Trở về</button>
+                <button type="button" class="back-button" style="width:150px; height:50px;"><img src="./icon/trove.png"
+                        style="width:30px; height:30px; margin-right: 5px; ">Trở về</button>
             </div>
-    </div>
+        </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
         $(document).ready(function() {
             $('.help-container .back-button').click(function() {
                 $(this).closest('.help-container').removeClass('show');
@@ -353,10 +403,10 @@ while ($row = mysqli_fetch_assoc($a)) {
             });
         });
         console.log(<?php echo $id_loai_hien_thi; ?>)
-    </script>
-</form>
+        </script>
+    </form>
 
-<?php
+    <?php
 $id_btuser = $_GET['id_bai_tap_user'];
 $kiem_tra = "SELECT * FROM `bai_tap_user` WHERE `id_bai_tap_user`=$id_btuser ORDER BY trang_thai DESC LIMIT 1;";
 $trangthai = mysqli_query($conn, $kiem_tra);
@@ -569,11 +619,11 @@ if(isset($rows) &&isset($row)){
             $result .= '</script>'; 
             return $result;
         } 
-      ?> 
+      ?>
 
-<script>
-document.getElementById('xemdapan-button').addEventListener('click', function xemdapan() {
-    <?php if(isset($_SESSION['ketquadapan']) && !empty($_SESSION['ketquadapan'])) { ?>
+    <script>
+    document.getElementById('xemdapan-button').addEventListener('click', function xemdapan() {
+        <?php if(isset($_SESSION['ketquadapan']) && !empty($_SESSION['ketquadapan'])) { ?>
         document.getElementById('notice-container').style.display = 'none';
         document.getElementById('inputt1').value = "<?php echo $_SESSION['ketquadapan'][2]; ?>";
         document.getElementById('inputt2').value = "<?php echo $_SESSION['ketquadapan'][1]; ?>";
@@ -583,60 +633,57 @@ document.getElementById('xemdapan-button').addEventListener('click', function xe
         document.getElementById('inputt3').readOnly = true;
         document.getElementById('check').disabled = true;
         document.getElementById('help').disabled = true;
-    <?php } ?>
-});
+        <?php } ?>
+    });
 
-    document.getElementById('tieptuclam').addEventListener('click', function tieptuclam(){
+    document.getElementById('tieptuclam').addEventListener('click', function tieptuclam() {
         <?php if(isset($_SESSION['ketquadapan']) && !empty($_SESSION['ketquadapan'])) { ?>
         document.getElementById('notice-container').style.display = 'none';
         document.getElementById('inputt1').value = "<?php echo $_SESSION['ketquadapan'][2]; ?>";
         document.getElementById('inputt2').value = "<?php echo $_SESSION['ketquadapan'][1]; ?>";
         document.getElementById('inputt3').value = "<?php echo $_SESSION['ketquadapan'][0]; ?>";
-    <?php } ?>
+        <?php } ?>
     })
 
-$('#check').click(function() {
-    var dataToSend = localStorage.getItem('dulieu');
-    var local =localStorage.getItem('mucdo');
-    var luu_vet1 = localStorage.getItem('luu_vet');
-    $.ajax({
-        url: 'file_database_d4k1.php',
-        type: 'post',
-        data: {
-            hai: dataToSend,
-            mucdo: local,
-            luu_vet:luu_vet1
-        },
-        success: function(response) {
-            // alert(data);
-        },
-        error: function(xhr, status, error) {
-            console.error(error);
-        }
+    $('#check').click(function() {
+        var dataToSend = localStorage.getItem('dulieu');
+        var local = localStorage.getItem('mucdo');
+        var luu_vet1 = localStorage.getItem('luu_vet');
+        $.ajax({
+            url: 'file_database_d4k1.php',
+            type: 'post',
+            data: {
+                hai: dataToSend,
+                mucdo: local,
+                luu_vet: luu_vet1
+            },
+            success: function(response) {
+                // alert(data);
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
+        });
     });
-});
-function them_lu_vet(key, newValue) {
-    // Bước 1: Lấy mảng hiện tại từ localStorage
-    let currentArray = JSON.parse(localStorage.getItem(key));
 
-    // Bước 2: Nếu mảng chưa tồn tại, tạo mảng mới
-    if (!currentArray) {
-        currentArray = [];
+    function them_lu_vet(key, newValue) {
+        // Bước 1: Lấy mảng hiện tại từ localStorage
+        let currentArray = JSON.parse(localStorage.getItem(key));
+
+        // Bước 2: Nếu mảng chưa tồn tại, tạo mảng mới
+        if (!currentArray) {
+            currentArray = [];
+        }
+
+        // Bước 3: Thêm giá trị mới vào mảng
+        currentArray.push(newValue);
+
+        // Bước 4: Lưu lại mảng đã cập nhật vào localStorage
+        localStorage.setItem(key, JSON.stringify(currentArray));
     }
-
-    // Bước 3: Thêm giá trị mới vào mảng
-    currentArray.push(newValue);
-
-    // Bước 4: Lưu lại mảng đã cập nhật vào localStorage
-    localStorage.setItem(key, JSON.stringify(currentArray));
-}
-</script>
-<script src="./src/js/d4k1.js"></script>
-<script src="./src/js/help_new_d6k3.js"></script>
+    </script>
+    <script src="./src/js/d4k1.js"></script>
+    <script src="./src/js/help_new_d6k3.js"></script>
 </body>
+
 </html>
-
-
-
-
-
