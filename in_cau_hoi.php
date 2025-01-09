@@ -329,6 +329,10 @@ table {
         /* font-size: 12px; */
         /* Giảm padding */
     }
+
+    #xemdapan-button {
+        width: 100%;
+    }
 }
 </style>
 
