@@ -16,272 +16,295 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./assets/css_v2/style.css">
-  <link rel="stylesheet" href="./assets/css_v2/baihoc_php.css">
-  <style>
-   @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css_v2/style.css">
+    <link rel="stylesheet" href="./assets/css_v2/baihoc_php.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-:root {
-  --modal-duration: 1s;
-  --primary-color: #61c0bf;
-  --secondary-color: #bbded6;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-  transition: transform 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* Add this line to hide overflow */
-}
-
-body.show-nav {
-  /* Width of nav */
-  transform: translateX(25%);
-  width: 80%;
-}
-
-button,
-input[type='submit'] {
-  background-color: var(--secondary-color);
-  border: 0;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  padding: 8px 12px;
-}
-
-button:focus {
-  outline: none;
-}
-
-.toggle1 {
-  background-color: #61c0bf;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 5;
-}
-
-.cta-btn {
-  padding: 12px 30px;
-  font-size: 20px;
-}
-
-.container1 {
-  display: flex;
-  padding: 15px;
-  margin: 0 auto;
-  min-width: 80%;
-  width: 100%;
-  height: 100vh; 
-  overflow: hidden; 
-}
-.container1::-webkit-scrollbar, #item1::-webkit-scrollbar {
-  width: 0;
-}
-.right{
-    display: flex;
-    flex-direction: column;
-}
-#content {
-  min-width: 80%;
-  width: 100%;
-  min-height: 110vh;
-  height: 100%;
-  margin: 0 auto;
-  border: none;
-  overflow: hidden;
-}
-
-
-
-
-.close-btn {
-  background: transparent;
-  font-size: 25px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.fa-solid.fa-circle-check {
-  color: green;
-}
-
-@keyframes modalopen {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-nav {
-    background-color: #bbded6;
-    border-right: 2px inset whitesmoke;
-    color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25%;
-    height: 100%;
-    overflow-y: scroll;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    border-radius: 5px;
-}
-nav::-webkit-scrollbar, #item1::-webkit-scrollbar {
-    width: 0;
-}
-nav .logo {
-    padding: 30px 0;
-    text-align: center;
-}
-
-nav .logo img {
-    height: 75px;
-    width: 75px;
-    border-radius: 50%;
-}
-
-nav ul {
-    padding: 0;
-    list-style-type: none;
-    margin: 0;
-    padding-inline-start: 0px;
-    
-}
-
-nav ul li {
-    border-bottom: 2px inset whitesmoke;
-    /* padding: 20px; */
-    list-style: none;
-}
-
-nav ul>li:first-of-type {
-    border-top: 2px solid rgba(200, 200, 200, 0.1);
-}
-
-nav ul li a {
-    color: grey;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    padding: 20px;
-    font-weight: bold;
-}
-
-
-nav li ul {
-    display: none;
-}
-
-a:hover,
-.right a:hover {
-    background-color: #61c0bf;
-    color: white;
-    font-weight: bold;
-}
-
-a:focus,
-.right a:focus {
-  box-shadow: inset 5px 0 0 green; 
-  margin-left: 10px;
-  color:black;
- font-weight: bold;
-}
-
-.right a{
-    display: inline-block;
-    padding: 10px;
-    width: 150px;
-    font-weight: bold;
-    background-color: #bbded6;
-    text-decoration: none;
-    margin: 10px 0;
-    border-radius: 10px;
-    color: grey;
-    transition: background-color 0.3s;
-    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-}
-
-.key{
-    margin-bottom: 20px;
-    background-color: #f1d3e3;
-    color: #333;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
-    position: relative;
-    z-index: -2;
-}
-
-#anhnote{
-  width: 170px;
-  height: 200px;
-  position: absolute;  
-  left: -10px;;
-  z-index: -1;
-}
-
-.textnote{
-  width: 145px;
-  position: absolute;
-  top:30px;
-  left: 0px;
-  z-index: 2;
-  font-size: 20px;
-  font-weight: bold;
-}
-.fa-fa-circle-check{
-  font-size: 100px;
-}
-#bai_hoc{
-  width: 100%;
-  height: 50px;
-  background-color: #ffb6b9;
-  text-align: center;
-  line-height: 50px;
-  color: black;
-}
-.fa-circle-check{
-  color: green;
-  font-size: 30px;
-  margin-left: 10px;
-}
-
-      .selected {
-        background-color: lightgreen; /* Màu nền khi ô được chọn */
+    :root {
+        --modal-duration: 1s;
+        --primary-color: #61c0bf;
+        --secondary-color: #bbded6;
     }
 
-    
-  </style>
-  <title>Toán 1</title>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        /* Add this line to hide overflow */
+    }
+
+    body.show-nav {
+        /* Width of nav */
+        transform: translateX(25%);
+        width: 80%;
+    }
+
+    button,
+    input[type='submit'] {
+        background-color: var(--secondary-color);
+        border: 0;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        padding: 8px 12px;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    .toggle1 {
+        background-color: #61c0bf;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+    }
+
+    .cta-btn {
+        padding: 12px 30px;
+        font-size: 20px;
+    }
+
+    .container1 {
+        display: flex;
+        padding: 15px;
+        margin: 0 auto;
+        min-width: 80%;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .container1::-webkit-scrollbar,
+    #item1::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #content {
+        min-width: 80%;
+        width: 100%;
+        min-height: 110vh;
+        height: 100%;
+        margin: 0 auto;
+        border: none;
+        overflow: hidden;
+    }
+
+
+
+
+    .close-btn {
+        background: transparent;
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .fa-solid.fa-circle-check {
+        color: green;
+    }
+
+    @keyframes modalopen {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    nav {
+        background-color: #bbded6;
+        border-right: 2px inset whitesmoke;
+        color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 100%;
+        overflow-y: scroll;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        border-radius: 5px;
+    }
+
+    nav::-webkit-scrollbar,
+    #item1::-webkit-scrollbar {
+        width: 0;
+    }
+
+    nav .logo {
+        padding: 30px 0;
+        text-align: center;
+    }
+
+    nav .logo img {
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+    }
+
+    nav ul {
+        padding: 0;
+        list-style-type: none;
+        margin: 0;
+        padding-inline-start: 0px;
+
+    }
+
+    nav ul li {
+        border-bottom: 2px inset whitesmoke;
+        /* padding: 20px; */
+        list-style: none;
+    }
+
+    nav ul>li:first-of-type {
+        border-top: 2px solid rgba(200, 200, 200, 0.1);
+    }
+
+    nav ul li a {
+        color: grey;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        padding: 20px;
+        font-weight: bold;
+    }
+
+
+    nav li ul {
+        display: none;
+    }
+
+    a:hover,
+    .right a:hover {
+        background-color: #61c0bf;
+        color: white;
+        font-weight: bold;
+    }
+
+    a:focus,
+    .right a:focus {
+        box-shadow: inset 5px 0 0 green;
+        margin-left: 10px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .right a {
+        display: inline-block;
+        padding: 10px;
+        width: 150px;
+        font-weight: bold;
+        background-color: #bbded6;
+        text-decoration: none;
+        margin: 10px 0;
+        border-radius: 10px;
+        color: grey;
+        transition: background-color 0.3s;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    }
+
+    .key {
+        margin-bottom: 20px;
+        background-color: #f1d3e3;
+        color: #333;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, box-shadow 0.3s;
+        position: relative;
+        z-index: -2;
+    }
+
+    #anhnote {
+        width: 170px;
+        height: 200px;
+        position: absolute;
+        left: -10px;
+        ;
+        z-index: -1;
+    }
+
+    .textnote {
+        width: 145px;
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        z-index: 2;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .fa-fa-circle-check {
+        font-size: 100px;
+    }
+
+    #bai_hoc {
+        width: 100%;
+        height: 50px;
+        background-color: #ffb6b9;
+        text-align: center;
+        line-height: 50px;
+        color: black;
+    }
+
+    .fa-circle-check {
+        color: green;
+        font-size: 30px;
+        margin-left: 10px;
+    }
+
+    .selected {
+        background-color: lightgreen;
+        /* Màu nền khi ô được chọn */
+    }
+
+    @media screen and (max-width: 440px) {
+        .textnote {
+            top: 100px;
+        }
+    }
+    </style>
+    <title>Toán 1</title>
 </head>
-  
+
 <body class="show-nav">
-  <?php
+    <?php
     if($role==2){
       ?> <nav id="navbar1">
-        
-      <ul>
-        <?php
+
+        <ul>
+            <?php
         
         
         // echo "id_bai_hoc: ".$id_bai_hoc;
@@ -390,25 +413,25 @@ a:focus,
         }
         
         ?>
-      </ul>
+        </ul>
     </nav>
     <button id="toggle1" class="toggle1">
-      <i class="fa-solid fa-bookmark"></i>
+        <i class="fa-solid fa-bookmark"></i>
     </button>
     <div id="bai_hoc">
-    <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
+        <h2>Bài học: <?php echo get_ten_bai($id_bai_hoc); ?></h2>
     </div>
     <div class="container1">
-    <iframe src="" name="ndung1" id="content" border="0"></iframe>
-    <div class="right">
-    <a href="ontaphk1.php?id_bai_hoc=<?php echo $id_bai_hoc; ?>">Tài liệu tham khảo</a>
-        <div class="key">
-          <img src="../../assets/image/note.png" id="anhnote" alt="">
-          
-          <p class="textnote">
-            <u>Từ khóa:</u> <br><br>
-            <br/>
-            <?php
+        <iframe src="" name="ndung1" id="content" border="0"></iframe>
+        <div class="right">
+            <a href="ontaphk1.php?id_bai_hoc=<?php echo $id_bai_hoc; ?>">Tài liệu tham khảo</a>
+            <div class="key">
+                <img src="../../assets/image/note.png" id="anhnote" alt="">
+
+                <p class="textnote">
+                    <u>Từ khóa:</u> <br>
+                    <br />
+                    <?php
               // echo "id_khoa_hoc: ".$id_khoa_hoc;
               $sql = "SELECT * FROM `tu_khoa` WHERE `khoa_hoc`='$id_khoa_hoc' and `id_bai_hoc`='$id_bai_hoc'";
               $kq = mysqli_query($conn,$sql);
@@ -435,23 +458,23 @@ a:focus,
               // }
             
             ?>
-<!-- <b>Warning</b>:  Undefined array key "folder" in <b>Z:\xampp_v3\htdocs\NCKH_2024\tong_hop_v3\menu\lesson\book\baihoc.php</b> on line <b>303</b><br /> -->
-          </p>
+                    <!-- <b>Warning</b>:  Undefined array key "folder" in <b>Z:\xampp_v3\htdocs\NCKH_2024\tong_hop_v3\menu\lesson\book\baihoc.php</b> on line <b>303</b><br /> -->
+                </p>
+            </div>
         </div>
     </div>
-  </div>
- 
-      <?php
+
+    <?php
     }
   ?>
- 
 
-  
 
-  <script>
-  //e thêm hàm 
 
-  <?php
+
+    <script>
+    //e thêm hàm 
+
+    <?php
     function get_ten_bai($ma_bai_hoc){
       global $conn;
       $sql ="SELECT * FROM `bai_hoc` WHERE `ma_bai_hoc`='$ma_bai_hoc'";
@@ -464,62 +487,63 @@ a:focus,
     }
   
   ?>
-function luubien(id){
-  localStorage.setItem('mucdo', 0);
-  var links = document.getElementsByTagName('a');
-    for (var i = 0; i < links.length; i++) {
-        links[i].classList.remove('selected');
+
+    function luubien(id) {
+        localStorage.setItem('mucdo', 0);
+        var links = document.getElementsByTagName('a');
+        for (var i = 0; i < links.length; i++) {
+            links[i].classList.remove('selected');
+        }
+        document.getElementById(id).classList.add('selected');
     }
-    document.getElementById(id).classList.add('selected');
-}
 
-function luubien_2(id){
-  var links = document.getElementsByTagName('a');
-    for (var i = 0; i < links.length; i++) {
-        links[i].classList.remove('selected');
+    function luubien_2(id) {
+        var links = document.getElementsByTagName('a');
+        for (var i = 0; i < links.length; i++) {
+            links[i].classList.remove('selected');
+        }
+        document.getElementById(id).classList.add('selected');
+        localStorage.setItem('mucdo_2', 0);
     }
-    document.getElementById(id).classList.add('selected');
-  localStorage.setItem('mucdo_2', 0);
-}
-  const toggle = document.getElementById('toggle1');
-  const close = document.getElementById('close');
-  const open = document.getElementById('open');
-  const navbar1 = document.getElementById('navbar1');
+    const toggle = document.getElementById('toggle1');
+    const close = document.getElementById('close');
+    const open = document.getElementById('open');
+    const navbar1 = document.getElementById('navbar1');
 
-  // function closeNavbar1(e) {
-  //   if (
-  //     document.body.classList.contains('show-nav') &&
-  //     e.target !== toggle &&
-  //     !toggle.contains(e.target) &&
-  //     e.target !== navbar1 &&
-  //     !navbar1.contains(e.target) && localStorage.getItem('Baitap') === "a"
-  //   ) {
-  //     document.body.classList.toggle('show-nav');
-  //     document.body.removeEventListener('click', closeNavbar1);
-  //   } else if (!document.body.classList.contains('show-nav')) {
-  //     document.body.removeEventListener('click', closeNavbar1);
-  //   }
-  // }
+    // function closeNavbar1(e) {
+    //   if (
+    //     document.body.classList.contains('show-nav') &&
+    //     e.target !== toggle &&
+    //     !toggle.contains(e.target) &&
+    //     e.target !== navbar1 &&
+    //     !navbar1.contains(e.target) && localStorage.getItem('Baitap') === "a"
+    //   ) {
+    //     document.body.classList.toggle('show-nav');
+    //     document.body.removeEventListener('click', closeNavbar1);
+    //   } else if (!document.body.classList.contains('show-nav')) {
+    //     document.body.removeEventListener('click', closeNavbar1);
+    //   }
+    // }
 
-  // function scrollToPosition(position) {
-  //   window.scrollTo({
-  //     top: position,
-  //     behavior: 'smooth' // Cuộn mượt
-  //   });
-  // }
+    // function scrollToPosition(position) {
+    //   window.scrollTo({
+    //     top: position,
+    //     behavior: 'smooth' // Cuộn mượt
+    //   });
+    // }
 
-  // Toggle nav
-  toggle.addEventListener('click', () => {
-    const isNavOpen = document.body.classList.toggle('show-nav');
-    if (isNavOpen) {
-      localStorage.setItem('Baitap', 'a');
-    } else {
-      localStorage.setItem('Baitap', 'b');
-    }
-  });
+    // Toggle nav
+    toggle.addEventListener('click', () => {
+        const isNavOpen = document.body.classList.toggle('show-nav');
+        if (isNavOpen) {
+            localStorage.setItem('Baitap', 'a');
+        } else {
+            localStorage.setItem('Baitap', 'b');
+        }
+    });
 
-  // });
+    // });
     </script>
-  </body>
+</body>
 
 </html>

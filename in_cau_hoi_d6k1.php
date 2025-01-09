@@ -298,7 +298,7 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
         /* Giảm kích thước chữ */
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 440px) {
         .bocso {
             font-size: 14px;
         }
@@ -308,6 +308,17 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
             padding: 5px;
             /* font-size: 12px; */
             /* Giảm padding */
+        }
+
+        #traloikeotha,
+        #traloithuam,
+        #traloidien {
+            font-size: 18px;
+            white-space: normal;
+        }
+
+        .xemdapan-button {
+            max-width: 100% !important;
         }
     }
     </style>
