@@ -93,17 +93,19 @@
     background-color: #1E97F3;
 }
 
-#divStrong3 {
-    background-color: #5a0a85;
+#divStrong1 {
+    background-color: #c81010;
 }
 
 #divStrong2 {
     background-color: #0a5a19;
 }
 
-#divStrong1 {
-    background-color: #c81010;
+#divStrong3 {
+    background-color: #5a0a85;
 }
+
+
 
 .boxStrong {
     display: flex;

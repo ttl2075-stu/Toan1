@@ -207,9 +207,9 @@ input#btnSubmitSendAns{
     color: #ffffff !important;
 }
 input#btnSubmitSendAns:hover{
-    background-color: white !important;
+    /* background-color: white !important; */
         transform: translateY(-5px);
-        color: red !important;
+        /* color: red !important; */
 }
 
 /* nút xem đáp án */

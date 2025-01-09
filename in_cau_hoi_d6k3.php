@@ -163,8 +163,8 @@ function cap_nhat_tg($id_bai_tap_user, $i)
     }
 
     .button-red {
-        background: #ff4742 !important;
-        border: 1px solid #ff4742;
+        /* background: #ff4742 !important;
+        border: 1px solid #ff4742; */
         color: #ffffff;
     }
 
@@ -192,9 +192,9 @@ function cap_nhat_tg($id_bai_tap_user, $i)
     }
 
     .btn:hover {
-        background-color: white !important;
+        /* background-color: white !important; */
         transform: translateY(-5px);
-        color: red !important;
+        /* color: red !important; */
     }
 
     #help {

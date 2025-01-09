@@ -241,8 +241,8 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
         margin-right: 10px;
         transition: transform 0.5s ease-in-out;
         font-size: 25px;
-        background: #ff4742 !important;
-        border: 1px solid #ff4742 !important;
+        /* background: #ff4742 !important;
+        border: 1px solid #ff4742 !important; */
         color: #ffffff !important;
     }
 
@@ -270,9 +270,9 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
     }
 
     .btn:hover {
-        background-color: white !important;
+        /* background-color: white !important; */
         transform: translateY(-5px);
-        color: red !important;
+        /* color: red !important; */
     }
 
     #help {
@@ -336,7 +336,7 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
         <form action="" method="post">
 
 
-            <button style="margin-bottom: 50%;" type="button" class="btn button-1" id="check" name="btn_check"
+            <button style="margin-bottom: 50%;" type="button" class="btn" id="check" name="btn_check"
                 onclick="checkAnswer()"><img src="./icon/check.png" style="width:30px; height:30px;">Kiểm tra</button>
 
 

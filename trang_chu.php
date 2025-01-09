@@ -178,7 +178,7 @@ function updateFolderValue(link, event) {
  
   <nav id="navbar">
     <div class="logo">
-      <img src="assets/image/logo.jpg" alt="user" />
+      <img src="assets/image/logo6.png" alt="user" />
     </div>
     <ul>
       <li><a href="trang_chu.php?id_khoa_hoc=<?php echo$id_khoa_hoc ?>">Trang chủ</a></li>

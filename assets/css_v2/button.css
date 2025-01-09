@@ -18,11 +18,18 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: middle;
+    background: #4cb4bf !important;
+    border: 1px solid #4cb4bf !important;
+    color: #ffffff !important;
+
 }
 .button-1:hover,
 .button-1:active {
-    background-color: initial;
+    /* background-color: initial; */
     background-position: 0 0;
+    background-color: #0b5ed7 !important;
+    color: #ffffff !important;
+    border: 1px solid #0b5ed7 !important;
 }
 .button-1:active {
     opacity: 0.5;
@@ -180,7 +187,7 @@
 }
 
 
-.button-blue-revert {
+/* .button-blue-revert {
     background: var(--white) !important;
     border: 1px solid var(--blue);
     color: var(--blue);
@@ -198,4 +205,4 @@
 .button-orange-revert:hover, .button-orange-revert:active {
     color: var(--white);
     background-color: #ff8c00 !important;
-}
+} */

@@ -265,8 +265,8 @@ div.btn-div-notice button {
 }
 
 .button-red {
-    background: #ff4742 !important;
-    border: 1px solid #ff4742;
+    /* background: #ff4742 !important;
+    border: 1px solid #ff4742; */
     color: #ffffff;
 }
 
@@ -294,9 +294,9 @@ div.btn-div-notice button {
 }
 
 .btn:hover {
-    background-color: white !important;
+    /* background-color: white !important; */
     transform: translateY(-5px);
-    color: red !important;
+    /* color: red !important; */
 }
 
 #help {

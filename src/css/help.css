@@ -129,15 +129,15 @@ button.back-button:hover {
 }
 
 #input-box0 {
-    /* background-color: #1e97f3; */
-    background-color: #c81010;
+    background-color: #1e97f3;
+    /* background-color: #c81010; */
     /* Màu nền khi chọn */
 }
 
 #input-box1 {
     /* Màu nền cho số thứ nhất */
-    /* background-color: #c81010; */
-    background-color: #1e97f3;
+    background-color: #c81010;
+    /* background-color: #1e97f3; */
     margin-right: 2px;
 }
 
