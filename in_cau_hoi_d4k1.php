@@ -309,10 +309,10 @@ while ($row = mysqli_fetch_assoc($a)) {
 
                 <div id="contain_1">
                     <div id="contain_2">
-                        <button type="button" class="btn button-1 button-red" id="check" name="btn_check"
+                        <button type="button" class="btn" id="check" name="btn_check"
                             onclick="checkAnswer()"><img src="./icon/check.png" style="width:30px; height:30px;">Kiểm
                             tra</button>
-                        <button type="button" class="btn button-1 button-red" id="help" name='btn_hd' value="
+                        <button type="button" class="btn" id="help" name='btn_hd' value="
                             <?php
                             // $sql="SELECT * FROM `ho_tro_hien_thi` WHERE `id_loai_hien_thi`=$id_loai_hien_thi";
                             $sql = " SELECT * FROM `kieu_ho_tro_chi_tiet` INNER JOIN `ho_tro_hien_thi` WHERE `kieu_ho_tro_chi_tiet`.`id_kieu_ho_tro` = `ho_tro_hien_thi`.`id_kieu_ho_tro` 

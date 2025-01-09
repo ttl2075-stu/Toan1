@@ -24,7 +24,7 @@ div.score-container.box_flex_column{
     border-radius: 20px;
     box-shadow: 0px 2px 8px 0px #1E97F3;
     text-align: left;
-    margin-right: 19rem;
+    /* margin-right: 19rem; */
 }
 
 button#traloikeotha.btn.hinhthucTL{

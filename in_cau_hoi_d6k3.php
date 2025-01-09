@@ -7,6 +7,9 @@ if (!isset($_SESSION['id_user'])) {
     die();
 }
 
+
+
+
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 $role = $_SESSION['quyen'];
 $id_user = $_SESSION['id_user'];
@@ -111,6 +114,9 @@ function cap_nhat_tg($id_bai_tap_user, $i)
     mysqli_query($conn, $sql);
 }
 
+// echo '<pre>';
+// print_r($_SESSION);
+// echo '</pre>';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -268,59 +274,12 @@ function cap_nhat_tg($id_bai_tap_user, $i)
                     ?>
                 </span>
             </div>
-            <div style="display: flex;">
-                <div class="contain" style="display: flex;">
-                    <div id="container">
-                        <img class="arrow_2" src="uploads/arrow.png" id="arrow" alt="arrow">
-                        <div style="display: flex; margin-top: 100px;">
-                            <div class="basket" id="basket"></div>
-                            <div class="plate" id="plate"></div>
-                            <div class="basket_plate" id="basket_plate" style="margin-left:90px; margin-top: 0px"></div>
-                        </div>
-                    </div>
-                    <!-- em sửa lại ô button -->
-                    <div class="box-phepTinh">
-                        <div class="square" id="square1"><input type="text" class="inputt" id='inputt1' name='inputt1'
-                                placeholder="?" required value="<?php if (isset($_POST['inputt1']) && $_POST['inputt1'] == $mang_rong[0]) {
-echo $_POST['inputt1'];
-}
-?>">
-                        </div>
-                        <div class="square" id="square2"><input type="text" class="inputt2" id='inputt2' name='inputt2'
-                                placeholder="?" required
-                                value="<?php
-                                                                                                                                                        if (isset($_POST['inputt2']) && $_POST['inputt2'] == $mang_rong[1]) {
-                                                                                                                                                            echo $_POST['inputt2'];
-                                                                                                                                                        }
-                                                                                                                                                        ?>">
-                        </div>
-                        <div class="square" id="square3"><input type="text" class="inputt" id='inputt3' name='inputt3'
-                                placeholder="?" required
-                                value="<?php
-                                                                                                                                                        if (isset($_POST['inputt3']) && $_POST['inputt3'] == $mang_rong[2]) {
-                                                                                                                                                            echo $_POST['inputt3'];
-                                                                                                                                                        }
-                                                                                                                                                        ?>">
-                        </div>
-                        <div class="square" id="square4"><input type="text" class="inputt2" id='inputt4' name='inputt4'
-                                placeholder="=" readonly></div>
-                        <div class="square" id="square5"><input type="text" class="inputt" id='inputt5' name='inputt5'
-                                placeholder="?" required
-                                value="<?php
-                                                                                                                                                        if (isset($_POST['inputt5']) && $_POST['inputt5'] == $mang_rong[4]) {
-                                                                                                                                                            echo $_POST['inputt5'];
-                                                                                                                                                        }
-                                                                                                                                                        ?>">
-                        </div>
-                    </div>
-                </div>
-
-                <div id="contain_1">
-                    <div id="contain_2">
-                        <button type="button" class="btn button-1 button-red" id="check" name="btn_check"
+            <div id="contain_1">
+                    <div style="display: flex; justify-content: center;">
+                        <button type="button" class="btn" id="check" name="btn_check"
                             onclick="checkAnswer()"><img src="./icon/check.png" style="width:30px; height:30px;">Kiểm
                             tra</button>
-                        <button type="button" class="btn button-1 button-red" id="help" name='btn_hd' value="
+                        <button type="button" class="btn" id="help" name='btn_hd' value="
                             <?php
                             // $sql="SELECT * FROM `ho_tro_hien_thi` WHERE `id_loai_hien_thi`=$id_loai_hien_thi";
                             $sql = " SELECT * FROM `kieu_ho_tro_chi_tiet` INNER JOIN `ho_tro_hien_thi` WHERE `kieu_ho_tro_chi_tiet`.`id_kieu_ho_tro` = `ho_tro_hien_thi`.`id_kieu_ho_tro` 
@@ -350,7 +309,111 @@ echo $_POST['inputt1'];
                         "><img src="./icon/support.png" style="margin-right: 10px;">Hỗ trợ</button>
                     </div>
                 </div>
+
+                <div class="contain">
+                    
+                    <div id="container">
+                        <img class="arrow_2" src="uploads/arrow.png" id="arrow" alt="arrow" style="display: <?php echo $_SESSION['dang_bai'][1] == '-' ? 'block' : 'none' ?>;">
+                        <div style="display: flex; margin-top: 100px;">
+                            <!-- <div class="basket" id="basket"></div>
+                            <div class="plate" id="plate"></div> -->
+                            <style>
+                                .box-main, .box-main tr, .box-main td {
+                                    border: 0;
+                                    outline: 0;
+                                    border-collapse: collapse;
+                                    margin: 0;
+                                    padding: 0;
+                                    height: fit-content;
+                                }
+                                .inputt, .inputt2 {
+                                    width: 70px;
+                                    height: 70px;
+                                    margin: 0;
+                                }
+                                .basket_plate {
+                                    margin: 20px 0 !important;
+                                    margin-bottom: 50px !important;
+                                    bottom: 0 !important;
+                                    /* overflow: ; */
+                                    width: 100%; /* Hoặc initial để trả về giá trị mặc định */
+                                    height: -webkit-fill-available;
+                                    background-size: initial; /* Trả về kích thước mặc định */
+                                    background-repeat: repeat; /* Mặc định của background-repeat */
+                                    display: flex; /* Ẩn phần tử */
+                                    justify-content: center;
+                                    align-content: center;
+                                    flex-wrap: wrap;
+                                    /* vertical-align: baseline; Giá trị mặc định */
+                                    position: static; /* Trả về vị trí mặc định */
+                                }
+                                .img_basket {
+                                    width: 75px;
+                                    height: 75px;
+                                    margin: 0;
+                                }
+                            </style>
+                            <table class="box-main">
+                                <tr style="height: fit-content;">
+                                    <td class="td-img" style="width: 35%;">
+                                        <div class="basket_plate" id="basket_plate-1">
+                                            <?php 
+                                                for ($i = 0; $i < $_SESSION['dang_bai'][0]; $i++) {
+                                                    echo "<img src='uploads/". $_SESSION['anh']['url_doi_tuong'] ."' class='img_basket'>";
+                                                }
+                                            ?>
+                                        </div>
+                                    </td>
+                                    <td style="width: 10%">
+
+                                    </td>
+                                    <td class="td-img" style="width: 35%;">
+                                        <div class="basket_plate" id="basket_plate-2">
+                                            <?php 
+                                                for ($i = 0; $i < $_SESSION['dang_bai'][2]; $i++) {
+                                                    echo "<img src='uploads/". $_SESSION['anh']['url_dung_do'] ."' class='img_basket'>";
+                                                }
+                                            ?>
+                                        </div>
+
+                                    </td>
+                                    <td style="width: 10%">
+
+                                    </td>
+                                    <td style="width: 10%">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div  id="square1"><input type="text" class="inputt" id='inputt1' name='inputt1' placeholder="?" required value="<?php if (isset($_POST['inputt1']) && $_POST['inputt1'] == $mang_rong[0]) { echo $_POST['inputt1']; } ?>"></div>
+                                    </td>
+                                    <td>
+                                        <div  id="square2"><input type="text" class="inputt2" id='inputt2' name='inputt2' placeholder="?" readonly value="<?php echo $_SESSION['dang_bai'][1] ?>"> </div>
+                                    </td>
+                                    <td>
+                                        <div  id="square3"><input type="text" class="inputt" id='inputt3' name='inputt3' placeholder="?" required value="<?php if (isset($_POST['inputt3']) && $_POST['inputt3'] == $mang_rong[2]) { echo $_POST['inputt3']; } ?>"> </div>
+
+                                    </td>
+                                    <td>
+                                        <div  id="square4"><input type="text" class="inputt2" id='inputt4' name='inputt4' placeholder="=" readonly></div>
+
+                                    </td>
+                                    <td>
+                                        <div  id="square5"><input type="text" class="inputt" id='inputt5' name='inputt5' placeholder="?" required value="<?php if (isset($_POST['inputt5']) && $_POST['inputt5'] == $mang_rong[4]) { echo $_POST['inputt5']; } ?>"/div>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- em sửa lại ô button -->
+                    <div class="box-phepTinh">
+                    </div>
+                </div>
+
             </div>
+            <div>
             <div class="checkdungsai">
                 <div class="Notice_True" style="display: none;">
                     <img src="./icon/dung.png" class="trueVideo">
@@ -1295,116 +1358,165 @@ echo $_POST['inputt1'];
     function displayObjects($count, $count_2)
     {
         $result = '';
-        $result .= '<script>';
-        $result .= 'var container = document.getElementById("basket");';
-        $result .= 'var an = document.getElementById("basket_plate");';
-        $result .= 'an.style.display = "none";';
-        $result .= 'var width = container.clientWidth;';
-        $result .= 'var height = container.clientHeight;';
-        $result .= 'container.innerHTML = "";';
-        $result .= 'for (var i = 0; i < ' . $count . '; i++) {';
-        $result .= '    var img = document.createElement("img");';
-        $result .= '    img.className = "";';
-        $result .= '    img.src = "uploads/' .  $_SESSION['anh']['url_doi_tuong'] . '";';
-        $result .= '    var centerX = width / 2;';
-        $result .= '    var centerY = height / 2;';
-        $result .= '    var radiusX = width / 2 - 100;';
-        $result .= '    var radiusY = height / 2 - 100;';
-        $result .= '    var angle = Math.random() * 2 * Math.PI;';
-        $result .= '    var x = centerX + radiusX * Math.cos(angle);';
-        $result .= '    var y = centerY + radiusY * Math.sin(angle);';
-        $result .= '    var scale = 1.2;';
-        $result .= '    var scaledWidth = 60 * scale;';
-        $result .= '    var scaledHeight = 50 * scale;';
-        $result .= '    img.style.width = scaledWidth + "px";';
-        $result .= '    img.style.height = scaledHeight + "px";';
-        $result .= '    img.style.left = (x - (scaledWidth / 2)) + "px";';
-        $result .= '    img.style.top = (y - (scaledHeight / 2)) + "px";';
-        $result .= '    container.appendChild(img);';
-        $result .= '}';
-        $result .= 'var containers = document.getElementById("plate");';
-        $result .= 'var widths = containers.clientWidth;';
-        $result .= 'var heights = containers.clientHeight;';
-        $result .= 'containers.innerHTML = "";';
-        $result .= 'for (var i = 0; i < ' . $count_2 . '; i++) {';
-        $result .= '    var img = document.createElement("img");';
-        $result .= '    img.className = "' . $_SESSION['anh']['url_doi_tuong'] . '";';
-        $result .= '    img.src = "uploads/' .  $_SESSION['anh']['url_doi_tuong'] . '";';
-        $result .= '    var centerX = width / 2;';
-        $result .= '    var centerY = height / 2;';
-        $result .= '    var radiusX = width / 2 - 100;';
-        $result .= '    var radiusY = height / 2 - 100;';
-        $result .= '    var angle = Math.random() * 2 * Math.PI;';
-        $result .= '    var x = centerX + radiusX * Math.cos(angle);';
-        $result .= '    var y = centerY + radiusY * Math.sin(angle);';
-        $result .= '    var scale = 1.2;';
-        $result .= '    var scaledWidth = 60 * scale;';
-        $result .= '    var scaledHeight = 50 * scale;';
-        $result .= '    img.style.width = scaledWidth + "px";';
-        $result .= '    img.style.height = scaledHeight + "px";';
-        $result .= '    img.style.left = (x - (scaledWidth / 2)) + "px";';
-        $result .= '    img.style.top = (y - (scaledHeight / 2)) + "px";';
-        $result .= '    containers.appendChild(img);';
-        $result .= '}';
-        $result .= '</script>';
+        // $result = `
+        //     <script>
+        //     console.log(1);
+        //         var an = document.getElementById("basket_plate-1");
+        //         for (var i = 0; i < `. $count .`; i++) {
+        //             var img = document.createElement("img");
+        //             img.src = "uploads/` . $_SESSION['anh']['url_doi_tuong'] . `";
+        //             img.style.width = "60px";
+        //             img.style.height = "60px";
+        //             an.appendChild(img);
+        //         }
+        //         var an = document.getElementById("basket_plate-2");
+        //         for (var i = 0; i < `. $count_2 .`; i++) {
+        //             var img = document.createElement("img");
+        //             img.src = "uploads/` . $_SESSION['anh']['url_doi_tuong'] . `";
+        //             img.style.width = "60px";
+        //             img.style.height = "60px";
+        //             an.appendChild(img);
+        //         }
+        // console.log(`. $_SESSION['anh']['url_doi_tuong'] .`)
+
+        //     </script >
+        // `;
+
+        // $result = '';
+        // $result .= '<script>';
+        // $result .= 'var container = document.getElementById("basket");';
+        // $result .= 'var an = document.getElementById("basket_plate");';
+        // $result .= 'an.style.display = "none";';
+        // $result .= 'var width = container.clientWidth;';
+        // $result .= 'var height = container.clientHeight;';
+        // $result .= 'container.innerHTML = "";';
+        // $result .= 'for (var i = 0; i < ' . $count . '; i++) {';
+        // $result .= '    var img = document.createElement("img");';
+        // $result .= '    img.className = "";';
+        // $result .= '    img.src = "uploads/' .  $_SESSION['anh']['url_doi_tuong'] . '";';
+        // $result .= '    var centerX = width / 2;';
+        // $result .= '    var centerY = height / 2;';
+        // $result .= '    var radiusX = width / 2 - 100;';
+        // $result .= '    var radiusY = height / 2 - 100;';
+        // $result .= '    var angle = Math.random() * 2 * Math.PI;';
+        // $result .= '    var x = centerX + radiusX * Math.cos(angle);';
+        // $result .= '    var y = centerY + radiusY * Math.sin(angle);';
+        // $result .= '    var scale = 1.2;';
+        // $result .= '    var scaledWidth = 60 * scale;';
+        // $result .= '    var scaledHeight = 50 * scale;';
+        // $result .= '    img.style.width = scaledWidth + "px";';
+        // $result .= '    img.style.height = scaledHeight + "px";';
+        // $result .= '    img.style.left = (x - (scaledWidth / 2)) + "px";';
+        // $result .= '    img.style.top = (y - (scaledHeight / 2)) + "px";';
+        // $result .= '    container.appendChild(img);';
+        // $result .= '}';
+        // $result .= 'var containers = document.getElementById("plate");';
+        // // $result .= 'var an = document.getElementById("basket_plate-2");';
+        // $result .= 'var widths = containers.clientWidth;';
+        // $result .= 'var heights = containers.clientHeight;';
+        // $result .= 'containers.innerHTML = "";';
+        // $result .= 'for (var i = 0; i < ' . $count_2 . '; i++) {';
+        // $result .= '    var img = document.createElement("img");';
+        // $result .= '    img.className = "' . $_SESSION['anh']['url_doi_tuong'] . '";';
+        // $result .= '    img.src = "uploads/' .  $_SESSION['anh']['url_doi_tuong'] . '";';
+        // $result .= '    var centerX = width / 2;';
+        // $result .= '    var centerY = height / 2;';
+        // $result .= '    var radiusX = width / 2 - 100;';
+        // $result .= '    var radiusY = height / 2 - 100;';
+        // $result .= '    var angle = Math.random() * 2 * Math.PI;';
+        // $result .= '    var x = centerX + radiusX * Math.cos(angle);';
+        // $result .= '    var y = centerY + radiusY * Math.sin(angle);';
+        // $result .= '    var scale = 1.2;';
+        // $result .= '    var scaledWidth = 60 * scale;';
+        // $result .= '    var scaledHeight = 50 * scale;';
+        // $result .= '    img.style.width = scaledWidth + "px";';
+        // $result .= '    img.style.height = scaledHeight + "px";';
+        // $result .= '    img.style.left = (x - (scaledWidth / 2)) + "px";';
+        // $result .= '    img.style.top = (y - (scaledHeight / 2)) + "px";';
+        // $result .= '    containers.appendChild(img);';
+        // $result .= '}';
+        // $result .= '</script>';
         return $result;
     }
 
     function displayObjects_sub($count, $count_2)
     {
-        $result = '';
-        $result .= '<script>';
-        $result .= 'var container = document.getElementById("basket_plate");';
-        $result .= 'var an_1 = document.getElementById("basket");';
-        $result .= 'var an_2 = document.getElementById("plate");';
-        $result .= 'an_1.style.display = "none";';
-        $result .= 'an_2.style.display = "none";';
-        $result .= 'var an = document.getElementById("arrow");';
-        $result .= 'an.style.display = "none";';
-        $result .= 'var width = container.clientWidth;';
-        $result .= 'var height = container.clientHeight;';
-        $result .= 'var imagesHtml = "";';
-        $result .= 'for (var i = 0; i < ' . $count . '; i++) {';
-        $result .= '    var img = document.createElement("img");';
-        $result .= '    img.className = "";';
-        $result .= '    img.src = "uploads/' .  $_SESSION['anh']['url_doi_tuong'] . '";';
-        $result .= '    var newWidth = 100;';
-        $result .= '    var newHeight = 80;';
-        $result .= '    img.style.width = newWidth + "px";';
-        $result .= '    img.style.height = newHeight + "px";';
-        $result .= '    var centerX = width / 2;';
-        $result .= '    var centerY = height / 2;';
-        $result .= '    var radiusX = width / 2 - 100;';
-        $result .= '    var radiusY = height / 2 - 100;';
-        $result .= '    var angle = Math.random() * 2 * Math.PI;';
-        $result .= '    var x = centerX + radiusX * Math.cos(angle);';
-        $result .= '    var y = centerY + radiusY * Math.sin(angle);';
-        $result .= '    img.style.left = (x - (newWidth / 2)) + "px";';
-        $result .= '    img.style.top = (y - (newHeight / 2)) + "px";';
-        $result .= '    imagesHtml += img.outerHTML;';
-        $result .= '}';
-        $result .= 'imagesHtml += "<br>";';
-        $result .= 'for (var i = 0; i < ' . $count_2 . '; i++) {';
-        $result .= '    var img = document.createElement("img");';
-        $result .= '    img.className = "' . $_SESSION['anh']['url_dung_do'] . '";';
-        $result .= '    img.src = "uploads/' .  $_SESSION['anh']['url_dung_do'] . '";';
-        $result .= '    var newWidth = 100;';
-        $result .= '    var newHeight = 80;';
-        $result .= '    img.style.width = newWidth + "px";';
-        $result .= '    img.style.height = newHeight + "px";';
-        $result .= '    var centerX = width / 2;';
-        $result .= '    var centerY = height / 2;';
-        $result .= '    var radiusX = width / 2 - 100;';
-        $result .= '    var radiusY = height / 2 - 100;';
-        $result .= '    var angle = Math.random() * 2 * Math.PI;';
-        $result .= '    var x = centerX + radiusX * Math.cos(angle);';
-        $result .= '    var y = centerY + radiusY * Math.sin(angle);';
-        $result .= '    img.style.left = (x - (newWidth / 2)) + "px";';
-        $result .= '    img.style.top = (y - (newHeight / 2)) + "px";';
-        $result .= '    imagesHtml += img.outerHTML;';
-        $result .= '}';
-        $result .= 'container.innerHTML = imagesHtml;';
-        $result .= '</script>';
+            $result = '';
+    //     $result = `
+    //     <script>
+    //         var an = document.getElementById("basket_plate-1");
+    //         for (var i = 0; i < $count; i++) {
+    //             var img = document.createElement("img");
+    //             img.src = "uploads/` . $_SESSION['anh']['url_doi_tuong'] . `";
+    //             img.style.width = "60px";
+    //             img.style.height = "60px";
+    //             an.appendChild(img);
+    //         }
+    //         var an = document.getElementById("basket_plate-2");
+    //         for (var i = 0; i < $count_2; i++) {
+    //             var img = document.createElement("img");
+    //             img.src = "uploads/` . $_SESSION['anh']['url_doi_tuong'] . `";
+    //             img.style.width = "60px";
+    //             img.style.height = "60px";
+    //             an.appendChild(img);
+    //         }
+    //     console.log(`. $_SESSION['anh']['url_doi_tuong'] .`)
+    //     console.log(`. $_SESSION['anh']['url_doi_tuong'] .`)
+    //     </script >
+    // `;
+        // $result = '';
+        // $result .= '<script>';
+        // $result .= 'var container = document.getElementById("basket_plate");';
+        // $result .= 'var an_1 = document.getElementById("basket");';
+        // $result .= 'var an_2 = document.getElementById("plate");';
+        // $result .= 'an_1.style.display = "none";';
+        // $result .= 'an_2.style.display = "none";';
+        // $result .= 'var an = document.getElementById("arrow");';
+        // $result .= 'an.style.display = "none";';
+        // $result .= 'var width = container.clientWidth;';
+        // $result .= 'var height = container.clientHeight;';
+        // $result .= 'var imagesHtml = "";';
+        // $result .= 'for (var i = 0; i < ' . $count . '; i++) {';
+        // $result .= '    var img = document.createElement("img");';
+        // $result .= '    img.className = "";';
+        // $result .= '    img.src = "uploads/' .  $_SESSION['anh']['url_doi_tuong'] . '";';
+        // $result .= '    var newWidth = 100;';
+        // $result .= '    var newHeight = 80;';
+        // $result .= '    img.style.width = newWidth + "px";';
+        // $result .= '    img.style.height = newHeight + "px";';
+        // $result .= '    var centerX = width / 2;';
+        // $result .= '    var centerY = height / 2;';
+        // $result .= '    var radiusX = width / 2 - 100;';
+        // $result .= '    var radiusY = height / 2 - 100;';
+        // $result .= '    var angle = Math.random() * 2 * Math.PI;';
+        // $result .= '    var x = centerX + radiusX * Math.cos(angle);';
+        // $result .= '    var y = centerY + radiusY * Math.sin(angle);';
+        // $result .= '    img.style.left = (x - (newWidth / 2)) + "px";';
+        // $result .= '    img.style.top = (y - (newHeight / 2)) + "px";';
+        // $result .= '    imagesHtml += img.outerHTML;';
+        // $result .= '}';
+        // $result .= 'imagesHtml += "<br>";';
+        // $result .= 'for (var i = 0; i < ' . $count_2 . '; i++) {';
+        // $result .= '    var img = document.createElement("img");';
+        // $result .= '    img.className = "' . $_SESSION['anh']['url_dung_do'] . '";';
+        // $result .= '    img.src = "uploads/' .  $_SESSION['anh']['url_dung_do'] . '";';
+        // $result .= '    var newWidth = 100;';
+        // $result .= '    var newHeight = 80;';
+        // $result .= '    img.style.width = newWidth + "px";';
+        // $result .= '    img.style.height = newHeight + "px";';
+        // $result .= '    var centerX = width / 2;';
+        // $result .= '    var centerY = height / 2;';
+        // $result .= '    var radiusX = width / 2 - 100;';
+        // $result .= '    var radiusY = height / 2 - 100;';
+        // $result .= '    var angle = Math.random() * 2 * Math.PI;';
+        // $result .= '    var x = centerX + radiusX * Math.cos(angle);';
+        // $result .= '    var y = centerY + radiusY * Math.sin(angle);';
+        // $result .= '    img.style.left = (x - (newWidth / 2)) + "px";';
+        // $result .= '    img.style.top = (y - (newHeight / 2)) + "px";';
+        // $result .= '    imagesHtml += img.outerHTML;';
+        // $result .= '}';
+        // $result .= 'container.innerHTML = imagesHtml;';
+        // $result .= '</script>';
         return $result;
     }
     ?>
