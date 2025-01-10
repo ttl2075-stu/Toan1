@@ -140,33 +140,33 @@ div#contain_2 {
     max-width: 185px;
     margin-left: 3rem;
 }
-.basket {
-    width: 350px;
-    min-height: 330px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    background-color: #FFF0F5;
-    border-radius: 20px;
-    box-shadow: 0px 2px 8px 0px #1E97F3;
-    text-align: left;
-}
-.plate {
-    margin-left: 50px;
-    width: 350px;
-    min-height: 330px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    background-color: #E0FFFF;
-    border-radius: 20px;
-    box-shadow: 0px 2px 8px 0px #1E97F3;
-    text-align: left;
-}
+    /* .basket {
+        width: 350px;
+        min-height: 330px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        background-color: #FFF0F5;
+        border-radius: 20px;
+        box-shadow: 0px 2px 8px 0px #1E97F3;
+        text-align: left;
+    }
+    .plate {
+        margin-left: 50px;
+        width: 350px;
+        min-height: 330px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        background-color: #E0FFFF;
+        border-radius: 20px;
+        box-shadow: 0px 2px 8px 0px #1E97F3;
+        text-align: left;
+    } */
 .speaker {
     background-color: #007bff;
     color: white;
