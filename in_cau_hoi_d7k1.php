@@ -125,7 +125,9 @@ function cap_nhat_tg($id_bai_tap_user, $i)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D7K1 - Tổng Hiệu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./src/css/form.css">
     <link rel="stylesheet" href="./src/css/setting.css">
     <link rel="stylesheet" href="./src/css/button.css">
@@ -139,98 +141,106 @@ function cap_nhat_tg($id_bai_tap_user, $i)
     <link rel="stylesheet" href="./assets/css_v2/InCauHoi_d7k1.css">
     <script src="./src/js/function.js"></script>
     <script>
-        // Loại bỏ sự kiện beforeunload
-        window.removeEventListener('beforeunload', function(e) {
-            // Không làm gì cả sẽ ngăn chặn thông báo
-        });
+    // Loại bỏ sự kiện beforeunload
+    window.removeEventListener('beforeunload', function(e) {
+        // Không làm gì cả sẽ ngăn chặn thông báo
+    });
 
-        // Đảm bảo rằng không có sự kiện beforeunload nào được thêm mới
-        window.onbeforeunload = null;
+    // Đảm bảo rằng không có sự kiện beforeunload nào được thêm mới
+    window.onbeforeunload = null;
 
-        function upLocalStorage(key, value) {
-            localStorage.setItem(key, JSON.stringify(value))
-        }
+    function upLocalStorage(key, value) {
+        localStorage.setItem(key, JSON.stringify(value))
+    }
     </script>
     <!-- Chuyen session php sang localstorage -->
     <script>
-        let loaihienthi = <?php echo $id_loai_hien_thi; ?>;
-        let sessionData = <?php echo $sessionDataJSON; ?>;
-        let quizs = JSON.parse(sessionData);
-        upLocalStorage("d7k1_baiDien", quizs);
+    let loaihienthi = <?php echo $id_loai_hien_thi; ?>;
+    let sessionData = <?php echo $sessionDataJSON; ?>;
+    let quizs = JSON.parse(sessionData);
+    upLocalStorage("d7k1_baiDien", quizs);
     </script>
     <style>
-        #help {
-            padding: 0px;
+    #help {
+        padding: 0px;
+    }
+
+    #help img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btn {
+        background-color: #2da0fa;
+        /* Màu nền */
+        border: none;
+        color: white;
+        /* Màu chữ */
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-right: 10px;
+        transition: transform 0.5s ease-in-out;
+        font-size: 25px;
+        margin-bottom: 30px;
+
+    }
+
+    #incrementButton {
+        margin-bottom: 1%;
+    }
+
+    #decrementButton {
+        margin-top: 0.1% !important;
+    }
+
+    #decrementButton,
+    #incrementButton {
+        margin-right: 10%;
+    }
+
+    #decrementButton #decrementButton #decrementButton on #decrementButton #decrementButton #decrementButton .btn i {
+        color: white;
+    }
+
+    .btn:hover {
+        background-color: yellow;
+        transform: translateY(-5px);
+        color: black;
+    }
+
+    #help {
+        padding: 0 10px;
+        margin-top: 10px;
+        /* width: 50px; */
+    }
+
+    #help img {
+        width: 50px;
+        /* Độ rộng của hình ảnh */
+        margin-left: 5px;
+        /* Khoảng cách giữa hình ảnh và văn bản */
+    }
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+        /* Giảm kích thước chữ */
+    }
+
+    @media (max-width: 768px) {
+        .bocso {
+            font-size: 14px;
         }
 
-        #help img {
-            width: 50px;
-            height: 50px;
+        td,
+        th {
+            padding: 5px;
+            /* font-size: 12px; */
+            /* Giảm padding */
         }
-
-        .btn {
-            background-color: #2da0fa;
-            /* Màu nền */
-            border: none;
-            color: white;
-            /* Màu chữ */
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-right: 10px;
-            transition: transform 0.5s ease-in-out;
-            font-size: 25px;
-            margin-bottom: 30px;
-
-        }
-
-        #incrementButton {
-            margin: 3% 10% 0px 0px;
-
-        }
-
-        .btn i {
-            color: white;
-        }
-
-        .btn:hover {
-            background-color: yellow;
-            transform: translateY(-5px);
-            color: black;
-        }
-
-        #help {
-            padding: 0 10px;
-            margin-top: 10px;
-            /* width: 50px; */
-        }
-
-        #help img {
-            width: 50px;
-            /* Độ rộng của hình ảnh */
-            margin-left: 5px;
-            /* Khoảng cách giữa hình ảnh và văn bản */
-        }
-
-        table {
-            width: 100%;
-            table-layout: fixed;
-            /* Giảm kích thước chữ */
-        }
-
-        @media (max-width: 768px) {
-            .bocso {
-                font-size: 14px;
-            }
-
-            td,
-            th {
-                padding: 5px;
-                /* font-size: 12px; */
-                /* Giảm padding */
-            }
-        }
+    }
     </style>
 </head>
 
@@ -242,9 +252,12 @@ function cap_nhat_tg($id_bai_tap_user, $i)
 
     <div class="button-container">
         <!-- <button type="button" class="return-button return-button-top-left" onclick="returnToForm()"><i class="fa-solid fa-backward"></i>Trở về</button> -->
-        <button type="button" class="btn hinhthucTL" id="traloikeotha" onclick="showThe()"><img src="./icon/thedapan.png" style="width:30px; height:30px; margin-right: 10px">Hiện thẻ đáp án</button>
-        <button type="button" class="btn hinhthucTL" id="traloithuam" onclick="showThuAM()"><img src="./icon/listen_1.png" style="width:30px; height:30px; margin-right: 10px">Thu âm để trả lời</button>
-        <button type="button" class="btn hinhthucTL" id="traloidien" onclick="showDien()"><img src="./icon/thedapan.png" style="width:30px; height:30px; margin-right: 10px"></i>Trả lời bằng cách điền</button>
+        <button type="button" class="btn hinhthucTL" id="traloikeotha" onclick="showThe()"><img
+                src="./icon/thedapan.png" style="width:30px; height:30px; margin-right: 10px">Hiện thẻ đáp án</button>
+        <button type="button" class="btn hinhthucTL" id="traloithuam" onclick="showThuAM()"><img
+                src="./icon/listen_1.png" style="width:30px; height:30px; margin-right: 10px">Thu âm để trả lời</button>
+        <button type="button" class="btn hinhthucTL" id="traloidien" onclick="showDien()"><img src="./icon/thedapan.png"
+                style="width:30px; height:30px; margin-right: 10px"></i>Trả lời bằng cách điền</button>
     </div>
     <div class="score-container box_flex_column">
         <label style="display:none;">ĐIỂM</label>
@@ -252,7 +265,8 @@ function cap_nhat_tg($id_bai_tap_user, $i)
         <span id="cauSo" style='display:none;'></span>
         <div class="lesson" style='display:none;'></div>
         <form action="" method="get">
-            <button type="button" class="btn" id="check" name="btn_check" onclick="checkAnswer()"><img src="./icon/check.png" style="width:30px; height:30px;">Kiểm tra</button>
+            <button type="button" class="btn" id="check" name="btn_check" onclick="checkAnswer()"><img
+                    src="./icon/check.png" style="width:30px; height:30px;">Kiểm tra</button>
             <button type="button" class="btn" id="help" name='btn_hd' value="
         <?php
         // $sql="SELECT * FROM `ho_tro_hien_thi` WHERE `id_loai_hien_thi`=$id_loai_hien_thi";
@@ -302,14 +316,15 @@ function cap_nhat_tg($id_bai_tap_user, $i)
         </div>
         <center>
             <style>
-                #input-box0 {
-                    /* background-color: #1e97f3; */
-                    background-color: #c81010;
-                }
-                #input-box1 {
-                    background-color: #1e97f3;
-                    /* background-color: #c81010; */
-                }
+            #input-box0 {
+                /* background-color: #1e97f3; */
+                background-color: #c81010;
+            }
+
+            #input-box1 {
+                background-color: #1e97f3;
+                /* background-color: #c81010; */
+            }
             </style>
             <div class="show-help"></div>
             <div id="tableContainer"></div>
@@ -318,14 +333,16 @@ function cap_nhat_tg($id_bai_tap_user, $i)
             <div id="nuthotro"></div>
         </center>
         <div class='div-btn'>
-            <button type="button" class="back-button"><img src="./icon/trove.png" style="width:30px; height:30px; margin-right: 5px; ">Trở về</button>
+            <button type="button" class="back-button"><img src="./icon/trove.png"
+                    style="width:30px; height:30px; margin-right: 5px; ">Trở về</button>
         </div>
     </div>
     <div class="notice-container">
         <h1>Bạn đã hoàn thành</h1>
         <div class='btn-div-notice'>
             <!-- <button type="button" class="back-button"><i class="fa-solid fa-pen-to-square"></i>Làm lại</button> -->
-            <button type="button" class="xemdapan-button" onclick="Xemdapan()"><i class="fa-solid fa-eye"></i>Xem lại đáp án đúng</button>
+            <button type="button" class="xemdapan-button" onclick="Xemdapan()"><i class="fa-solid fa-eye"></i>Xem lại
+                đáp án đúng</button>
         </div>
     </div>
     <!-- thong bao dung sai -->
@@ -368,46 +385,46 @@ function cap_nhat_tg($id_bai_tap_user, $i)
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.help-container .back-button').click(function() {
-                $(this).closest('.help-container').removeClass('show');
-                $('#tableContainer').empty();
-                $('#legoContainer').empty();
-                $('#support').empty();
-                $('.show-help').empty();
-                // $('#nuthotro').hide();
-            });
-            $('.notice-container button').click(function() {
-                $(this).closest('.notice-container').removeClass('showNotice');
-            });
+    $(document).ready(function() {
+        $('.help-container .back-button').click(function() {
+            $(this).closest('.help-container').removeClass('show');
+            $('#tableContainer').empty();
+            $('#legoContainer').empty();
+            $('#support').empty();
+            $('.show-help').empty();
+            // $('#nuthotro').hide();
         });
-        console.log(<?php echo $id_loai_hien_thi; ?>)
+        $('.notice-container button').click(function() {
+            $(this).closest('.notice-container').removeClass('showNotice');
+        });
+    });
+    console.log(<?php echo $id_loai_hien_thi; ?>)
     </script>
     <!-- <button id="sendDataButton">Send Data to PHP</button> -->
 
     <script>
-        // Xử lý sự kiện khi nút được nhấn
-        $('#check').click(function() {
-            var luu_vet1 = localStorage.getItem('luu_vet');
-            var hai = localStorage.getItem('d7k1_baiDien');
+    // Xử lý sự kiện khi nút được nhấn
+    $('#check').click(function() {
+        var luu_vet1 = localStorage.getItem('luu_vet');
+        var hai = localStorage.getItem('d7k1_baiDien');
 
-            // Sử dụng AJAX để gửi dữ liệu sang PHP
-            $.ajax({
-                url: 'file_php_up_database_d7k1.php',
-                type: 'post',
-                data: {
-                    hai: hai,
-                    luu_vet1: luu_vet1
-                },
-                success: function(response) {
-                    // alert(response); 
-                },
-                error: function(xhr, status, error) {
-                    console.error(error); // Xử lý lỗi nếu có
-                }
-            });
+        // Sử dụng AJAX để gửi dữ liệu sang PHP
+        $.ajax({
+            url: 'file_php_up_database_d7k1.php',
+            type: 'post',
+            data: {
+                hai: hai,
+                luu_vet1: luu_vet1
+            },
+            success: function(response) {
+                // alert(response); 
+            },
+            error: function(xhr, status, error) {
+                console.error(error); // Xử lý lỗi nếu có
+            }
         });
-        localStorage.setItem("luu_vet", JSON.stringify([]));
+    });
+    localStorage.setItem("luu_vet", JSON.stringify([]));
     </script>
 
 
