@@ -301,6 +301,16 @@ function cap_nhat_tg($id_bai_tap_user, $i)
 
         </div>
         <center>
+            <style>
+                #input-box0 {
+                    /* background-color: #1e97f3; */
+                    background-color: #c81010;
+                }
+                #input-box1 {
+                    background-color: #1e97f3;
+                    /* background-color: #c81010; */
+                }
+            </style>
             <div class="show-help"></div>
             <div id="tableContainer"></div>
             <div id="legoContainer"></div>
