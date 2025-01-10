@@ -318,6 +318,13 @@ table {
     /* Giảm kích thước chữ */
 }
 
+.canh_dieu_box {
+    margin-bottom: 60px !important;
+}
+
+.canh_dieu_item .item input[type="number"] {
+    outline: 2px solid #000;
+}
 @media (max-width: 768px) {
     .bocso {
         font-size: 14px;

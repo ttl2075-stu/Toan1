@@ -109,6 +109,9 @@
  
      $_SESSION['id_bai_tap_user'] = $_GET['id_bai_tap_user'];
     // end 28/07/2024
+    //  echo '<pre>';
+    //  echo print_r($_SESSION);
+    //  echo '</pre>';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -197,21 +200,21 @@
             display: flex;
             /* border: 1px solid black; */
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: flex-start;
             min-height: 200px;
             margin-top: 100px;
             margin-left: 15px;
             margin-right: 15px;
         }
         .trai{
-            width: 45%;
-            height: 100%;
+            width: 35%;
+            height: -webkit-fill-available;
             background-color: lightblue;
             text-align: left;
         }
         .phai{
-            width: 45%;
-            height: 100%;
+            width: 35%;
+            height: -webkit-fill-available;
             background-color: lightcoral;
             text-align: left;
         }
@@ -236,12 +239,16 @@
             <span id="debai"> 
                             
                     <?php 
-                        $sql ="SELECT ten_cau_hoi FROM `cau_hoi` WHERE cau_hoi.id_cau_hoi = $id_cau_hoi";
-                        $a = mysqli_query($conn, $sql);
-                        while($row = mysqli_fetch_assoc($a)){
-                            echo $row['ten_cau_hoi'];
-                        };
+                        // $sql ="SELECT ten_cau_hoi FROM `cau_hoi` WHERE cau_hoi.id_cau_hoi = $id_cau_hoi";
+                        // $a = mysqli_query($conn, $sql);
+                        // while($row = mysqli_fetch_assoc($a)){
+                        //     echo $row['ten_cau_hoi'];
+                        // };
                     ?>
+                    <!-- <br> -->
+                    Chọn 
+                    <font color="red"><?php echo $_SESSION['dang_bai'][1] ?></font>
+                    đối tượng từ khung bên trái vào khung bên phải bằng cách kéo thả
             </span>
         </div>
         <div style="display: flex;">
@@ -299,7 +306,9 @@
                 } else if (ev.target.tagName !== 'IMG') {
                     ev.target.appendChild(img);
                 }
-                // document.getElementById('objCount').innerHTML=dem.length
+                console.log(dem);
+                document.getElementById('objCount').innerHTML=document.querySelectorAll('.phai>.anh').length;
+                speakVietnamese(document.getElementById('objCount').innerHTML);
             }
         </script>
         <div class="checkdungsai">
