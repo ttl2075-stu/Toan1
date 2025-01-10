@@ -40,7 +40,7 @@
 }
 
 .box-phepTinh {
-    margin: 9% auto 0%;
+    /* margin: 9% auto 0%; */
     width: fit-content;
     display: flex;
     align-items: center;

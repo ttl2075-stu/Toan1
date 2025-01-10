@@ -86,6 +86,14 @@ div.cauhoi{
     background-color: var(--yellow);
     color: var(--white);
 }
+.dien {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    /* margin-left: 300px;
+    margin-top: -100px; */
+    /* display: none !important; */
+}
 
 /* Hỗ trợ bên trong */
 button#incrementButton{
@@ -265,7 +273,8 @@ div.show{
 }
 button {
     width: 170px;
-    margin: 10px 0px;
+    margin-right: 17px;
+    margin-top: -3px;
 }
 .help-container {
     position: fixed;
