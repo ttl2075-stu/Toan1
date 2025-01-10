@@ -314,7 +314,7 @@ function cap_nhat_tg($id_bai_tap_user, $i)
                     
                     <div id="container">
                         <img class="arrow_2" src="uploads/arrow.png" id="arrow" alt="arrow" style="display: <?php echo $_SESSION['dang_bai'][1] == '-' ? 'block' : 'none' ?>;">
-                        <div style="display: flex; margin-top: 100px;">
+                        <div style="display: flex; margin-top: 50px;">
                             <!-- <div class="basket" id="basket"></div>
                             <div class="plate" id="plate"></div> -->
                             <style>

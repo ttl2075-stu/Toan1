@@ -121,9 +121,8 @@ button#check.btn{
     background-color: var( --blue);
     display: flex;
     justify-content: center;
-    width: 14rem;
+    width: fit-content;
     gap: 5px;
-    
     color: white;
     border-radius: 8px;
     border: none;
@@ -131,7 +130,7 @@ button#check.btn{
     transition: all 0.3s ease;
     /* margin-left: 1.5rem; */
     text-align: center;
-
+    align-items: center;
 }
 
 button#check.btn:hover{
@@ -141,7 +140,7 @@ button#check.btn:hover{
 button#help.btn {
     background-color: var(--blue);
     display: flex;
-    width: 14rem;
+    width: fit-content;
     justify-content: center;
     gap: 5px;
     color: white;
@@ -152,6 +151,7 @@ button#help.btn {
     transition: all 0.3s ease;
     /* margin-left: 1.5rem; */
     text-align: center;
+    align-items: center;
 }
 button#help.btn:hover{
     background-color: var( --yellow);
