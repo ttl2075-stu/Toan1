@@ -28,18 +28,16 @@ function show() {
                                                 <div align="left" class="box-num" id="box-pheptinh">${arrNum[1]}</div>
                                                 <div align="right" class="box-num" id="box-num2">${arrNum[2]}</div>
                                                 <hr>
-                                                <input type="number" name="checkA" id="checkA${index}"  class="checkA inputStyle1">
-
-                                                
-                                        </div>
-                                        <div class="tags" id="tags${index}"></div>
+                                                </div>
+                                                <div class="dien" id="dien${index}" style="display: flex; justify-content: center; align-items: center;" >
+                                                    <button id="incrementButton">&nbsp;<i class="fa-solid fa-angle-up"></i></button>
+                                                    <input type="number" name="checkA" id="checkA${index}"  class="checkA inputStyle1" style="width: 100px; margin: 5px 10px;" >
+                                                    <button id="decrementButton">&nbsp;<i class="fa-solid fa-angle-down"></i></button>
+                                                </div>
+                                                <div class="tags" id="tags${index}"></div>
                                         <div class="thuAm" id="thuAm${index}">
                                             <button id="recordButton" class="hidden"><i class="fa-solid fa-microphone"></i> Bắt đầu thu âm</button>
                                             <p id="result"></p>
-                                        </div>
-                                        <div class="dien" id="dien${index}">
-                                            <button id="incrementButton">&nbsp;<i class="fa-solid fa-angle-up"></i></button>
-                                            <button id="decrementButton">&nbsp;<i class="fa-solid fa-angle-down"></i></button>
                                         </div>
                                     </center>
                                 <span id="notice${index}" style="color:#999999; font-size: 25px; font-weight: bold;"><span>
@@ -198,7 +196,8 @@ function showThe() {
     document.querySelectorAll('.thuAm button').forEach(u => {
         u.classList.add('hidden');
     });
-    document.querySelector('.dien').classList.add('hidden')
+    document.querySelector('#incrementButton').classList.add('hidden')
+    document.querySelector('#decrementButton').classList.add('hidden')
     document.querySelector('#traloikeotha').classList.add('hidden')
     document.querySelector('#traloithuam').classList.remove('hidden')
     document.querySelector('#traloidien').classList.remove('hidden')
@@ -222,7 +221,8 @@ function showDien() {
     document.querySelectorAll('.thuAm button').forEach(u => {
         u.classList.add('hidden');
     });
-    document.querySelector('.dien').classList.remove('hidden')
+    document.querySelector('#incrementButton').classList.remove('hidden')
+    document.querySelector('#decrementButton').classList.remove('hidden')
     if (lesson[quizShow].mucHelp > 1) document.querySelector('.dien').classList.add('hidden')
     document.querySelector('#traloikeotha').classList.remove('hidden')
     document.querySelector('#traloithuam').classList.remove('hidden')
@@ -236,7 +236,8 @@ function showThuAM() {
     document.querySelectorAll('.boxQuiz input').forEach(input => {
         input.setAttribute('readonly', true);
     });
-    document.querySelector('.dien').classList.add('hidden')
+    document.querySelector('#incrementButton').classList.add('hidden')
+    document.querySelector('#decrementButton').classList.add('hidden')
     document.querySelectorAll('.thuAm button').forEach(u => {
         u.classList.remove('hidden')
     });

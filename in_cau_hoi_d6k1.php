@@ -228,9 +228,9 @@ $id_loai_hien_thi = $id_loai_hien_thi['id_loai_hien_thi'];
         height: 50px;
     }
 
-    #incrementButton {
+    /* #incrementButton {
         margin: 3% 10% 0px 0px;
-    }
+    } */
 
     .btn {
         /* background-color: #2da0fa; */
